@@ -4,15 +4,9 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 [![The Whole Fruit Manifesto](https://img.shields.io/badge/writing%20standard-the%20whole%20fruit-brightgreen)](https://github.com/the-whole-fruit/manifesto)
 
-This package provides a Theme for the [Backpack for Laravel](https://backpackforlaravel.com/) administration panel, that uses CoreUI v2 and implicitly Bootstrap v4. As a UI (aka UI kit, aka admin panel template) it looks and works as seen on https://backstrap.net/ - as it is a customized version of CoreUI v2.
+This package provides a Theme for the [Backpack for Laravel](https://backpackforlaravel.com/) administration panel, that uses [CoreUI v4](https://coreui.io/product/free-bootstrap-admin-template/) and implicitly Bootstrap v5. All esthetic customizations on top of CoreUI are done in separate CSS files, which can be easily edited if you don't like them.
 
-It has been launched in 2021 as part of Backpack's core. In 2023 it has been sparated into this package, as a way to provide 100% backwards-compatibility, for whoever doesn't want to upgrade to the newer themes, like CoreUI v4 and Tabler.
-
-Why would anybody NOT want to upgrade? Well... because some developers:
-- have to support IE; and while Bootstrap v5 is better in every way... it does drop support for IE;
-- have customized their blade files so much, that it's impossible to upgrade;
-
-If you're one of the developers above, fear not... this package offers a way for you to upgrade your project to Backpack v6... while not rocking the boat too much. Please keep in mind we DO NOT plan to add any more features to this theme. It's just here as a crutch for people who can't upgrade.
+The file structure inside this package is the same as CoreUI v2, which is the same as Backpack v3, v4 and v5. If you want to upgrade to Bootstrap v5 and a modern theme, but you've heavily customized your blade files... this theme will be the easiest to upgrade to.
 
 ## Screenshots
 
