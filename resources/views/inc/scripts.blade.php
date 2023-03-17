@@ -26,7 +26,7 @@
     @vite(config('backpack.base.vite_scripts'))
 @endif
 
-@include(backpack_view('backpack::inc.alerts'))
+@include(backpack_view('inc.alerts'))
 
 {{-- page script --}}
 <script type="text/javascript">
