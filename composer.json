@@ -1,0 +1,44 @@
+{
+    "name": "backpack/theme-coreuiv2",
+    "description": "UI that uses CoreUI v2 and Bootstrap v4, provided as a legacy theme for Backpack v6.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cristian Tabacitu",
+            "email": "hello@backpackforlaravel.com",
+            "homepage": "https://backpackforlaravel.com"
+        }
+    ],
+    "homepage": "https://github.com/backpack/theme-coreuiv2",
+    "keywords": [
+        "Laravel", "Backpack", "Backpack for Laravel", "Backpack Addon", "ThemeCoreuiv2"
+    ],
+    "require": {
+        "illuminate/support": "~8|~9",
+        "backpack/crud": "^5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Backpack\\ThemeCoreuiv2\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Backpack\\ThemeCoreuiv2\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --testdox"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Backpack\\ThemeCoreuiv2\\AddonServiceProvider"
+            ]
+        }
+    }
+}
