@@ -3,55 +3,57 @@
 <html lang="{{ app()->getLocale() }}" dir="{{ config('backpack.base.html_direction') }}">
 
 <head>
-  @include(backpack_view('inc.head'))
+    @include(backpack_view('inc.head'))
 
 </head>
 
 <body class="{{ config('backpack.base.body_class') }}">
 
-  @include(backpack_view('inc.sidebar'))
+<div class="page">
+    @include(backpack_view('inc.sidebar'))
 
-  <div class="wrapper d-flex flex-column min-vh-100 bg-light">
-    
-    @include(backpack_view('inc.main_header'))
+    <div class="page-wrapper">
 
-    <div class="app-body flex-grow-1 px-2">
+        @include(backpack_view('inc.main_header'))
 
-    <main class="main">
+        <div class="app-body flex-grow-1 px-2">
 
-       @yield('before_breadcrumbs_widgets')
+            <main class="main">
 
-       @includeWhen(isset($breadcrumbs), backpack_view('inc.breadcrumbs'))
+                @yield('before_breadcrumbs_widgets')
 
-       @yield('after_breadcrumbs_widgets')
+                @includeWhen(isset($breadcrumbs), backpack_view('inc.breadcrumbs'))
 
-       @yield('header')
+                @yield('after_breadcrumbs_widgets')
 
-        <div class="container-fluid animated fadeIn">
+                @yield('header')
 
-          @yield('before_content_widgets')
+                <div class="container-fluid animated fadeIn">
 
-          @yield('content')
-          
-          @yield('after_content_widgets')
+                    @yield('before_content_widgets')
+
+                    @yield('content')
+
+                    @yield('after_content_widgets')
+
+                </div>
+
+            </main>
 
         </div>
 
-    </main>
+        <footer class="{{ config('backpack.base.footer_class') }}">
+            @include(backpack_view('inc.footer'))
+        </footer>
+    </div>
+</div>
 
-  </div>{{-- ./app-body --}}
+@yield('before_scripts')
+@stack('before_scripts')
 
-  <footer class="{{ config('backpack.base.footer_class') }}">
-    @include(backpack_view('inc.footer'))
-  </footer>
-  </div>
+@include(backpack_view('inc.scripts'))
 
-  @yield('before_scripts')
-  @stack('before_scripts')
-
-  @include(backpack_view('inc.scripts'))
-
-  @yield('after_scripts')
-  @stack('after_scripts')
+@yield('after_scripts')
+@stack('after_scripts')
 </body>
 </html>
