@@ -9,13 +9,15 @@
 
 <body class="{{ config('backpack.base.body_class') }}">
 
-  @include(backpack_view('inc.main_header'))
+  @include(backpack_view('inc.sidebar'))
 
-  <div class="app-body">
+  <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+    
+    @include(backpack_view('inc.main_header'))
 
-    @include(backpack_view('inc.sidebar'))
+    <div class="app-body flex-grow-1 px-2">
 
-    <main class="main pt-2">
+    <main class="main">
 
        @yield('before_breadcrumbs_widgets')
 
@@ -42,6 +44,7 @@
   <footer class="{{ config('backpack.base.footer_class') }}">
     @include(backpack_view('inc.footer'))
   </footer>
+  </div>
 
   @yield('before_scripts')
   @stack('before_scripts')

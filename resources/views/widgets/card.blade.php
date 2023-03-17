@@ -4,7 +4,7 @@
 @endphp
 
 @includeWhen(!empty($widget['wrapper']), 'backpack::widgets.inc.wrapper_start')
-	<div class="{{ $widget['class'] ?? 'card' }}">
+	<div class="{{ $widget['class'] ?? 'card mb-3' }}">
 		@if (isset($widget['content']))
 			@if (isset($widget['content']['header']))
 				<div class="card-header">{!! $widget['content']['header'] !!}</div>

@@ -11,7 +11,7 @@
       @endif
 
       @if (isset($widget['description']))
-      <div>{!! $widget['description'] !!}</div>
+      <div class="card-title">{!! $widget['description'] !!}</div>
       @endif
       
       @if (isset($widget['progress']))
@@ -21,13 +21,13 @@
       @endif
       
       @if (isset($widget['hint']))
-      <small class="text-muted">{!! $widget['hint'] !!}</small>
+      <small class="card-text">{!! $widget['hint'] !!}</small>
       @endif
     </div>
     
     @if (isset($widget['footer_link']))
     <div class="card-footer px-3 py-2">
-      <a class="btn-block text-muted d-flex justify-content-between align-items-center" href="{{ $widget['footer_link'] ?? '#' }}"><span class="small font-weight-bold">{{ $widget['footer_text'] ?? 'View more' }}</span><i class="la la-angle-right"></i></a>
+      <a class="btn-block card-text d-flex justify-content-between align-items-center" href="{{ $widget['footer_link'] ?? '#' }}"><span class="small font-weight-bold">{{ $widget['footer_text'] ?? 'View more' }}</span><i class="la la-angle-right"></i></a>
     </div>
     @endif
   </div>
