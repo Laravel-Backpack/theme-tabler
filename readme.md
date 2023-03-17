@@ -1,4 +1,4 @@
-# Theme CoreUI v2
+# Theme CoreUI v4
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
@@ -24,14 +24,14 @@ If you're one of the developers above, fear not... this package offers a way for
 **Step 1.** Install via Composer
 
 ``` bash
-composer require backpack/theme-coreuiv2
+composer require backpack/theme-coreuiv4
 ```
 
 **Step 2.** Go to `config/backpack/base.php` and change your view namespace:
 
 ```diff
 -    'view_namespace' => 'backpack::',
-+    'view_namespace' => 'backpack.theme-coreuiv2::',
++    'view_namespace' => 'backpack.theme-coreuiv4::',
 ```
 
 ## Overriding
@@ -42,15 +42,15 @@ The more files you copy-paste and customize, the more difficult it will be to up
 
 ```bash
 # create the custom directory if it's not already there
-mkdir -p resources/views/vendor/backpack/theme-coreuiv2
+mkdir -p resources/views/vendor/backpack/theme-coreuiv4
 
 # copy the blade file inside the folder we created above
-cp -i vendor/backpack/theme-coreuiv2/src/resources/views/dashboard.blade.php resources/views/vendor/backpack/theme-coreuiv2/dashboard.blade.php
+cp -i vendor/backpack/theme-coreuiv4/src/resources/views/dashboard.blade.php resources/views/vendor/backpack/theme-coreuiv4/dashboard.blade.php
 ```
 
 ## Change log
 
-Changes are documented here on Github. Please see the [Releases tab](https://github.com/backpack/theme-coreuiv2/releases).
+Changes are documented here on Github. Please see the [Releases tab](https://github.com/backpack/theme-coreuiv4/releases).
 
 ## Contributing
 
@@ -69,10 +69,10 @@ If you discover any security related issues, please email hello@backpackforlarav
 
 This project was released under MIT, so you can install it on top of any Backpack & Laravel project. Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/backpack/theme-coreuiv2.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/backpack/theme-coreuiv2.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/backpack/theme-coreuiv4.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/backpack/theme-coreuiv4.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/backpack/theme-coreuiv2
-[link-downloads]: https://packagist.org/packages/backpack/theme-coreuiv2
+[link-packagist]: https://packagist.org/packages/backpack/theme-coreuiv4
+[link-downloads]: https://packagist.org/packages/backpack/theme-coreuiv4
 [link-author]: https://github.com/backpack
 [link-contributors]: ../../contributors
