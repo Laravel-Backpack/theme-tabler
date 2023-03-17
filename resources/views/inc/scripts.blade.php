@@ -4,7 +4,7 @@
 @basset('https://unpkg.com/pace-js@1.2.4/pace.min.js')
 @basset('https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js')
 
-@include('backpack::inc.theme_scripts')
+@include(backpack_view('inc.theme_scripts'))
 
 @if (config('backpack.base.scripts') && count(config('backpack.base.scripts')))
     @foreach (config('backpack.base.scripts') as $path)
@@ -26,7 +26,7 @@
     @vite(config('backpack.base.vite_scripts'))
 @endif
 
-@include('backpack::inc.alerts')
+@include(backpack_view('backpack::inc.alerts'))
 
 {{-- page script --}}
 <script type="text/javascript">
