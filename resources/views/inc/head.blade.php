@@ -9,7 +9,7 @@
     @yield('before_styles')
     @stack('before_styles')
 
-        @include('backpack::inc.theme_styles')
+        @include(backpack_view('inc.theme_styles'))
 
         @basset('https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css')
         @basset('https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/fonts/la-regular-400.woff2')

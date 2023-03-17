@@ -12,7 +12,7 @@
   </div>
 
   <footer class="app-footer sticky-footer">
-    @include('backpack::inc.footer')
+    @include(backpack_view('inc.footer'))
   </footer>
 
   @yield('before_scripts')
