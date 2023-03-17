@@ -1,6 +1,6 @@
 <?php
 
-namespace Backpack\ThemeCoreuiv4;
+namespace Backpack\ThemeTabler;
 
 use Backpack\CRUD\ViewNamespaces;
 

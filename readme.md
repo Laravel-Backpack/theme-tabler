@@ -1,12 +1,12 @@
-# Theme CoreUI v4
+# Theme Tabler
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![The Whole Fruit Manifesto](https://img.shields.io/badge/writing%20standard-the%20whole%20fruit-brightgreen)](https://github.com/the-whole-fruit/manifesto)
 
-This package provides a Theme for the [Backpack for Laravel](https://backpackforlaravel.com/) administration panel, that uses [CoreUI v4](https://coreui.io/product/free-bootstrap-admin-template/) and implicitly Bootstrap v5. All esthetic customizations on top of CoreUI are done in separate CSS files, which can be easily edited if you don't like them.
+This package provides a theme for the [Backpack for Laravel](https://backpackforlaravel.com/) administration panel, that uses [Tabler](https://tabler.io/) and implicitly Bootstrap v5. All esthetic customizations on top of Tabler are done in separate CSS files, which can be easily edited if you don't like them.
 
-The file structure inside this package is the same as CoreUI v2, which is the same as Backpack v3, v4 and v5. If you want to upgrade to Bootstrap v5 and a modern theme, but you've heavily customized your blade files... this theme will be the easiest to upgrade to.
+The file structure inside this package has changed a bit from Backpack v3-v5. We've split split it into smaller, more granual views. So that if you need to customize something by publishing a view, your change is small. If you want the old file structure, you can use the CoreUI v4 or CoreUI v2 themes.
 
 ## Screenshots
 
@@ -18,14 +18,14 @@ The file structure inside this package is the same as CoreUI v2, which is the sa
 **Step 1.** Install via Composer
 
 ``` bash
-composer require backpack/theme-coreuiv4
+composer require backpack/theme-tabler
 ```
 
 **Step 2.** Go to `config/backpack/base.php` and change your view namespace:
 
 ```diff
 -    'view_namespace' => 'backpack::',
-+    'view_namespace' => 'backpack.theme-coreuiv4::',
++    'view_namespace' => 'backpack.theme-tabler::',
 ```
 
 ## Overriding
@@ -36,15 +36,15 @@ The more files you copy-paste and customize, the more difficult it will be to up
 
 ```bash
 # create the custom directory if it's not already there
-mkdir -p resources/views/vendor/backpack/theme-coreuiv4
+mkdir -p resources/views/vendor/backpack/theme-tabler
 
 # copy the blade file inside the folder we created above
-cp -i vendor/backpack/theme-coreuiv4/src/resources/views/dashboard.blade.php resources/views/vendor/backpack/theme-coreuiv4/dashboard.blade.php
+cp -i vendor/backpack/theme-tabler/src/resources/views/dashboard.blade.php resources/views/vendor/backpack/theme-tabler/dashboard.blade.php
 ```
 
 ## Change log
 
-Changes are documented here on Github. Please see the [Releases tab](https://github.com/backpack/theme-coreuiv4/releases).
+Changes are documented here on Github. Please see the [Releases tab](https://github.com/backpack/theme-tabler/releases).
 
 ## Contributing
 
@@ -63,10 +63,10 @@ If you discover any security related issues, please email hello@backpackforlarav
 
 This project was released under MIT, so you can install it on top of any Backpack & Laravel project. Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/backpack/theme-coreuiv4.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/backpack/theme-coreuiv4.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/backpack/theme-tabler.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/backpack/theme-tabler.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/backpack/theme-coreuiv4
-[link-downloads]: https://packagist.org/packages/backpack/theme-coreuiv4
+[link-packagist]: https://packagist.org/packages/backpack/theme-tabler
+[link-downloads]: https://packagist.org/packages/backpack/theme-tabler
 [link-author]: https://github.com/backpack
 [link-contributors]: ../../contributors
