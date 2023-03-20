@@ -121,7 +121,7 @@ span.badge.bg-warning {
 }
 /*/aside*/
 
-[data-bs-theme=light] .btn-link, [data-bs-theme=light] a:not(.btn) {
+[data-bs-theme=light] .btn-link, [data-bs-theme=light] a:not(.btn) a:not([role=presentation]) {
     color: var(--tblr-primary);
 }
 
@@ -187,4 +187,43 @@ span.badge.bg-warning {
 }
 [data-bs-theme=dark] ul.pagination li.paginate_button.page-item.active a:hover {
     background-color: rgb(var(--tblr-primary-rgb));
+}
+
+/*reorder*/
+[data-bs-theme=dark] ol.sortable li div, [data-bs-theme=dark] ul.select_and_order_all li div {
+    background-color: var(--tblr-table-color-bg-lighter);
+    color: var(--tblr-light-text);
+    border-color: var(--tblr-primary-border-subtle) !important;
+}
+
+/*modal*/
+[data-bs-theme=dark] div.dtr-modal div.dtr-modal-display {
+    background-color: var(--tblr-bg);
+}
+[data-bs-theme=dark] div.dtr-modal div.dtr-modal-display .dtr-modal-close {
+    background-color: var(--tblr-danger);
+    color: var(--tblr-light-text);
+    border: none;
+}
+[data-bs-theme=dark] div.dtr-modal div.dtr-modal-display table.table.table-striped tr td {
+    color: var(--tblr-light-text);
+}
+
+/*tabbed fields*/
+[data-bs-theme=dark] div.tab-container div.tab-content {
+    background-color: var(--tblr-table-color-bg-darker);
+}
+div.tab-container ul {
+    --tblr-nav-tabs-border-width: 0 !important;
+}
+[data-bs-theme=dark] div.tab-container ul li.nav-item .active {
+    background-color: var(--tblr-table-color-bg-darker);
+    --tblr-nav-tabs-border-width: 0 !important;
+}
+[data-bs-theme=light] div.tab-container div.tab-content {
+    background-color: #fff;
+}
+[data-bs-theme=light] div.tab-container ul li.nav-item .active {
+    background-color: #fff;
+    --tblr-nav-tabs-border-width: 0 !important;
 }

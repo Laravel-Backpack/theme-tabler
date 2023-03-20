@@ -190,9 +190,8 @@
 [data-bs-theme=dark] input[type=checkbox]:not(:checked).form-check-input {
     background-color: var(--tblr-primary-border-subtle);
 }
-[data-bs-theme=dark] input[type=search].form-control,
-[data-bs-theme=dark] input[type=date].form-control,
-[data-bs-theme=dark] input[type=text].form-control,
+[data-bs-theme=dark] input:not(input[type=hidden]).form-control,
+[data-bs-theme=dark] textarea.form-control,
 [data-bs-theme=dark] select.form-control,
 [data-bs-theme=dark] select.form-select,
 [data-bs-theme=dark] :not(.navbar-filters) .select2-selection--single,
@@ -200,9 +199,8 @@
     background-color: var(--tblr-table-color-bg-lighter);
     border-color: var(--tblr-card-head);
 }
-[data-bs-theme=dark] input[type=search].form-control:focus,
-[data-bs-theme=dark] input[type=date].form-control:focus,
-[data-bs-theme=dark] input[type=text].form-control:focus,
+[data-bs-theme=dark] input:not(input[type=hidden]).form-control:focus,
+[data-bs-theme=dark] textarea.form-control:focus,
 [data-bs-theme=dark] select.form-control:focus,
 [data-bs-theme=dark] select.form-select:focus,
 [data-bs-theme=dark] :not(.navbar-filters) .select2-selection--single:focus {
@@ -230,17 +228,20 @@
 
     background-color: var(--tblr-dark) !important;
 }
-
 [data-bs-theme=dark] .input-group button.popup_selector,
 [data-bs-theme=dark] .input-group button.clear_elfinder_picker {
     background-color: var(--tblr-dark) !important;
     color: var(--tblr-light-text);
 }
-
 [data-bs-theme=dark] .input-group button.popup_selector:hover,
 [data-bs-theme=dark] .input-group button.clear_elfinder_picker:hover {
     background-color: var(--tblr-dark-rgb) !important;
     color: var(--tblr-light-text);
+}
+
+/*phone*/
+[data-bs-theme=dark] .dial-code {
+    color: red !important;
 }
 
 /*ckeditor*/
