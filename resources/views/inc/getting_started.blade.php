@@ -7,7 +7,7 @@
     <div id="accordion" role="tablist">
       <div class="card mb-1">
         <div class="card-header bg-light" id="headingOne" role="tab">
-          <h5 class="mb-0"><a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed text-dark"><span class="badge badge-warning mr-2 mt-n2">1</span>Create your first CRUD <small class="float-right mt-2">1-5 min</small></a></h5>
+          <h5 class="mb-0"><a data-bs-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed text-dark"><span class="badge bg-warning mr-2 mt-n2">1</span>Create your first CRUD <small class="float-right mt-2">1-5 min</small></a></h5>
         </div>
         <div class="collapse" id="collapseOne" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" style="">
           <div class="card-body">
@@ -18,7 +18,7 @@
             <p>Run that in your terminal and <strong>choose <code class="text-primary bg-light p-1 rounded">field</code> when asked which <a href="https://backpackforlaravel.com/docs/5.x/crud-operation-create#validation?ref=getting-started-widget"
               target="_blank">validation type</a> you'd like</strong>. You can now click on the new sidebar item (or <a href="{{ backpack_url('user') }}">here</a>) and you'll be able to see the entries in the <code class="text-primary bg-light p-1 rounded">users</code> table. Now... even though most generated CRUDs work out-of-the-box, they probably won't be <i>exactly</i> what you need. But that's where Backpack shines, in how easy it is to customize.</p>
 
-            <p>To dig a little deeper, <a href="#" data-toggle="collapse" data-target="#customizeUsersCRUD" aria-expanded="true" aria-controls="customizeUsersCRUD">let's make a few changes to the Users CRUD <i class="la la-angle-double-right"></i></a></p>
+            <p>To dig a little deeper, <a href="#" data-bs-toggle="collapse" data-target="#customizeUsersCRUD" aria-expanded="true" aria-controls="customizeUsersCRUD">let's make a few changes to the Users CRUD <i class="la la-angle-double-right"></i></a></p>
 
             <div class="collapse" id="customizeUsersCRUD">
               <p><strong>1. When Listing, let's remove the "password" column</strong> - no point in showing the hash. To do that, go to <code class="text-primary bg-light p-1 rounded">UserCrudController::setupListOperation()</code> and remove the line saying <code class="text-primary bg-light p-1 rounded">CRUD::column('password');</code> - easy-peasy, right?</p>
@@ -73,7 +73,7 @@
       </div>
       <div class="card mb-1">
         <div class="card-header bg-light" id="headingTwo" role="tab">
-          <h5 class="mb-0"><a class="collapsed text-dark" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span class="badge badge-warning mr-2 mt-n2">2</span>Learn the basics <small class="float-right mt-2">20-30 min</small></a></h5>
+          <h5 class="mb-0"><a class="collapsed text-dark" data-bs-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span class="badge bg-warning mr-2 mt-n2">2</span>Learn the basics <small class="float-right mt-2">20-30 min</small></a></h5>
         </div>
         <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" style="">
           <div class="card-body">
@@ -88,7 +88,7 @@
       </div>
       <div class="card mb-1">
         <div class="card-header bg-light" id="headingThree" role="tab">
-          <h5 class="mb-0"><a class="collapsed text-dark" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span class="badge badge-warning mr-2 mt-n2">4</span>Subscribe or purchase <small class="float-right mt-2">1-3 min</small></a></h5>
+          <h5 class="mb-0"><a class="collapsed text-dark" data-bs-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span class="badge bg-warning mr-2 mt-n2">4</span>Subscribe or purchase <small class="float-right mt-2">1-3 min</small></a></h5>
         </div>
         <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion" style="">
           <div class="card-body">
@@ -105,7 +105,7 @@
       </div>
       <div class="card mb-1">
         <div class="card-header bg-light" id="headingThree" role="tab">
-          <h5 class="mb-0"><a class="collapsed text-dark" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><span class="badge badge-warning mr-2 mt-n2">4</span>Hide this notice <small class="float-right mt-2">1 min</small></a></h5>
+          <h5 class="mb-0"><a class="collapsed text-dark" data-bs-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><span class="badge bg-warning mr-2 mt-n2">4</span>Hide this notice <small class="float-right mt-2">1 min</small></a></h5>
         </div>
         <div class="collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion" style="">
           <div class="card-body">Go to your <code class="text-primary bg-light p-1 rounded">config/backpack/base.php</code> and change <code class="text-primary bg-light p-1 rounded">show_getting_started</code> to <code class="text-primary bg-light p-1 rounded">false</code>.</div>

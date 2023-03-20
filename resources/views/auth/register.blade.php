@@ -1,15 +1,15 @@
 @extends(backpack_view('layouts.plain'))
 
 @section('content')
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-4">
+    <div class="row justify-content-center align-items-center d-flex flex-row min-vh-100">
+        <div class="col-12 col-md-8 col-lg-6">
             <h3 class="text-center mb-4">{{ trans('backpack::base.register') }}</h3>
-            <div class="card">
+            <div class="card p-4 mb-0">
                 <div class="card-body">
                     <form class="col-md-12 p-t-10" role="form" method="POST" action="{{ route('backpack.auth.register') }}">
                         {!! csrf_field() !!}
 
-                        <div class="form-group">
+                        <div class="form-group mb-2">
                             <label class="control-label" for="name">{{ trans('backpack::base.name') }}</label>
 
                             <div>
@@ -23,7 +23,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mb-2">
                             <label class="control-label" for="{{ backpack_authentication_column() }}">{{ config('backpack.base.authentication_column_name') }}</label>
 
                             <div>
@@ -37,7 +37,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mb-2">
                             <label class="control-label" for="password">{{ trans('backpack::base.password') }}</label>
 
                             <div>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mb-2">
                             <label class="control-label" for="password_confirmation">{{ trans('backpack::base.confirm_password') }}</label>
 
                             <div>
@@ -65,7 +65,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mt-3">
                             <div>
                                 <button type="submit" class="btn btn-block btn-primary">
                                     {{ trans('backpack::base.register') }}
@@ -76,7 +76,7 @@
                 </div>
             </div>
             @if (backpack_users_have_email() && backpack_email_column() == 'email' && config('backpack.base.setup_password_recovery_routes', true))
-                <div class="text-center"><a href="{{ route('backpack.auth.password.reset') }}">{{ trans('backpack::base.forgot_your_password') }}</a></div>
+                <div class="text-center mt-2"><a href="{{ route('backpack.auth.password.reset') }}">{{ trans('backpack::base.forgot_your_password') }}</a></div>
             @endif
             <div class="text-center"><a href="{{ route('backpack.auth.login') }}">{{ trans('backpack::base.login') }}</a></div>
         </div>

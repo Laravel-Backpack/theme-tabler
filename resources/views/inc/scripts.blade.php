@@ -1,5 +1,5 @@
 @basset('https://unpkg.com/jquery@3.6.1/dist/jquery.min.js')
-@basset('https://unpkg.com/popper.js@1.16.1/dist/umd/popper.min.js')
+@basset('https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js')
 @basset('https://unpkg.com/noty@3.2.0-beta-deprecated/lib/noty.min.js')
 @basset('https://unpkg.com/pace-js@1.2.4/pace.min.js')
 @basset('https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js')
@@ -72,11 +72,10 @@
         }
     });
 
-    {{-- Enable deep link to tab --}}
-    var activeTab = $('[href="' + location.hash.replace("#", "#tab_") + '"]');
-    location.hash && activeTab && activeTab.tab('show');
-    $('.nav-tabs a').on('shown.bs.tab', function (e) {
-        location.hash = e.target.hash.replace("#tab_", "#");
+    // Enable deep link to tab
+    document.querySelectorAll('.nav-tabs a').forEach(function (elem) {
+        if(elem.dataset.name === location.hash.substr(1)) (new bootstrap.Tab(elem)).show();
+        elem.addEventListener('click', () => location.hash = elem.dataset.name);
     });
 </script>
 

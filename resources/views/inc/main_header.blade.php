@@ -1,14 +1,7 @@
-<header class="{{ config('backpack.base.header_class') }}">
-  {{-- Logo --}}
-  <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto ml-3" type="button" data-toggle="sidebar-show" aria-label="{{ trans('backpack::base.toggle_navigation')}}">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="{{ url(config('backpack.base.home_link')) }}" title="{{ config('backpack.base.project_name') }}">
-    {!! config('backpack.base.project_logo') !!}
-  </a>
-  <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show" aria-label="{{ trans('backpack::base.toggle_navigation')}}">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  @include(backpack_view('inc.menu'))
-</header>
+<div class="sticky-top mb-3 d-none d-lg-block">
+    <header class="navbar navbar-expand-md navbar-light sticky-top d-print-none px-3">
+        <div class="navbar-nav w-100 justify-content-end">
+            @include(backpack_view('inc.menu'))
+        </div>
+    </header>
+</div>

@@ -1,2 +1,4 @@
-@basset('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js')
-@basset('https://unpkg.com/@coreui/coreui@2.1.16/dist/js/coreui.js')
+@basset('https://unpkg.com/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js')
+@basset('https://unpkg.com/simplebar@latest/dist/simplebar.min.js')
+
+@basset(base_path('vendor/backpack/theme-tabler/resources/assets/js/tabler.js'))

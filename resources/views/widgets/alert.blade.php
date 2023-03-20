@@ -1,9 +1,13 @@
 @includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_start'))
 
-<div class="{{ $widget['class'] ?? 'alert alert-primary' }}" role="alert">
+@php
+	$dismissible = isset($widget['close_button']) && $widget['close_button'];
+@endphp
 
-	@if (isset($widget['close_button']) && $widget['close_button'])	
-	<button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+<div class="{{ $widget['class'] ?? 'alert alert-primary mb-3' }} {{ $dismissible ? 'alert-dismissible' : '' }}" role="alert">
+
+	@if ($dismissible)	
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 	@endif
 
 	@if (isset($widget['heading']))
