@@ -1,4 +1,4 @@
-@includeWhen(!empty($widget['wrapper']), 'backpack::widgets.inc.wrapper_start')
+@includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_start'))
 
 <div class="{{ $widget['class'] ?? 'alert alert-primary' }}" role="alert">
 
@@ -16,4 +16,4 @@
 
 </div>
 
-@includeWhen(!empty($widget['wrapper']), 'backpack::widgets.inc.wrapper_end')
+@includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_end'))
