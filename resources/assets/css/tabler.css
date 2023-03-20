@@ -190,7 +190,7 @@ span.badge.bg-warning {
 }
 
 /*reorder*/
-[data-bs-theme=dark] ol.sortable li div, [data-bs-theme=dark] ul.select_and_order_all li div {
+[data-bs-theme=dark] ol.sortable li div, [data-bs-theme=dark] ul.select_and_order_all li {
     background-color: var(--tblr-table-color-bg-lighter);
     color: var(--tblr-light-text);
     border-color: var(--tblr-primary-border-subtle) !important;
@@ -221,7 +221,6 @@ div.tab-container ul li.nav-item .active {
     background-color: var(--tblr-table-color-bg-darker) !important;
     --tblr-nav-tabs-border-width: 0 !important;
 }
-
 [data-bs-theme=light] div.tab-container div.tab-content {
     background-color: #fff !important;
 }
