@@ -4,7 +4,7 @@
     $accentColor = $widget['accentColor'] ?? 'primary';
 @endphp
 
-@includeWhen(!empty($widget['wrapper']), 'backpack::widgets.inc.wrapper_start')
+@includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_start'))
 <div class="{{ $widget['class'] ?? 'card' }}">
 
     @if ($widget['ribbon'] ?? false)
@@ -35,4 +35,4 @@
         </div>
     @endif
 </div>
-@includeWhen(!empty($widget['wrapper']), 'backpack::widgets.inc.wrapper_end')
+@includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_end'))

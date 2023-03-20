@@ -5,7 +5,7 @@
 	}
 @endphp
 
-@includeWhen(!empty($widget['wrapper']), 'backpack::widgets.inc.wrapper_start')
+@includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_start'))
 	<div class="jumbotron mb-2">
 
 	  @if (isset($widget['heading']))
@@ -22,4 +22,4 @@
 	  </p>
 	  @endif
 	</div>
-@includeWhen(!empty($widget['wrapper']), 'backpack::widgets.inc.wrapper_end')
+@includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_end'))

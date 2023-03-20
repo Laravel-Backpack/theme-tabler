@@ -1,4 +1,4 @@
-@includeWhen(!empty($widget['wrapper']), 'backpack::widgets.inc.wrapper_start')
+@includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_start'))
 
 @php
 	$dismissible = isset($widget['close_button']) && $widget['close_button'];
@@ -20,4 +20,4 @@
 
 </div>
 
-@includeWhen(!empty($widget['wrapper']), 'backpack::widgets.inc.wrapper_end')
+@includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_end'))

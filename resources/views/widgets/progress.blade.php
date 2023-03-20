@@ -4,7 +4,7 @@
     $accentColor = $widget['accentColor'] ?? 'primary';
 @endphp
 
-@includeWhen(!empty($widget['wrapper']), 'backpack::widgets.inc.wrapper_start')
+@includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_start'))
 <div class="{{ $widget['class'] ?? 'card' }}">
 
     @if ($widget['ribbon'] ?? false)
@@ -47,5 +47,5 @@
             <a class="btn-block card-text d-flex justify-content-between align-items-center" href="{{ $widget['footer_link'] ?? '#' }}"><span class="small font-weight-bold">{{ $widget['footer_text'] ?? 'View more' }}</span><i class="la la-angle-right"></i></a>
         </div>
     @endif
-</div>
-@includeWhen(!empty($widget['wrapper']), 'backpack::widgets.inc.wrapper_end')
+  </div>
+@includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_end'))
