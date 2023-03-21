@@ -256,6 +256,7 @@ span.badge.bg-warning {
 
 /*tabbed fields*/
 div.tab-container div.tab-content {
+    padding: 25px;
     background-color: var(--tblr-table-color-bg-darker) !important;
     border: none !important;
 }
@@ -272,4 +273,13 @@ div.tab-container ul li.nav-item .active {
 [data-bs-theme=light] div.tab-container ul li.nav-item .active {
     background-color: #fff !important;
     --tblr-nav-tabs-border-width: 0 !important;
+}
+[data-bs-theme=dark] .select_and_order_all,
+[data-bs-theme=dark] .select_and_order_selected {
+    border: 1px solid var(--tblr-primary-border-subtle) !important;
+}
+[data-bs-theme=dark] .select_and_order_all li,
+[data-bs-theme=dark] .select_and_order_selected li {
+    background-color: var(--tblr-primary-border-subtle);
+    border: none !important;
 }
