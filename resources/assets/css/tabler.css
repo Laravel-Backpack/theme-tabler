@@ -161,6 +161,9 @@ span.badge.bg-warning {
 [data-bs-theme=dark] .navbar-filters .dropdown-menu {
     box-shadow: none;
 }
+[data-bs-theme=dark] .navbar-filters .nav-item.active a {
+    background-color: var(--tblr-table-color-bg-darker) !important;
+}
 [data-bs-theme=dark] .navbar-filters .select2-selection--single {
     background-color: var(--tblr-dark) !important;
 }
@@ -179,6 +182,48 @@ span.badge.bg-warning {
 [data-bs-theme=dark] .navbar-filters .select2-results ul.select2-results__options li.select2-results__option[aria-selected="true"]:not(.select2-results__option--highlighted) {
     background-color: var(--tblr-gray-800);
     color: var(--tblr-light-text);
+}
+[data-bs-theme=dark] .daterangepicker {
+    background-color: var(--tblr-bg-surface);
+    border-width: 0;
+    box-shadow: 0 0 10px rgba(var(--tblr-light-rgb),.2);
+}
+[data-bs-theme=dark] .daterangepicker .ranges li.active,
+[data-bs-theme=dark] .daterangepicker .ranges li:hover {
+    background-color: var(--tblr-primary);
+}
+[data-bs-theme=dark] .daterangepicker .calendar-table {
+    border-color: var(--tblr-light-border-subtle);
+    background-color: var(--tblr-table-color-bg-darker);
+}
+[data-bs-theme=dark] .daterangepicker .calendar-table td.off {
+    background-color: var(--tblr-table-color-bg-lighter);
+}
+[data-bs-theme=dark] .daterangepicker .calendar-table td.active,
+[data-bs-theme=dark] .daterangepicker .calendar-table td:hover {
+    background-color: var(--tblr-primary);
+}
+[data-bs-theme=dark] .daterangepicker .calendar-table td.in-range:not(.active) {
+    background-color: var(--tblr-primary-border-subtle);
+    color: var(--tblr-light-text);
+}
+[data-bs-theme=dark] .daterangepicker .calendar-table th.prev.available:hover,
+[data-bs-theme=dark] .daterangepicker .calendar-table th.next.available:hover {
+    background-color: var(--tblr-primary);
+}
+[data-bs-theme=dark] .daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span,
+[data-bs-theme=dark] .daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .next span {
+    border-color: var(--tblr-muted) !important;
+}
+[data-bs-theme=dark] .daterangepicker .calendar-table .prev:hover span,
+[data-bs-theme=dark] .daterangepicker .calendar-table .next:hover span {
+    border-color: var(--tblr-light-text) !important;
+}
+[data-bs-theme=dark] .daterangepicker.show-ranges.ltr .drp-calendar.left {
+    border-left-color: var(--tblr-gray);
+}
+[data-bs-theme=dark] .daterangepicker .drp-buttons {
+    border-top-color: var(--tblr-gray);
 }
 
 /*pagination*/
