@@ -9,8 +9,8 @@
                 </div>
             </ul>
             <h1 class="navbar-brand navbar-brand-autodark d-none d-lg-block align-self-center mb-3">
-                <a class="h2 text-decoration-none" href="{{ url(config('backpack.base.home_link')) }}" title="{{ config('backpack.base.project_name') }}">
-                    {!! config('backpack.base.project_logo') !!}
+                <a class="h2 text-decoration-none" href="{{ url(backpack_theme_config('home_link')) }}" title="{{ backpack_theme_config('project_name') }}">
+                    {!! backpack_theme_config('project_logo') !!}
                 </a>
             </h1>
             <div class="collapse navbar-collapse" id="sidebar-menu">

@@ -6,8 +6,8 @@
 
 @include(backpack_view('inc.theme_scripts'))
 
-@if (config('backpack.base.scripts') && count(config('backpack.base.scripts')))
-    @foreach (config('backpack.base.scripts') as $path)
+@if (backpack_theme_config('scripts') && count(backpack_theme_config('scripts')))
+    @foreach (backpack_theme_config('scripts') as $path)
         @if(is_array($path))
             @basset(...$path)
         @else
@@ -16,14 +16,14 @@
     @endforeach
 @endif
 
-@if (config('backpack.base.mix_scripts') && count(config('backpack.base.mix_scripts')))
-    @foreach (config('backpack.base.mix_scripts') as $path => $manifest)
+@if (backpack_theme_config('mix_scripts') && count(backpack_theme_config('mix_scripts')))
+    @foreach (backpack_theme_config('mix_scripts') as $path => $manifest)
     <script type="text/javascript" src="{{ mix($path, $manifest) }}"></script>
     @endforeach
 @endif
 
-@if (config('backpack.base.vite_scripts') && count(config('backpack.base.vite_scripts')))
-    @vite(config('backpack.base.vite_scripts'))
+@if (backpack_theme_config('vite_scripts') && count(backpack_theme_config('vite_scripts')))
+    @vite(backpack_theme_config('vite_scripts'))
 @endif
 
 @include(backpack_view('inc.alerts'))
