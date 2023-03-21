@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
-<html lang="{{ app()->getLocale() }}" dir="{{ config('backpack.base.html_direction') }}">
+<html lang="{{ app()->getLocale() }}" dir="{{ backpack_theme_config('html_direction') }}">
 
 <head>
   @include(backpack_view('inc.head'))
 
 </head>
 
-<body class="{{ config('backpack.base.body_class') }}">
+<body class="{{ backpack_theme_config('classes.body') }}">
 
   @include(backpack_view('inc.main_header'))
 
@@ -39,7 +39,7 @@
 
   </div>{{-- ./app-body --}}
 
-  <footer class="{{ config('backpack.base.footer_class') }}">
+  <footer class="{{ backpack_theme_config('classes.footer') }}">
     @include(backpack_view('inc.footer'))
   </footer>
 

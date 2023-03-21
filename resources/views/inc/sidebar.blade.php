@@ -1,6 +1,6 @@
 @if (backpack_auth()->check())
     {{-- Left side column. contains the sidebar --}}
-    <div class="{{ config('backpack.base.sidebar_class') }}">
+    <div class="{{ backpack_theme_config('classes.sidebar') }}">
       {{-- sidebar: style can be found in sidebar.less --}}
       <nav class="sidebar-nav overflow-hidden">
         {{-- sidebar menu: : style can be found in sidebar.less --}}
