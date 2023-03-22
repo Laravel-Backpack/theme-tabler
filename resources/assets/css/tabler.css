@@ -6,17 +6,20 @@ header .sidebar-toggler i {
     color: var(--tblr-light-text);
 }
 
-.btn-group .dropdown-toggle:after {
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0;
-    border-left: 0.3em solid transparent;
-    transform: none;
-}
-
 .navbar-collapse .dropdown-toggle:after {
     all: unset;
     color: var(--tblr-dark-text);
+    font-family: "Line Awesome Free";
+    content: "\f107";
+    font-weight: 900;
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+/*buttons center table*/
+button.buttons-collection:after {
+    all: unset;
+    color: var(--tblr-light-text);
     font-family: "Line Awesome Free";
     content: "\f107";
     font-weight: 900;
@@ -35,6 +38,13 @@ header .sidebar-toggler i {
 /* Fix table row hover */
 .table-hover tbody tr:hover td {
     box-shadow: none !important;
+}
+.table-hover tbody tr td a.btn.btn-sm.btn-link i {
+    margin-right: 3px;
+}
+
+.table-hover tbody tr td.dtr-control span {
+    margin-left: 3px;
 }
 
 .nav-separator {
@@ -90,6 +100,13 @@ header .sidebar-toggler i {
 }
 
 /*aside*/
+aside .navbar-collapse .dropdown-toggle {
+    padding-right: 0 !important;
+}
+aside .navbar-collapse .dropdown-item {
+    padding-left: 25px !important;
+    padding-right: 0 !important;
+}
 aside a.nav-link.active, aside a.nav-link.active:hover {
     background-color: var(--tblr-navbar-active-bg);
 }
@@ -290,4 +307,21 @@ div.tab-container ul li.nav-item .active {
 [data-bs-theme=dark] .select_and_order_selected li {
     background-color: var(--tblr-primary-border-subtle);
     border: none !important;
+}
+
+/*repeatable fields*/
+[data-bs-theme=dark] .repeatable-element {
+    background-color: var(--tblr-primary-border-subtle) !important;
+}
+
+/*browse field*/
+[data-bs-theme=dark] button.browse {
+    background-color: var(--tblr-primary-border-subtle);
+    color: var(--tblr-light-text)
+}
+
+/*input file*/
+[data-bs-theme=dark] .backstrap-file-label {
+    background-color: var(--tblr-primary-border-subtle) !important;
+    border-color: var(--tblr-card-head);
 }
