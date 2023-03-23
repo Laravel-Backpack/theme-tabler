@@ -4,10 +4,11 @@
 
 <head>
     @include(backpack_view('inc.head'))
-
 </head>
 
 <body class="{{ backpack_theme_config('classes.body') }}">
+
+@basset(base_path('vendor/backpack/theme-tabler/resources/assets/js/theming.js'))
 
 <div class="page">
     @include(backpack_view('inc.sidebar'))

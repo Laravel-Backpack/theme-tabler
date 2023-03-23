@@ -40,7 +40,6 @@ table .table-hover tbody tr:hover td {
     box-shadow: none !important;
 }
 
-
 .table-hover tbody tr td a.btn.btn-sm.btn-link i {
     margin-right: 3px;
 }
@@ -157,8 +156,13 @@ span.badge.bg-warning {
     color: var(--tblr-dark) !important;
 }
 
-/*/aside*/
+aside li.nav-item a.nav-link i,
+aside div.dropdown-menu a.dropdown-item i {
+    margin-right: 7px;
+    font-size: 16px;
+}
 
+/*/aside*/
 [data-bs-theme=light] .btn-link, [data-bs-theme=light] a:not(.btn) a:not([role=presentation]) {
     color: var(--tblr-primary);
 }
@@ -374,4 +378,20 @@ div.dtr-modal {
 
 footer {
     padding-top: 20px;
+}
+
+/*bulk buttons*/
+#bottom_buttons a.btn.btn-sm {
+    padding: 5px 10px;
+}
+
+[data-bs-theme=dark] #crudTable_wrapper table tbody tr td input[type=editable_text],
+[data-bs-theme=dark] #crudTable_wrapper table tbody tr td select {
+    color: var(--tblr-light-text);
+    border-bottom: 1px dashed var(--tblr-gray-700) !important;
+}
+
+[data-bs-theme=dark] #crudTable_wrapper table tbody tr td input[type=editable_text]:focus {
+    --bs-table-accent-bg: none !important;
+    box-shadow: none !important;
 }
