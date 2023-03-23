@@ -181,32 +181,32 @@
     border-color: var(--tblr-light-border-subtle) !important;
 }
 
-[data-bs-theme=dark] .card-footer a:hover .text-primary {
+.card-footer a:hover .text-primary {
     text-decoration: underline;
     text-decoration-color: var(--tblr-primary);
 }
 
-[data-bs-theme=dark] .card-footer a:hover .text-secondary {
+.card-footer a:hover .text-secondary {
     text-decoration: underline;
     text-decoration-color: var(--tblr-secondary);
 }
 
-[data-bs-theme=dark] .card-footer a:hover .text-success {
+.card-footer a:hover .text-success {
     text-decoration: underline;
     text-decoration-color: var(--tblr-success);
 }
 
-[data-bs-theme=dark] .card-footer a:hover .text-danger {
+.card-footer a:hover .text-danger {
     text-decoration: underline;
     text-decoration-color: var(--tblr-danger);
 }
 
-[data-bs-theme=dark] .card-footer a:hover .text-warning {
+.card-footer a:hover .text-warning {
     text-decoration: underline;
     text-decoration-color: var(--tblr-warning);
 }
 
-[data-bs-theme=dark] .card-footer a:hover .text-info {
+.card-footer a:hover .text-info {
     text-decoration: underline;
     text-decoration-color: var(--tblr-info);
 }
