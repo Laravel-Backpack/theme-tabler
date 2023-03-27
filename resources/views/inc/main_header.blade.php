@@ -4,4 +4,5 @@
             @include(backpack_view('inc.menu'))
         </div>
     </header>
+    @includeWhen(config('backpack.theme-tabler.nav_position') === 'top', backpack_view('inc.topbar'))
 </div>

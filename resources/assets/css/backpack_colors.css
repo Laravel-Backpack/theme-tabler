@@ -354,3 +354,7 @@
 #crudTable_wrapper .table-striped > tbody > tr:nth-of-type(odd) > * {
     box-shadow: none;
 }
+
+[data-bs-theme=dark] header.top div.navbar-collapse div.navbar {
+    background-color: var(--tblr-table-hover-bg-new);
+}

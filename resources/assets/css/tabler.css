@@ -6,7 +6,7 @@ header .sidebar-toggler i {
     color: var(--tblr-light-text);
 }
 
-.navbar-collapse .dropdown-toggle:after {
+.navbar-collapse .dropdown-toggle:after, a.actions-buttons-column:after {
     all: unset;
     color: var(--tblr-dark-text);
     font-family: "Line Awesome Free";
@@ -138,6 +138,17 @@ aside .navbar-nav .nav-item.dropdown span.badge {
     margin-left: 7px;
 }
 
+header.top div ul.navbar-nav li.nav-item a.nav-link span.badge {
+    transform: none;
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: absolute;
+    font-size: 10px;
+    right: -5px;
+    top: -5px;
+}
+
 [data-bs-theme=dark] aside .navbar-collapse .dropdown-toggle:hover:after {
     color: var(--tblr-primary);
 }
@@ -157,7 +168,9 @@ span.badge.bg-warning {
 }
 
 aside li.nav-item a.nav-link i,
-aside div.dropdown-menu a.dropdown-item i {
+aside div.dropdown-menu a.dropdown-item i,
+header.top div ul.navbar-nav li.nav-item a.nav-link i,
+header.top div.dropdown-menu a.dropdown-item i {
     margin-right: 7px;
     font-size: 16px;
 }

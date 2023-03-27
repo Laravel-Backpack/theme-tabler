@@ -11,15 +11,14 @@
 @basset(base_path('vendor/backpack/theme-tabler/resources/assets/js/theming.js'))
 
 <div class="page">
-    @include(backpack_view('inc.sidebar'))
+    @includeWhen(config('backpack.theme-tabler.nav_position') === 'left', backpack_view('inc.sidebar'))
 
     <div class="page-wrapper">
 
         @include(backpack_view('inc.main_header'))
 
-        <div class="app-body flex-grow-1 px-2">
-
-            <main class="main">
+        <div class="page-body">
+            <main class="@if(config('backpack.theme-tabler.nav_position') === 'left') main app-body flex-grow-1 px-2 @else container-xl @endif">
 
                 @yield('before_breadcrumbs_widgets')
 
@@ -38,9 +37,7 @@
                     @yield('after_content_widgets')
 
                 </div>
-
             </main>
-
         </div>
 
         <footer class="{{ config('backpack.base.footer_class') }}">
