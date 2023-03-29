@@ -409,33 +409,33 @@ footer {
     box-shadow: none !important;
 }
 
-a.bp-action-button {
+a.actions-buttons-column {
     border: none;
     background-color: var(--tblr-gray-200);
     --tblr-btn-active-bg: var(--tblr-gray-600);
 }
 
-a.bp-action-button:hover {
+a.actions-buttons-column:hover {
     background-color: var(--tblr-gray-600);
 }
 
-a.bp-action-button:hover:after,
-a.bp-action-button.show:after {
+a.actions-buttons-column:hover:after,
+a.actions-buttons-column.show:after {
     color: var(--tblr-light-text);
 }
 
-[data-bs-theme=dark] a.bp-action-button {
+[data-bs-theme=dark] a.actions-buttons-column {
     border: none;
     background-color: var(--tblr-gray-800);
     color: var(--tblr-dark-text);
     --tblr-btn-active-bg: var(--tblr-gray-800);
 }
 
-[data-bs-theme=dark] a.bp-action-button:hover {
+[data-bs-theme=dark] a.actions-buttons-column:hover {
     background-color: var(--tblr-gray-900);
 }
 
-[data-bs-theme=dark] a.bp-action-button:hover:after,
-[data-bs-theme=dark] a.bp-action-button.show:after {
+[data-bs-theme=dark] a.actions-buttons-column:hover:after,
+[data-bs-theme=dark] a.actions-buttons-column.show:after {
     color: var(--tblr-dark-text);
 }
