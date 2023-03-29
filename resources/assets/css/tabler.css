@@ -408,3 +408,34 @@ footer {
     --bs-table-accent-bg: none !important;
     box-shadow: none !important;
 }
+
+a.bp-action-button {
+    border: none;
+    background-color: var(--tblr-gray-200);
+    --tblr-btn-active-bg: var(--tblr-gray-600);
+}
+
+a.bp-action-button:hover {
+    background-color: var(--tblr-gray-600);
+}
+
+a.bp-action-button:hover:after,
+a.bp-action-button.show:after {
+    color: var(--tblr-light-text);
+}
+
+[data-bs-theme=dark] a.bp-action-button {
+    border: none;
+    background-color: var(--tblr-gray-800);
+    color: var(--tblr-dark-text);
+    --tblr-btn-active-bg: var(--tblr-gray-800);
+}
+
+[data-bs-theme=dark] a.bp-action-button:hover {
+    background-color: var(--tblr-gray-900);
+}
+
+[data-bs-theme=dark] a.bp-action-button:hover:after,
+[data-bs-theme=dark] a.bp-action-button.show:after {
+    color: var(--tblr-dark-text);
+}
