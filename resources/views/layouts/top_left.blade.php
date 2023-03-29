@@ -6,19 +6,19 @@
     @include(backpack_view('inc.head'))
 </head>
 
-<body class="{{ backpack_theme_config('classes.body') }}">
+<body class="o-auto {{ backpack_theme_config('classes.body') }}">
 
 @basset(base_path('vendor/backpack/theme-tabler/resources/assets/js/theming.js'))
 
 <div class="page">
-    @includeWhen(config('backpack.theme-tabler.nav_position') === 'left', backpack_view('inc.sidebar'))
+    @includeWhen(config('backpack.theme-tabler.layout.menu') === 'vertical', backpack_view('inc.menu-vertical'))
 
     <div class="page-wrapper">
 
         @include(backpack_view('inc.main_header'))
 
         <div class="page-body">
-            <main class="@if(config('backpack.theme-tabler.nav_position') === 'left') main app-body flex-grow-1 px-2 @else container-xl @endif">
+            <main class="{{ config('backpack.theme-tabler.classes.main') }}">
 
                 @yield('before_breadcrumbs_widgets')
 
@@ -40,7 +40,7 @@
             </main>
         </div>
 
-        <footer class="{{ config('backpack.base.footer_class') }}">
+        <footer class="{{ config('backpack.theme-tabler.classes.footer') }}">
             @include(backpack_view('inc.footer'))
         </footer>
     </div>

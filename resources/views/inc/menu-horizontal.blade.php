@@ -1,4 +1,4 @@
-<header class="navbar-expand-md top">
+<header class="{{ backpack_theme_config('classes.topbar') }}">
     <div class="collapse navbar-collapse" id="navbar-menu">
         <div class="navbar navbar-light">
             <div class="container-xl">
