@@ -20,8 +20,10 @@ return [
 
     // Control where we position the menu and its overall behaviour
     'layout' => [
-        'menu' => 'vertical', // horizontal, vertical
-        'use-sticky-header' => true, // this includes the top-header (always present) and the menu-header when set as horizontal
+        'menu' => 'horizontal-overlap', // horizontal, vertical, horizontal-overlap
+        'use-sticky-header' => true, // this fixes the top-header (always present) and the menu-header when set as "horizontal"
+        // "use-sticky-header" defaults to false when using "horizontal-overlap"
+        'use-fluid-containers' => false, // if true, the content area will take the whole screen width
     ],
 
     // -------
@@ -31,13 +33,10 @@ return [
     // These can help make the admin panel look similar to your project's design.
     'classes' => [
 
-        'top-header' => 'd-print-none px-3 navbar navbar-expand-md navbar-light',
+        'top-header' => 'px-3 navbar navbar-expand-md navbar-dark',
         // For background colors use: bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info, bg-blue,
-        //bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white
+        // bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white
         // For links to be visible on different background colors use: "navbar-dark", "navbar-light"
-
-        'main' => 'container-xl',
-        // Use "main app-body flex-grow-1 px-2" for a fluid container that uses the full width of your screen
 
         'sidebar' => 'navbar navbar-vertical navbar-expand-lg navbar-dark',
         // Applies only for Vertical Menu Layout
@@ -45,15 +44,17 @@ return [
         //      - Remove "navbar-dark/light"
         //      - Remove "navbar-light/dark" from 'top-header' and instead use "bg-light"
         // You can also add a background class like bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success,
-        //bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan
+        // bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan
 
         'topbar' => 'navbar-expand-md top',
 
-        'footer' => 'app-footer d-print-none',
-        // hide it with d-none
-        // change background color with bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info,
-        //bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white
+        'menu-horizontal' => 'navbar navbar-expand-md navbar-dark',
 
+        'footer' => 'footer',
+        // Make transparent with footer-transparent
+        // Hide it with d-none
+        // Change background color with bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info,
+        // bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white
     ],
 
 ];

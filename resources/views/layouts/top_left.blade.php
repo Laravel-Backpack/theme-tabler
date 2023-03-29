@@ -18,7 +18,7 @@
         @include(backpack_view('inc.main_header'))
 
         <div class="page-body">
-            <main class="{{ config('backpack.theme-tabler.classes.main') }}">
+            <main class="{{ config('backpack.theme-tabler.layout.use-fluid-containers') ? 'container-fluid' : 'container-xl' }}">
 
                 @yield('before_breadcrumbs_widgets')
 
@@ -40,9 +40,7 @@
             </main>
         </div>
 
-        <footer class="{{ config('backpack.theme-tabler.classes.footer') }}">
-            @include(backpack_view('inc.footer'))
-        </footer>
+        @include(backpack_view('inc.footer'))
     </div>
 </div>
 
