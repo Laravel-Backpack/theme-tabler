@@ -1,6 +1,6 @@
 @if (backpack_theme_config('show_powered_by') || backpack_theme_config('developer_link'))
-    <footer class="d-print-none {{ backpack_theme_config('classes.footer') }}">
-        <div class="{{ \Backpack\ThemeTabler\ThemeOptions::shouldUseFluidContainers() ? 'container-fluid' : 'container-xl' }}">
+    <footer class="d-print-none {{ backpack_theme_config('classes.footer') ?? 'footer' }}">
+        <div class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
             <div class="@if (backpack_theme_config('developer_link') && backpack_theme_config('developer_name') && backpack_theme_config('show_powered_by')) row @endif text-center align-items-center flex-row-reverse">
                 @if (backpack_theme_config('show_powered_by'))
                     <div class="col-lg-auto ms-lg-auto">

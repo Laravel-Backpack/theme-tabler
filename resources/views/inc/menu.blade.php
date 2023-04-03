@@ -25,7 +25,7 @@
         @endif
     @else
         {{-- Topbar. Contains the right part --}}
-        @includeWhen(\Backpack\ThemeTabler\ThemeOptions::shouldShowColorModeSwitcher(), backpack_view('inc.switch_theme'))
+        @includeWhen(backpack_theme_config('options.showColorModeSwitcher'), backpack_view('inc.switch_theme'))
         @include(backpack_view('inc.topbar_right_content'))
         @include(backpack_view('inc.menu_user_dropdown'))
     @endif

@@ -8,34 +8,26 @@
 
 <body class="o-auto {{ backpack_theme_config('classes.body') }}">
 
-@include(backpack_view('inc.theming'))
+@include(backpack_view('inc.color-mode'))
 
 <div class="page">
-    @includeWhen(!\Backpack\ThemeTabler\ThemeOptions::isHorizontalLayout(), backpack_view('inc.menu-vertical'))
-
     <div class="page-wrapper">
 
-        @include(backpack_view('inc.main_header'))
+        @include(backpack_view('inc.horizontal_overlap.header'))
+        @include(backpack_view('inc.horizontal_overlap.menu'))
 
         <div class="page-body">
-            <main class="{{ \Backpack\ThemeTabler\ThemeOptions::shouldUseFluidContainers() ? 'container-fluid' : 'container-xl' }}">
+            <main class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
 
                 @yield('before_breadcrumbs_widgets')
-
                 @includeWhen(isset($breadcrumbs), backpack_view('inc.breadcrumbs'))
-
                 @yield('after_breadcrumbs_widgets')
-
                 @yield('header')
 
                 <div class="container-fluid animated fadeIn">
-
                     @yield('before_content_widgets')
-
                     @yield('content')
-
                     @yield('after_content_widgets')
-
                 </div>
             </main>
         </div>

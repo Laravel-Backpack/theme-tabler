@@ -1,4 +1,4 @@
-@extends(backpack_view('layouts.top_left'))
+@extends(backpack_view('layouts.' . backpack_theme_config('layout')))
 
 @php
 	// Merge widgets that were fluently declared with widgets declared without the fluent syntax: 

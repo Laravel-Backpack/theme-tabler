@@ -14,21 +14,27 @@ return [
     */
 
     /**
-     * LAYOUT
-     * Control where to position the menu and its overall behaviour
+     * 1st layer pf customization
+     *
+     * Simple pick a layout and let Backpack decide the best look for it.
+     * No extra step is required.
+     *
+     * Where should the menu be positioned?
      */
-    'layout' => [
-        /**
-         * Where should the menu be positioned?
-         * @see \Backpack\ThemeTabler\ThemeOptions::LAYOUT_MENU_TYPES
-         */
-        'type' => \Backpack\ThemeTabler\ThemeOptions::LAYOUT_MENU_HORIZONTAL_OVERLAP,
+    'layout' => 'horizontal_overlap', // horizontal, vertical, horizontal_overlap
+
+    /**
+     * 2nd Layer of customization
+     *
+     * If you need to further customize the way your panel looks,
+     * these options will help you achieve that.
+     */
+    'options' => [
 
         /**
          * The color mode used by default.
-         * @see \Backpack\ThemeTabler\ThemeOptions::COLOR_MODES
          */
-        'defaultColorMode' => \Backpack\ThemeTabler\ThemeOptions::COLOR_MODE_DARK,
+        'defaultColorMode' => 'dark', // light, dark
 
         /**
          * When true, a switch is displayed to let admins choose their favorite theme mode.
@@ -55,8 +61,10 @@ return [
     ],
 
     /**
-     * CLASSES
-     * These can help make the admin panel look similar to your project's design.
+     * 3rd Layer of customization
+     *
+     * In case the first two steps were not enough, here you have full control over
+     * the classes that make up the look of your panel.
      */
     'classes' => [
         /**
@@ -65,8 +73,9 @@ return [
          * bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white.
          *
          * For links to be visible on different background colors use: "navbar-dark", "navbar-light".
+         *
          */
-        'topHeader' => 'px-3 navbar navbar-expand-md navbar-dark',
+        'topHeader' => null,
 
         /**
          * Applies only for Vertical Menu Layout
@@ -76,17 +85,17 @@ return [
          * You can also add a background class like bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success,
          * bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan
          */
-        'sidebar' => 'navbar navbar-vertical navbar-expand-lg navbar-dark',
+        'sidebar' => null,
 
         /**
          * Used in the top container menu when the layout is of horizontal type.
          */
-        'menuHorizontalContainer' => 'navbar-expand-md top',
+        'menuHorizontalContainer' => null,
 
         /**
          * Used in the top menu content when the layout is of horizontal type.
          */
-        'menuHorizontalContent' => 'navbar navbar-expand-md navbar-dark',
+        'menuHorizontalContent' => null,
 
         /**
          * Make transparent with footer-transparent.
@@ -95,6 +104,6 @@ return [
          * Change background color with bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info,
          * bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white.
          */
-        'footer' => 'footer',
+        'footer' => null,
     ],
 ];
