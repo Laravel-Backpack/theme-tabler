@@ -1,7 +1,9 @@
-<header class="{{ backpack_theme_config('classes.topbar') }}">
+<header class="{{ backpack_theme_config('classes.menuHorizontalContainer') }}">
     <div class="collapse navbar-collapse" id="navbar-menu">
-        <div class="d-print-none {{ backpack_theme_config('classes.menu-horizontal') }} @if(config('backpack.theme-tabler.layout.menu') === 'horizontal-overlap') navbar-overlap @endif">
-            <div class="{{ config('backpack.theme-tabler.layout.use-fluid-containers') ? 'container-fluid' : 'container-xl' }}">
+        <div class="d-print-none {{ backpack_theme_config('classes.menuHorizontalContent') }}
+            @if(\Backpack\ThemeTabler\ThemeOptions::isHorizontalOverlapLayout() && request()->route()->getName() === 'backpack.dashboard') navbar-overlap @endif"
+        >
+            <div class="{{ \Backpack\ThemeTabler\ThemeOptions::shouldUseFluidContainers() ? 'container-fluid' : 'container-xl' }}">
                 <ul class="navbar-nav">
                     @include(backpack_view('inc.sidebar_content'))
                 </ul>

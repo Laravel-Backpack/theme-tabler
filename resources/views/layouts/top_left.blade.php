@@ -8,17 +8,17 @@
 
 <body class="o-auto {{ backpack_theme_config('classes.body') }}">
 
-@basset(base_path('vendor/backpack/theme-tabler/resources/assets/js/theming.js'))
+@include(backpack_view('inc.theming'))
 
 <div class="page">
-    @includeWhen(config('backpack.theme-tabler.layout.menu') === 'vertical', backpack_view('inc.menu-vertical'))
+    @includeWhen(!\Backpack\ThemeTabler\ThemeOptions::isHorizontalLayout(), backpack_view('inc.menu-vertical'))
 
     <div class="page-wrapper">
 
         @include(backpack_view('inc.main_header'))
 
         <div class="page-body">
-            <main class="{{ config('backpack.theme-tabler.layout.use-fluid-containers') ? 'container-fluid' : 'container-xl' }}">
+            <main class="{{ \Backpack\ThemeTabler\ThemeOptions::shouldUseFluidContainers() ? 'container-fluid' : 'container-xl' }}">
 
                 @yield('before_breadcrumbs_widgets')
 

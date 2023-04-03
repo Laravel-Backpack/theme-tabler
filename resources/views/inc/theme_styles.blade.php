@@ -13,6 +13,8 @@
 true, [], 'style') --}}
 
 {{-- Custom Backpack Rules --}}
+@if(\Backpack\ThemeTabler\ThemeOptions::shouldUseBackpackColorSkin())
 @basset(base_path('vendor/backpack/theme-tabler/resources/assets/css/backpack_colors.css'))
+@endif
 @basset(base_path('vendor/backpack/theme-tabler/resources/assets/css/tabler.css'))
 @basset(base_path('vendor/backpack/crud/src/resources/assets/css/common.css'))
