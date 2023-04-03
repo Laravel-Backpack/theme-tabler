@@ -14,7 +14,7 @@ return [
     */
 
     /**
-     * 1st layer pf customization
+     * 1st layer of customization
      *
      * Simple pick a layout and let Backpack decide the best look for it.
      * No extra step is required.
@@ -106,4 +106,15 @@ return [
          */
         'footer' => null,
     ],
+
+    /**
+     * 4th Layer of customization
+     *
+     * Alright, if nothing so far met your need, then you still have an easy way to build
+     * a custom layout using the already existing components of this theme.
+     *
+     * 1. Create a new blade file in resources/views/layouts/your-custom-layout.blade.php
+     * 2. Replace the value of layout on this file with "your-custom-layout"
+     * 3. Customize the blade and place components such as sidebar, header, top-bar, where you need them!
+     */
 ];
