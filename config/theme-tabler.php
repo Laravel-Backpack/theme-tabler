@@ -21,7 +21,19 @@ return [
      *
      * Where should the menu be positioned?
      */
-    'layout' => 'horizontal_overlap', // horizontal, vertical, horizontal_overlap
+    'layout' => 'horizontal',
+    // horizontal
+    // horizontal_dark
+    // horizontal_overlap
+    // vertical
+    // vertical_transparent
+    // right_vertical
+    // right_vertical_transparent
+    // navbar_dark
+    // navbar_sticky
+    // rtl_mode
+    // fluid
+    // fluid_vertical
 
     /**
      * 2nd Layer of customization
@@ -30,6 +42,13 @@ return [
      * these options will help you achieve that.
      */
     'options' => [
+        /**
+         * When using horizontal_overlap layout, the overlap effect is not applied to all pages, but only a few (those that look nice).
+         * Indicate the urls that should use an overlap effect — we include the dashboard as an example.
+         */
+        'urlsUsingOverLapEffect' => [
+            backpack_url('dashboard'),
+        ],
 
         /**
          * The color mode used by default.

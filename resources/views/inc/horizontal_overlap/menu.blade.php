@@ -1,6 +1,10 @@
+@php
+  $shouldApplyOverlapEffect = in_array(url()->current(), backpack_theme_config('options.urlsUsingOverLapEffect') ?? []);
+@endphp
+
 <header class="{{ backpack_theme_config('classes.menuHorizontalContainer') ?? 'navbar-expand-lg top' }}">
     <div class="collapse navbar-collapse" id="navbar-menu">
-        <div class="d-print-none {{ backpack_theme_config('classes.menuHorizontalContent') ?? 'navbar navbar-expand-lg navbar-dark navbar-overlap' }}">
+        <div class="d-print-none {{ backpack_theme_config('classes.menuHorizontalContent') ?? 'navbar navbar-expand-lg navbar-dark' }} {{ $shouldApplyOverlapEffect ? 'navbar-overlap' : '' }}">
             <div class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
                 <ul class="navbar-nav">
                     @include(backpack_view('inc.sidebar_content'))

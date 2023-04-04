@@ -2,28 +2,39 @@
     const defaultColorMode = window.localStorage.getItem('mode')
         ? window.localStorage.getItem('mode')
         : '{{ backpack_theme_config('options.defaultColorMode') ?? 'light' }}';
+    const body = document.getElementsByTagName('body')[0];
+    const html = document.getElementsByTagName('html')[0];
 
-    setTheme(defaultColorMode);
+    // Allow users to subscribe to an event that listens for changes in the color mode
+    // and adjust what's been displayed as needed (like images, etc)
+    colorMode = {
+        value: null,
+        set(theme) {
+            const previousTheme = theme === 'light'
+                ? 'dark'
+                : 'light';
 
-    function switchTheme() {
-        const mode = window.localStorage.getItem('mode');
-        !mode || mode === 'light'
-            ? setTheme('dark')
-            : setTheme('light');
+            html.dataset.bsTheme = theme;
+            body.classList.remove('theme-' + previousTheme);
+            body.classList.add('theme-' + theme);
+
+            window.localStorage.setItem('mode', theme);
+
+            this.value = theme;
+            this.colorModeListener(theme);
+        },
+        get() {
+            return this.value;
+        },
+        switch: function () {
+            this.set(this.value === 'light' ? 'dark' : 'light');
+        },
+        colorModeListener: function (theme) {
+        },
+        registerListener: function (listener) {
+            this.colorModeListener = listener;
+        }
     }
 
-    function setTheme(theme) {
-        const body = document.getElementsByTagName('body')[0];
-        const previousTheme = theme === 'light'
-            ? 'dark'
-            : 'light';
-
-        const html = document.getElementsByTagName('html')[0];
-        html.dataset.bsTheme = theme;
-
-        body.classList.remove('theme-' + previousTheme);
-        body.classList.add('theme-' + theme);
-
-        window.localStorage.setItem('mode', theme);
-    }
+    colorMode.set(defaultColorMode);
 </script>
