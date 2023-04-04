@@ -3,6 +3,7 @@
 namespace Backpack\ThemeTabler;
 
 use Backpack\CRUD\ViewNamespaces;
+use Backpack\Basset\Facades\Basset;
 
 /**
  * This trait automatically loads package stuff, if they're present
@@ -19,7 +20,7 @@ trait AutomaticServiceProvider
      * @var string
      */
     protected string $path;
-    
+
     public function __construct($app)
     {
         $this->app = $app;
@@ -73,6 +74,9 @@ trait AutomaticServiceProvider
                     ViewNamespaces::addFor($viewNamespace, $this->vendorNameDotPackageName()."::{$viewNamespace}");
                 }
             }
+
+            // Add basset view path
+            Basset::addViewPath($this->packageViewsPath());
         }
 
         if ($this->packageDirectoryExistsAndIsNotEmpty('database/migrations')) {
@@ -120,6 +124,9 @@ trait AutomaticServiceProvider
             $this->publishes([
                 $this->packageViewsPath() => $this->publishedViewsPath(),
             ], 'views');
+
+            // Add basset view path
+            Basset::addViewPath($this->packageViewsPath());
         }
 
         // Publishing assets.
