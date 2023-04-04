@@ -1,7 +1,7 @@
 @extends(backpack_view('blank'))
 
 @php
-    if (config('show_getting_started')) {
+    if (backpack_theme_config('show_getting_started')) {
         $widgets['before_content'][] = [
             'type'        => 'view',
             'view'        => 'backpack::inc.getting_started',
