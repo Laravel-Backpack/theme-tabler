@@ -26,6 +26,7 @@ return [
     // horizontal_dark
     // horizontal_overlap
     // vertical
+    // vertical_dark
     // vertical_transparent
     // right_vertical
     // right_vertical_transparent

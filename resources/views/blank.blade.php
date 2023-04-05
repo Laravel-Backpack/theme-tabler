@@ -1,7 +1,7 @@
 @extends(backpack_view('layouts.' . backpack_theme_config('layout')))
 
 @php
-	// Merge widgets that were fluently declared with widgets declared without the fluent syntax: 
+	// Merge widgets that were fluently declared with widgets declared without the fluent syntax:
 	// - $data['widgets']['before_content']
 	// - $data['widgets']['after_content']
 	if (isset($widgets)) {
