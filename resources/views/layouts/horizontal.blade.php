@@ -8,14 +8,14 @@
 
 <body class="o-auto {{ backpack_theme_config('classes.body') }}">
 
-@include(backpack_view('inc.color-mode'))
+@include(backpack_view('layouts.partials.light-dark-mode'))
 
 <div class="page">
     <div class="page-wrapper">
 
         <div class="@if(backpack_theme_config('options.useStickyHeader')) sticky-top @endif">
-            @include(backpack_view('inc.horizontal.header'))
-            @include(backpack_view('inc.horizontal.menu'))
+            @include(backpack_view('layouts._horizontal.header_container'))
+            @include(backpack_view('layouts._horizontal.menu_container'))
         </div>
 
         <div class="page-body">

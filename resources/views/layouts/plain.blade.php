@@ -1,27 +1,46 @@
 <!DOCTYPE html>
+
 <html lang="{{ app()->getLocale() }}" dir="{{ backpack_theme_config('html_direction') }}">
+
 <head>
     @include(backpack_view('inc.head'))
 </head>
-<body class="app flex-row align-items-center">
 
-  @yield('header')
+<body class="o-auto {{ backpack_theme_config('classes.body') }}">
 
-  <div class="container">
-  @yield('content')
-  </div>
+@include(backpack_view('layouts.partials.light-dark-mode'))
 
-  <footer class="app-footer sticky-footer">
-    @include(backpack_view('inc.footer'))
-  </footer>
+<div class="page">
 
-  @yield('before_scripts')
-  @stack('before_scripts')
+    <div class="page-wrapper">
 
-  @include(backpack_view('inc.scripts'))
+        <div class="page-body">
+            <main class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
 
-  @yield('after_scripts')
-  @stack('after_scripts')
+                @yield('before_breadcrumbs_widgets')
+                @includeWhen(isset($breadcrumbs), backpack_view('inc.breadcrumbs'))
+                @yield('after_breadcrumbs_widgets')
 
+                <div class="container-fluid animated fadeIn">
+                    @yield('before_content_widgets')
+                    @yield('content')
+                    @yield('after_content_widgets')
+                </div>
+            </main>
+        </div>
+
+        <footer class="app-footer sticky-footer">
+            @include(backpack_view('inc.footer'))
+        </footer>
+    </div>
+</div>
+
+@yield('before_scripts')
+@stack('before_scripts')
+
+@include(backpack_view('inc.scripts'))
+
+@yield('after_scripts')
+@stack('after_scripts')
 </body>
 </html>

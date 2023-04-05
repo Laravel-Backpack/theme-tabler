@@ -2,8 +2,9 @@
     <aside class="{{ backpack_theme_config('classes.sidebar') ?? 'navbar navbar-vertical navbar-expand-lg navbar-dark' }}">
         <div class="container-fluid">
             <ul class="nav navbar-nav d-flex flex-row align-items-center justify-content-between w-100 d-block d-lg-none">
+                @include(backpack_view('layouts.partials.mobile_toggle_btn'), ['forceWhiteLabelText' => true])
                 <div class="d-flex flex-row align-items-center">
-                    @includeWhen(backpack_theme_config('options.showColorModeSwitcher'), backpack_view('inc.switch_theme'))
+                    @includeWhen(backpack_theme_config('options.showColorModeSwitcher'), backpack_view('layouts.partials.switch_theme'))
                     @include(backpack_view('inc.menu_user_dropdown'))
                 </div>
             </ul>
@@ -12,7 +13,7 @@
                     {!! backpack_theme_config('project_logo') !!}
                 </a>
             </h1>
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="mobile-menu">
                 <ul class="navbar-nav pt-lg-3">
                     <li class="px-3 fw-bold">{{ ucfirst(strtolower(trans('backpack::base.administration'))) }}</li>
                     @include(backpack_view('inc.sidebar_content'))
