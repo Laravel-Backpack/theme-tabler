@@ -35,11 +35,6 @@ button.buttons-collection:after {
     color: var(--tblr-gray-200);
 }
 
-/* Fix table row hover */
-table .table-hover tbody tr:hover td {
-    box-shadow: none !important;
-}
-
 .table-hover tbody tr td a.btn.btn-sm.btn-link i {
     margin-right: 3px;
 }
@@ -64,7 +59,7 @@ table .table-hover tbody tr:hover td {
 }
 
 [data-bs-theme=dark] #crudTable_wrapper tbody {
-    background-color: var(--tblr-gray-dark);
+    /*background-color: var(--tblr-gray-dark);*/
 }
 
 [data-bs-theme=dark] #crudTable_wrapper .table-striped > tbody > tr:nth-of-type(odd) > * {
@@ -92,7 +87,7 @@ table .table-hover tbody tr:hover td {
 }
 
 [data-bs-theme=dark] .btn-link, [data-bs-theme=dark] a:not(.btn):not(.nav-link, .dropdown-item) {
-    color: var(--tblr-gray-600) !important;
+    color: var(--tblr-gray-400) !important;
 }
 
 [data-bs-theme=dark] .btn-link:hover, [data-bs-theme=dark] a:not(.btn):hover {
@@ -175,27 +170,10 @@ header.top div.dropdown-menu a.dropdown-item i {
     font-size: 16px;
 }
 
-/*/aside*/
-[data-bs-theme=light] .btn-link, [data-bs-theme=light] a:not(.btn) a:not([role=presentation]) {
-    color: var(--tblr-primary);
-}
-
-[data-bs-theme=light] .btn-link:hover, [data-bs-theme=light] a:not(.btn):hover {
-    background-color: transparent;
-    color: rgb(var(--tblr-primary-rgb)) !important;
-}
-
-[data-bs-theme=dark] .select2-dropdown {
-    border: 0 !important;
-    box-shadow: 0 0 3px var(--tblr-primary) !important;
-}
-
-[data-bs-theme=dark] .nav-item.dropdown.active a {
-    background-color: var(--tblr-gray-700) !important;
-}
-
-.btn-link {
-    color: var(--tblr-primary);
+/*table hover*/
+#crudTable_wrapper .table-striped > tbody > tr:hover > * {
+    box-shadow: none !important;
+    background-color: rgba(var(--tblr-primary-rgb),.1);
 }
 
 [data-bs-theme=light] table#crudTable {
@@ -203,7 +181,7 @@ header.top div.dropdown-menu a.dropdown-item i {
 }
 
 [data-bs-theme=dark] table#crudTable {
-    background-color: var(--tblr-gray-dark);
+    background-color: var(--tblr-bg-surface);
 }
 
 /*filters*/
@@ -219,7 +197,7 @@ header.top div.dropdown-menu a.dropdown-item i {
 }
 
 [data-bs-theme=dark] .navbar-filters .nav-item.active a {
-    background-color: var(--tblr-table-color-bg-darker) !important;
+    background-color: var(--tblr-bg-surface) !important;
 }
 
 [data-bs-theme=dark] .navbar-filters .select2-selection--single {
@@ -260,11 +238,11 @@ header.top div.dropdown-menu a.dropdown-item i {
 
 [data-bs-theme=dark] .daterangepicker .calendar-table {
     border-color: var(--tblr-light-border-subtle);
-    background-color: var(--tblr-table-color-bg-darker);
+    background-color: var(--tblr-bg-surface);
 }
 
 [data-bs-theme=dark] .daterangepicker .calendar-table td.off {
-    background-color: var(--tblr-table-color-bg-lighter);
+    background-color: var(--tblr-bg-surface);
 }
 
 [data-bs-theme=dark] .daterangepicker .calendar-table td.active,
@@ -311,14 +289,14 @@ header.top div.dropdown-menu a.dropdown-item i {
 
 /*reorder*/
 [data-bs-theme=dark] ol.sortable li div, [data-bs-theme=dark] ul.select_and_order_all li {
-    background-color: var(--tblr-table-color-bg-lighter);
+    background-color: var(--tblr-bg-surface);
     color: var(--tblr-light-text);
     border-color: var(--tblr-primary-border-subtle) !important;
 }
 
 /*modal*/
 [data-bs-theme=dark] div.dtr-modal div.dtr-modal-display {
-    background-color: var(--tblr-bg);
+    background-color: var(--tblr-bg-surface);
 }
 
 [data-bs-theme=dark] div.dtr-modal div.dtr-modal-display .dtr-modal-close {
@@ -334,7 +312,7 @@ header.top div.dropdown-menu a.dropdown-item i {
 /*tabbed fields*/
 div.tab-container div.tab-content {
     padding: 25px;
-    background-color: var(--tblr-table-color-bg-darker) !important;
+    background-color: var(--tblr-bg-surface) !important;
     border: none !important;
 }
 
@@ -343,7 +321,7 @@ div.tab-container ul {
 }
 
 div.tab-container ul li.nav-item .active {
-    background-color: var(--tblr-table-color-bg-darker) !important;
+    background-color: var(--tblr-bg-surface) !important;
     --tblr-nav-tabs-border-width: 0 !important;
 }
 
@@ -381,7 +359,7 @@ div.tab-container ul li.nav-item .active {
 /*input file*/
 [data-bs-theme=dark] .backstrap-file-label {
     background-color: var(--tblr-primary-border-subtle) !important;
-    border-color: var(--tblr-card-head);
+    border-color: var(--tblr-bg-surface);
 }
 
 /*modal overlay*/
