@@ -66,7 +66,7 @@ return [
         /**
          * When true, colors will display a beautiful Backpack skin :)
          */
-        'useBackpackColorSkin' => false,
+        'useBackpackColorSkin' => true,
 
         /**
          * Fix the top-header component (present in all layout types) and the menu when the layout type is set as "horizontal".
