@@ -19,22 +19,10 @@ return [
      * Simple pick a layout and let Backpack decide the best look for it.
      * No extra step is required.
      *
-     * Where should the menu be positioned?
+     * Possible values: horizontal, horizontal_dark, horizontal_overlap, vertical,
+     * vertical_dark, vertical_transparent, right_vertical, right_vertical_dark, right_vertical_transparent
      */
     'layout' => 'horizontal',
-    // horizontal
-    // horizontal_dark
-    // horizontal_overlap
-    // vertical
-    // vertical_dark
-    // vertical_transparent
-    // right_vertical
-    // right_vertical_transparent
-    // navbar_dark
-    // navbar_sticky
-    // rtl_mode
-    // fluid
-    // fluid_vertical
 
     /**
      * 2nd Layer of customization
@@ -46,6 +34,7 @@ return [
         /**
          * When using horizontal_overlap layout, the overlap effect is not applied to all pages, but only a few (those that look nice).
          * Indicate the urls that should use an overlap effect — we include the dashboard as an example.
+         * Hint: List, Create, Update operations do not look great with it, but only pages with content that can overlap the header!
          */
         'urlsUsingOverLapEffect' => [
             backpack_url('dashboard'),
