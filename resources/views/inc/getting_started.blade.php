@@ -18,7 +18,7 @@
             <p>Run that in your terminal and <strong>choose <code class="text-primary bg-light p-1 rounded">field</code> when asked which <a href="https://backpackforlaravel.com/docs/5.x/crud-operation-create#validation?ref=getting-started-widget"
               target="_blank">validation type</a> you'd like</strong>. You can now click on the new sidebar item (or <a href="{{ backpack_url('user') }}">here</a>) and you'll be able to see the entries in the <code class="text-primary bg-light p-1 rounded">users</code> table. Now... even though most generated CRUDs work out-of-the-box, they probably won't be <i>exactly</i> what you need. But that's where Backpack shines, in how easy it is to customize.</p>
 
-            <p>To dig a little deeper, <a href="#" data-bs-toggle="collapse" data-target="#customizeUsersCRUD" aria-expanded="true" aria-controls="customizeUsersCRUD">let's make a few changes to the Users CRUD <i class="la la-angle-double-right"></i></a></p>
+            <p>To dig a little deeper, <a href="#" data-bs-toggle="collapse" data-bs-target="#customizeUsersCRUD" aria-expanded="true" aria-controls="customizeUsersCRUD">let's make a few changes to the Users CRUD <i class="la la-angle-double-right"></i></a></p>
 
             <div class="collapse" id="customizeUsersCRUD">
               <p><strong>1. When Listing, let's remove the "password" column</strong> - no point in showing the hash. To do that, go to <code class="text-primary bg-light p-1 rounded">UserCrudController::setupListOperation()</code> and remove the line saying <code class="text-primary bg-light p-1 rounded">CRUD::column('password');</code> - easy-peasy, right?</p>
