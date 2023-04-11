@@ -25,12 +25,6 @@ return [
     'layout' => 'horizontal',
 
     /**
-     * Pick a login page layout.
-     * Possible values: default, illustration, cover
-     */
-    'layout_login' => 'default', // default, illustration, cover
-
-    /**
      * 2nd Layer of customization
      *
      * If you need to further customize the way your panel looks,
