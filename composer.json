@@ -44,6 +44,9 @@
         "test": "vendor/bin/phpunit --testdox"
     },
     "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        },
         "laravel": {
             "providers": [
                 "Backpack\\ThemeTabler\\AddonServiceProvider"
