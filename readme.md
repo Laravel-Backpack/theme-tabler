@@ -10,7 +10,7 @@ The file structure inside this package has changed a bit from Backpack v3-v5. We
 
 ## Screenshots
 
-![Backpack Toggle Field Addon](https://via.placeholder.com/600x250?text=screenshot+needed)
+![all-layouts](https://user-images.githubusercontent.com/33960976/230347568-36f1a08e-6ee5-4534-ace3-9c4b259ca754.gif)
 
 
 ## Installation
