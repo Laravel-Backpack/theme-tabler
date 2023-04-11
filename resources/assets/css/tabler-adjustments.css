@@ -417,3 +417,7 @@ a.actions-buttons-column.show:after {
 [data-bs-theme=dark] a.actions-buttons-column.show:after {
     color: var(--tblr-dark-text);
 }
+
+body {
+    overflow-y: auto !important;
+}
