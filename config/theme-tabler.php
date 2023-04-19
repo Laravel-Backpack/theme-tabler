@@ -61,7 +61,7 @@ return [
          * Fix the top-header component (present in all layout types) and the menu when the layout type is set as "horizontal".
          * This value is skipped when the layout type is horizontal-overlap, using false as default.
          */
-        'useStickyHeader' => true,
+        'useStickyHeader' => false,
 
         /**
          * When true, the content area will take the whole screen width.
