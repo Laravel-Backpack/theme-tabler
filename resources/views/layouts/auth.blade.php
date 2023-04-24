@@ -4,6 +4,15 @@
 
 <head>
     @include(backpack_view('inc.head'))
+    <style>
+        footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background-color: transparent !important;
+            border: none !important;
+        }
+    </style>
 </head>
 
 <body class="o-auto {{ backpack_theme_config('classes.body') }} @if(backpack_theme_config('layout_login') === 'cover') d-flex flex-column theme-light @endif">
@@ -14,6 +23,8 @@
 
 @yield('before_scripts')
 @stack('before_scripts')
+
+@include(backpack_view('inc.footer'))
 
 @include(backpack_view('inc.scripts'))
 
