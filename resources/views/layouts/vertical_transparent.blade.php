@@ -40,6 +40,8 @@
     </div>
 </div>
 
+@yield('modals')
+
 @yield('before_scripts')
 @stack('before_scripts')
 
