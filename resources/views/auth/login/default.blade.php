@@ -1,0 +1,21 @@
+@extends(backpack_view('layouts.auth'))
+
+@section('content')
+    <div class="page page-center">
+        <div class="container container-tight py-4">
+            <div class="text-center mb-4 display-6">
+                {!! backpack_theme_config('project_logo') !!}
+            </div>
+            <div class="card card-md">
+                <div class="card-body pt-0">
+                    @include(backpack_view('auth.login.inc.form'))
+                </div>
+            </div>
+            @if (config('backpack.base.registration_open'))
+                <div class="text-center text-muted mt-4">
+                    <a href="{{ route('backpack.auth.register') }}" tabindex="-1">{{ trans('backpack::base.register') }}</a>
+                </div>
+            @endif
+        </div>
+    </div>
+@endsection

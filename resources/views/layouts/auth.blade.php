@@ -15,7 +15,7 @@
     </style>
 </head>
 
-<body class="o-auto {{ backpack_theme_config('classes.body') }} @if(backpack_theme_config('layout_login') === 'cover') d-flex flex-column theme-light @endif">
+<body class="o-auto {{ backpack_theme_config('classes.body') }} @if(backpack_theme_config('auth_layout') === 'cover') d-flex flex-column theme-light @endif">
 
 @include(backpack_view('layouts.partials.light-dark-mode'))
 

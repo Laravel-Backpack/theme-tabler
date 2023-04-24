@@ -40,7 +40,7 @@ return [
      * Pick a login page layout.
      * Possible values: default, illustration, cover
      */
-    'layout_login' => 'default', // default, illustration, cover
+    'auth_layout' => 'default', // default, illustration, cover
 
     /**
      * 2nd Layer of customization
