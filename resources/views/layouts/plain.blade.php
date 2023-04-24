@@ -29,9 +29,7 @@
             </main>
         </div>
 
-        <footer class="app-footer sticky-footer">
-            @include(backpack_view('inc.footer'))
-        </footer>
+        @include(backpack_view('inc.footer'))
     </div>
 </div>
 
