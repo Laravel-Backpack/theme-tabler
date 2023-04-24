@@ -420,4 +420,5 @@ a.actions-buttons-column.show:after {
 
 body {
     overflow-y: auto !important;
+    scrollbar-gutter: stable;
 }
