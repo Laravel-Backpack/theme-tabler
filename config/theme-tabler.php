@@ -72,7 +72,12 @@ return [
         /**
          * When true, the content area will take the whole screen width.
          */
-        'useFluidContainers' => true,
+        'useFluidContainers' => false,
+
+        /**
+         * When true, the sidebar content for vertical layouts will not scroll with the rest of the content.
+         */
+        'sidebarFixed' => false,
     ],
 
     /**

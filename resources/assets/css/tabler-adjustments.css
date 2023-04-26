@@ -450,3 +450,8 @@ body {
 [data-bs-theme=dark] .sidebar-shortcuts :not(:first-child):not(.hide-theme):before {
     color: var(--tblr-gray-600);
 }
+
+.navbar-vertical:not(.navbar-fixed) {
+    position: absolute !important;
+    overflow-y: scroll;
+}

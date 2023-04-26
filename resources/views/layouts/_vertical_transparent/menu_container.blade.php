@@ -1,5 +1,5 @@
 @if(backpack_auth()->check())
-    <aside class="{{ backpack_theme_config('classes.sidebar') ?? 'navbar navbar-vertical navbar-expand-lg' }}">
+    <aside class="{{ backpack_theme_config('classes.sidebar') ?? 'navbar navbar-vertical navbar-expand-lg' }} @if(backpack_theme_config('options.sidebarFixed')) navbar-fixed @endif">
         <div class="container-fluid">
             <ul class="nav navbar-nav d-flex flex-row align-items-center justify-content-between w-100 d-block d-lg-none">
                 @include(backpack_view('layouts.partials.mobile_toggle_btn'), ['forceWhiteLabelText' => true])
