@@ -439,3 +439,14 @@ body {
 [data-bs-theme=dark] .topbar-transparent {
     background-color: var(--tblr-navbar-bg) !important;
 }
+
+.sidebar-shortcuts :not(:first-child):not(.hide-theme):before {
+    content: "|";
+    color: var(--tblr-gray-300);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+[data-bs-theme=dark] .sidebar-shortcuts :not(:first-child):not(.hide-theme):before {
+    color: var(--tblr-gray-600);
+}

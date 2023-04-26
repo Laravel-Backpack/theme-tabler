@@ -16,10 +16,6 @@
 
     <div class="page-wrapper">
 
-        <div class="@if(backpack_theme_config('options.useStickyHeader')) sticky-top @endif">
-            @include(backpack_view('layouts._vertical_dark.header_container'))
-        </div>
-
         <div class="page-body">
             <main class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
 
