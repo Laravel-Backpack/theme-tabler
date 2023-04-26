@@ -419,6 +419,23 @@ a.actions-buttons-column.show:after {
 }
 
 body {
-    overflow-y: auto !important;
     scrollbar-gutter: stable;
+}
+
+.project-logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.auth-logo-container .project-logo {
+    max-width: 230px;
+    height: auto;
+}
+
+.topbar-transparent {
+    background-color: var(--tblr-gray-100) !important;
+}
+
+[data-bs-theme=dark] .topbar-transparent {
+    background-color: var(--tblr-navbar-bg) !important;
 }

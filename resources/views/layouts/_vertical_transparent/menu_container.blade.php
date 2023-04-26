@@ -1,4 +1,4 @@
-@if (backpack_auth()->check())
+@if(backpack_auth()->check())
     <aside class="{{ backpack_theme_config('classes.sidebar') ?? 'navbar navbar-vertical navbar-expand-lg' }}">
         <div class="container-fluid">
             <ul class="nav navbar-nav d-flex flex-row align-items-center justify-content-between w-100 d-block d-lg-none">
@@ -9,7 +9,7 @@
                 </div>
             </ul>
             <h1 class="navbar-brand navbar-brand-autodark d-none d-lg-block align-self-center mb-3">
-                <a class="h2 text-decoration-none" href="{{ url(backpack_theme_config('home_link')) }}" title="{{ backpack_theme_config('project_name') }}">
+                <a class="h2 text-decoration-none mb-0" href="{{ url(backpack_theme_config('home_link')) }}" title="{{ backpack_theme_config('project_name') }}">
                     {!! backpack_theme_config('project_logo') !!}
                 </a>
             </h1>

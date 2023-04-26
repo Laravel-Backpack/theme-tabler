@@ -3,7 +3,7 @@
 @section('content')
     <div class="page page-center">
         <div class="container container-tight py-4">
-            <div class="text-center mb-4 display-6">
+            <div class="text-center mb-4 display-6 auth-logo-container">
                 {!! backpack_theme_config('project_logo') !!}
             </div>
             <div class="card">

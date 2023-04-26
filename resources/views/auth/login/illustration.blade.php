@@ -6,7 +6,7 @@
             <div class="row align-items-center g-4">
                 <div class="col-lg">
                     <div class="container-tight">
-                        <div class="text-center mb-4 display-6">
+                        <div class="text-center mb-4 display-6 auth-logo-container">
                             {!! backpack_theme_config('project_logo') !!}
                         </div>
                         <div class="card card-md">
