@@ -25,7 +25,7 @@
         @endif
     @else
         {{-- Topbar. Contains the right part --}}
-        <li class="nav-item me-2">
+        <li class="nav-item">
             @includeWhen(backpack_theme_config('options.showColorModeSwitcher'), backpack_view('layouts.partials.switch_theme'))
         </li>
         @include(backpack_view('inc.topbar_right_content'))

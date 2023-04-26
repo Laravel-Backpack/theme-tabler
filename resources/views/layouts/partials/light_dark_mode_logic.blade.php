@@ -21,7 +21,7 @@
             window.localStorage.setItem('mode', theme);
 
             this.value = theme;
-            this.colorModeListener();
+            this.colorModeListener(theme);
         },
         get() {
             return this.value;
