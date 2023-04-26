@@ -59,9 +59,10 @@ return [
         'showColorModeSwitcher' => true,
 
         /**
-         * When true, colors will display a beautiful Backpack skin :)
+         * When set to true colors are overridden
+         * @uses resources/assets/css/colors.css
          */
-        'useBackpackColorSkin' => true,
+        'overrideColorSkin' => true,
 
         /**
          * Fix the top-header component (present in "vertical_transparent") and the menu when the layout type is set as "horizontal".

@@ -1,11 +1,11 @@
-@if(backpack_theme_config('options.useBackpackColorSkin'))
-    @basset(base_path('vendor/backpack/theme-tabler/resources/assets/css/tabler-backpack.min.css'))
-@else
-    @basset('https://unpkg.com/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css')
+@basset('https://unpkg.com/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css')
+
+@if(backpack_theme_config('options.overrideColorSkin'))
+    @basset(base_path('vendor/backpack/theme-tabler/resources/assets/css/colors.css'))
 @endif
 
-@basset(base_path('vendor/backpack/theme-tabler/resources/assets/css/tabler-adjustments.css'))
 @basset(base_path('vendor/backpack/crud/src/resources/assets/css/common.css'))
+@basset(base_path('vendor/backpack/theme-tabler/resources/assets/css/tabler.css'))
 
 @basset('https://unpkg.com/animate.css@4.1.1/animate.compat.css')
 @basset('https://unpkg.com/noty@3.2.0-beta-deprecated/lib/noty.css')
