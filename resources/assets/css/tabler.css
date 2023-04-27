@@ -212,6 +212,21 @@ header.top div.dropdown-menu a.dropdown-item i {
     color: var(--tblr-muted) !important;
 }
 
+[data-bs-theme=dark] span.select2-selection.select2-selection--single,
+[data-bs-theme=dark] .select2-selection.select2-selection--multiple ul.select2-selection__rendered {
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: var(--tblr-primary-border-subtle) !important;
+    border-radius: 0 !important;
+}
+
+/*Border radius inputs*/
+span.select2-selection.select2-selection--single,
+.select2-selection.select2-selection--multiple ul.select2-selection__rendered,
+.form-control {
+    border-radius: 0 !important;
+}
+
 [data-bs-theme=dark] .navbar-filters .select2-results ul.select2-results__options li.select2-results__option.select2-results__option--highlighted {
     background-color: var(--tblr-primary);
 }
@@ -458,4 +473,25 @@ body {
 
 [data-bs-theme=dark] .select2-container--bootstrap .select2-dropdown {
     border-color: var(--tblr-border-color) !important;
+}
+
+div.controls {
+    top: -5px;
+}
+
+div.controls button.delete-element {
+    background-color: var(--tblr-danger) !important;
+    color: #fff;
+    border: none;
+}
+
+.repeatable-group {
+    padding-bottom: 12px;
+}
+.add-repeatable-element-button {
+    margin-top: 5px;
+}
+
+form .form-group.required > label:not(:empty):not(.form-check-label)::after {
+    color: var(--tblr-danger) !important;
 }
