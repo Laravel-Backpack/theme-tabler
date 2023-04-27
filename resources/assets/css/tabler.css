@@ -58,10 +58,6 @@ button.buttons-collection:after {
     background-color: var(--tblr-table-bg);
 }
 
-[data-bs-theme=dark] #crudTable_wrapper tbody {
-    /*background-color: var(--tblr-gray-dark);*/
-}
-
 [data-bs-theme=dark] #crudTable_wrapper .table-striped > tbody > tr:nth-of-type(odd) > * {
     color: var(--tblr-table-color);
 }
@@ -76,12 +72,12 @@ button.buttons-collection:after {
 }
 
 /* Headers for operations */
-.main .container-fluid h2 small {
+.page-body .container-fluid h2 small {
     font-size: 15px;
     font-weight: 300;
 }
 
-.main .container-fluid h2 {
+.page-body .container-fluid h2 {
     font-size: 27px;
     font-weight: 400;
 }
@@ -422,6 +418,7 @@ body {
     scrollbar-gutter: stable;
 }
 
+/*Logo*/
 .project-logo {
     max-width: 150px;
     height: auto;
@@ -432,6 +429,7 @@ body {
     height: auto;
 }
 
+/*Adjust topbar*/
 .topbar-transparent {
     background-color: var(--tblr-gray-100) !important;
 }
@@ -440,6 +438,7 @@ body {
     background-color: var(--tblr-navbar-bg) !important;
 }
 
+/*Sidebar shortcuts*/
 .sidebar-shortcuts :not(:first-child):not(.hide-theme):before {
     content: "|";
     color: var(--tblr-gray-300);
@@ -451,7 +450,12 @@ body {
     color: var(--tblr-gray-600);
 }
 
+/*Sidebar fixed or not fixed, that's the question*/
 .navbar-vertical:not(.navbar-fixed) {
     position: absolute !important;
     overflow-y: scroll;
+}
+
+[data-bs-theme=dark] .select2-container--bootstrap .select2-dropdown {
+    border-color: var(--tblr-border-color) !important;
 }
