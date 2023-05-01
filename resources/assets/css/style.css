@@ -495,3 +495,8 @@ div.controls button.delete-element {
 form .form-group.required > label:not(:empty):not(.form-check-label)::after {
     color: var(--tblr-danger) !important;
 }
+
+label {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}

@@ -31,6 +31,19 @@ return [
     'auth_layout' => 'default', // default, illustration, cover
 
     /**
+     * Here you can easily load your own extra css styles.
+     * Note: if you want to customize the style to create your own custom skin colors:
+     *   - make a copy of the file "vendor/backpack/theme-tabler/resources/assets/css/colors.css" into your project
+     *   - adjust colors variables as you wish
+     *   - replace "base_path('vendor/backpack/theme-tabler/resources/assets/css/colors.css')," with the path to the file created above
+     *   - boom!
+     */
+    'styles' => [
+        base_path('vendor/backpack/theme-tabler/resources/assets/css/color-adjustments.css'),
+        base_path('vendor/backpack/theme-tabler/resources/assets/css/colors.css'),
+    ],
+
+    /**
      * 2nd Layer of customization
      *
      * If you need to further customize the way your panel looks,
@@ -59,12 +72,6 @@ return [
         'showColorModeSwitcher' => true,
 
         /**
-         * When set to true colors are overridden
-         * @uses resources/assets/css/colors.css
-         */
-        'overrideColorSkin' => true,
-
-        /**
          * Fix the top-header component (present in "vertical_transparent") and the menu when the layout type is set as "horizontal".
          * This value is skipped when the layout type is horizontal-overlap, using false as default.
          */
@@ -83,7 +90,7 @@ return [
         /**
          * When true, horizontal layouts will display the classic top bar on top to free some space when multiple nav items are used.
          */
-        'displayTopBar' => true,
+        'doubleTopBarInHorizontalLayouts' => true,
     ],
 
     /**

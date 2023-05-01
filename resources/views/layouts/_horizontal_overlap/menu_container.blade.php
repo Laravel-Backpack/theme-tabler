@@ -7,7 +7,7 @@
         <div class="d-print-none {{ backpack_theme_config('classes.menuHorizontalContent') ?? 'navbar navbar-expand-lg navbar-dark' }} {{ $shouldApplyOverlapEffect ? 'navbar-overlap' : '' }}">
             <div class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
                 <ul class="navbar-nav">
-                    @unless(backpack_theme_config('options.displayTopBar'))
+                    @unless(backpack_theme_config('options.doubleTopBarInHorizontalLayouts'))
                         <li>
                             <a class="nav-link" href="{{ backpack_url('dashboard') }}">
                                 {!! backpack_theme_config('project_logo') !!}
@@ -16,7 +16,7 @@
                     @endunless
                     @include(backpack_view('inc.sidebar_content'))
                 </ul>
-                @unless(backpack_theme_config('options.displayTopBar'))
+                @unless(backpack_theme_config('options.doubleTopBarInHorizontalLayouts'))
                     @include(backpack_view('inc.menu'))
                 @endunless
             </div>
