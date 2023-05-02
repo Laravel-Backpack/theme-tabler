@@ -24,7 +24,8 @@
         "Laravel", "Backpack", "Backpack for Laravel", "Backpack Addon", "ThemeTabler"
     ],
     "require": {
-        "backpack/crud": "^5.5|v6.x-dev|^6.0"
+        "backpack/crud": "^5.5|v6.x-dev|^6.0",
+        "backpack/basset": "^0.15.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~9.0",
