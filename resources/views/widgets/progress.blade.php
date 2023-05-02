@@ -5,7 +5,7 @@
 @endphp
 
 @includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_start'))
-<div class="{{ $widget['class'] ?? 'card' }}">
+<div class="{{ $widget['class'] ?? 'card' }} @if($widget['ribbon'] ?? false) border-start-0 @endif">
 
     @if ($widget['ribbon'] ?? false)
         <div class="ribbon ribbon-{{ $widget['ribbon'][0] ?? 'top' }} bg-{{ $accentColor }} @if(($widget['ribbon'][0] ?? '') === 'bottom') mb-3 @endif">

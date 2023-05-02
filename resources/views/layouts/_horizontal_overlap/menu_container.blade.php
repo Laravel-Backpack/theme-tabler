@@ -7,19 +7,31 @@
         <div class="d-print-none {{ backpack_theme_config('classes.menuHorizontalContent') ?? 'navbar navbar-expand-lg navbar-dark' }} {{ $shouldApplyOverlapEffect ? 'navbar-overlap' : '' }}">
             <div class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
                 <ul class="navbar-nav">
+                    @unless(backpack_theme_config('options.doubleTopBarInHorizontalLayouts'))
+                        <li>
+                            <a class="nav-link" href="{{ backpack_url('dashboard') }}">
+                                {!! backpack_theme_config('project_logo') !!}
+                            </a>
+                        </li>
+                    @endunless
                     @include(backpack_view('inc.sidebar_content'))
                 </ul>
+                @unless(backpack_theme_config('options.doubleTopBarInHorizontalLayouts'))
+                    @include(backpack_view('inc.menu'))
+                @endunless
             </div>
         </div>
     </div>
 </header>
 
-<aside class="{{ backpack_theme_config('classes.sidebar') ?? 'navbar navbar-vertical navbar-expand-lg navbar-dark d-block d-lg-none' }}">
+<aside class="navbar navbar-expand-lg navbar-dark d-block d-lg-none">
     <div class="container-fluid">
         <ul class="nav navbar-nav d-flex flex-row align-items-center justify-content-between w-100">
             @include(backpack_view('layouts.partials.mobile_toggle_btn'), ['forceWhiteLabelText' => true])
             <div class="d-flex flex-row align-items-center">
-                @includeWhen(backpack_theme_config('options.showColorModeSwitcher'), backpack_view('layouts.partials.switch_theme'))
+                <li class="nav-item me-2">
+                    @includeWhen(backpack_theme_config('options.showColorModeSwitcher'), backpack_view('layouts.partials.switch_theme'))
+                </li>
                 @include(backpack_view('inc.menu_user_dropdown'))
             </div>
         </ul>

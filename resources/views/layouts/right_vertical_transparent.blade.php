@@ -12,9 +12,13 @@
 
 <div class="page">
 
-    @include(backpack_view('layouts._vertical_dark.menu_container'))
+    @include(backpack_view('layouts._right_vertical_transparent.menu_container'))
 
     <div class="page-wrapper">
+
+        <div class="@if(backpack_theme_config('options.useStickyHeader')) sticky-top @endif">
+            @include(backpack_view('layouts._right_vertical_transparent.header_container'))
+        </div>
 
         <div class="page-body">
             <main class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">

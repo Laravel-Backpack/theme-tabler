@@ -12,7 +12,7 @@
 
 <div class="page">
 
-    @include(backpack_view('layouts._vertical_dark.menu_container'))
+    @include(backpack_view('layouts._right_vertical_dark.menu_container'))
 
     <div class="page-wrapper">
 

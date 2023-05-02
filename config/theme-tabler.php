@@ -19,28 +19,29 @@ return [
      * Simple pick a layout and let Backpack decide the best look for it.
      * No extra step is required.
      *
-     * Where should the menu be positioned?
+     * Possible values: horizontal, horizontal_dark, horizontal_overlap, vertical,
+     * vertical_dark, vertical_transparent (legacy theme), right_vertical, right_vertical_dark, right_vertical_transparent
      */
-    'layout' => 'horizontal',
-    // horizontal
-    // horizontal_dark
-    // horizontal_overlap
-    // vertical
-    // vertical_dark
-    // vertical_transparent
-    // right_vertical
-    // right_vertical_transparent
-    // navbar_dark
-    // navbar_sticky
-    // rtl_mode
-    // fluid
-    // fluid_vertical
+    'layout' => 'vertical_transparent',
 
     /**
      * Pick a login page layout.
      * Possible values: default, illustration, cover
      */
     'auth_layout' => 'default', // default, illustration, cover
+
+    /**
+     * Here you can easily load your own extra css styles.
+     * Note: if you want to customize the style to create your own custom skin colors:
+     *   - make a copy of the file "vendor/backpack/theme-tabler/resources/assets/css/colors.css" into your project
+     *   - adjust colors variables as you wish
+     *   - replace "base_path('vendor/backpack/theme-tabler/resources/assets/css/colors.css')," with the path to the file created above
+     *   - boom!
+     */
+    'styles' => [
+        base_path('vendor/backpack/theme-tabler/resources/assets/css/color-adjustments.css'),
+        base_path('vendor/backpack/theme-tabler/resources/assets/css/colors.css'),
+    ],
 
     /**
      * 2nd Layer of customization
@@ -52,6 +53,7 @@ return [
         /**
          * When using horizontal_overlap layout, the overlap effect is not applied to all pages, but only a few (those that look nice).
          * Indicate the urls that should use an overlap effect — we include the dashboard as an example.
+         * Hint: List, Create, Update operations do not look great with it, but only pages with content that can overlap the header!
          */
         'urlsUsingOverLapEffect' => [
             backpack_url('dashboard'),
@@ -70,20 +72,25 @@ return [
         'showColorModeSwitcher' => true,
 
         /**
-         * When true, colors will display a beautiful Backpack skin :)
-         */
-        'useBackpackColorSkin' => true,
-
-        /**
-         * Fix the top-header component (present in all layout types) and the menu when the layout type is set as "horizontal".
+         * Fix the top-header component (present in "vertical_transparent") and the menu when the layout type is set as "horizontal".
          * This value is skipped when the layout type is horizontal-overlap, using false as default.
          */
-        'useStickyHeader' => true,
+        'useStickyHeader' => false,
 
         /**
          * When true, the content area will take the whole screen width.
          */
         'useFluidContainers' => false,
+
+        /**
+         * When true, the sidebar content for vertical layouts will not scroll with the rest of the content.
+         */
+        'sidebarFixed' => false,
+
+        /**
+         * When true, horizontal layouts will display the classic top bar on top to free some space when multiple nav items are used.
+         */
+        'doubleTopBarInHorizontalLayouts' => true,
     ],
 
     /**

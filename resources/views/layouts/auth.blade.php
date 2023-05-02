@@ -21,9 +21,9 @@
     </style>
 </head>
 
-<body class="o-auto {{ backpack_theme_config('classes.body') }} @if(backpack_theme_config('auth_layout') === 'cover') d-flex flex-column theme-light @endif">
+<body class="{{ backpack_theme_config('classes.body') }} @if(backpack_theme_config('auth_layout') === 'cover') d-flex flex-column theme-light @endif">
 
-@include(backpack_view('layouts.partials.light-dark-mode'))
+@include(backpack_view('layouts.partials.light_dark_mode_logic'))
 
 @if(backpack_theme_config('options.showColorModeSwitcher'))
     <div class="switch-mode p-3">
