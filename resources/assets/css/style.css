@@ -489,3 +489,8 @@ label {
     padding-bottom: 5px;
     padding-top: 5px;
 }
+
+/*Hide separators in horizontal layouts*/
+header .nav-separator {
+    display: none;
+}
