@@ -433,17 +433,6 @@ body {
     scrollbar-gutter: stable;
 }
 
-/*Logo*/
-.project-logo {
-    max-width: 150px;
-    height: auto;
-}
-
-.auth-logo-container .project-logo {
-    max-width: 230px;
-    height: auto;
-}
-
 /*Adjust topbar*/
 .topbar-transparent {
     background-color: var(--tblr-gray-100) !important;
