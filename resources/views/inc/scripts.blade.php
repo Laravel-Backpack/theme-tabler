@@ -4,6 +4,12 @@
 @basset('https://unpkg.com/pace-js@1.2.4/pace.min.js')
 @basset('https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js')
 
+<script>
+    {{-- TODO :: This will soon be moved to CRUD so that it works across all themes --}}
+    document.querySelectorAll('header a.nav-link.dropdown-toggle').forEach(el => el.dataset.bsAutoClose = 'true');
+    document.querySelectorAll('aside a.nav-link.dropdown-toggle').forEach(el => el.dataset.bsAutoClose = 'false');
+</script>
+
 @include(backpack_view('inc.theme_scripts'))
 
 @if (backpack_theme_config('scripts') && count(backpack_theme_config('scripts')))
