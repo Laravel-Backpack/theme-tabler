@@ -202,3 +202,11 @@
 [data-bs-theme=dark] .form-selectgroup-check {
     background-color: var(--tblr-bg-surface);
 }
+
+td a.btn.btn-sm.btn-link {
+    color: var(--tblr-primary);
+}
+
+td a.btn.btn-sm.btn-link:hover {
+    text-decoration: none;
+}

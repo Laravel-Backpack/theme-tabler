@@ -494,3 +494,8 @@ label {
 header .nav-separator {
     display: none;
 }
+
+.header-operation h3 {
+    font-size: 25px;
+    line-height: 27px !important;
+}
