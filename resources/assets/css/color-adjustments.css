@@ -203,10 +203,19 @@
     background-color: var(--tblr-bg-surface);
 }
 
-td a.btn.btn-sm.btn-link {
+td a.btn.btn-sm.btn-link,
+button.inline-create-button {
     color: var(--tblr-primary);
 }
 
-td a.btn.btn-sm.btn-link:hover {
+td a.btn.btn-sm.btn-link:hover,
+button.inline-create-button:hover {
     text-decoration: none;
+    color: rgba(var(--tblr-primary-rgb),.8);
+}
+
+aside.navbar-dark,
+header.navbar-dark,
+div.navbar-dark {
+    background-color: #291f2f;
 }

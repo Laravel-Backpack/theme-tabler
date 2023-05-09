@@ -35,11 +35,19 @@ button.buttons-collection:after {
     color: var(--tblr-gray-200);
 }
 
-.table-hover tbody tr td a.btn.btn-sm.btn-link i {
+table tbody tr td a.btn.btn-sm.btn-link i,
+.btn.btn-light.btn-sm.border.popup_selector i,
+.btn.btn-light.btn-sm.border.clear_elfinder_picker i,
+a.btn.btn-sm.btn-secondary.bulk-button i {
     margin-right: 3px;
 }
 
-.table-hover tbody tr td.dtr-control span {
+.btn.btn-light.btn-sm.border.popup_selector,
+.btn.btn-light.btn-sm.border.clear_elfinder_picker {
+    box-shadow: none;
+}
+
+table tbody tr td.dtr-control span {
     margin-left: 3px;
 }
 
@@ -410,7 +418,7 @@ a.actions-buttons-column:hover {
 
 a.actions-buttons-column:hover:after,
 a.actions-buttons-column.show:after {
-    color: var(--tblr-light-text);
+    color: var(--tblr-light);
 }
 
 [data-bs-theme=dark] a.actions-buttons-column {
@@ -455,9 +463,11 @@ body {
 }
 
 /*Sidebar fixed or not fixed, that's the question*/
-.navbar-vertical:not(.navbar-fixed) {
-    position: absolute !important;
-    overflow-y: scroll;
+@media (min-width: 992px) {
+    .navbar-vertical:not(.navbar-fixed) {
+        position: absolute !important;
+        overflow-y: scroll;
+    }
 }
 
 [data-bs-theme=dark] .select2-container--bootstrap .select2-dropdown {
@@ -498,4 +508,9 @@ header .nav-separator {
 .header-operation h3 {
     font-size: 25px;
     line-height: 27px !important;
+}
+
+ol li.ui-sortable-placeholder.placeholder {
+    width: 100%;
+    height: 35px;
 }
