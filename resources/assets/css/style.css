@@ -433,17 +433,6 @@ body {
     scrollbar-gutter: stable;
 }
 
-/*Logo*/
-.project-logo {
-    max-width: 150px;
-    height: auto;
-}
-
-.auth-logo-container .project-logo {
-    max-width: 230px;
-    height: auto;
-}
-
 /*Adjust topbar*/
 .topbar-transparent {
     background-color: var(--tblr-gray-100) !important;
@@ -499,4 +488,9 @@ form .form-group.required > label:not(:empty):not(.form-check-label)::after {
 label {
     padding-bottom: 5px;
     padding-top: 5px;
+}
+
+/*Hide separators in horizontal layouts*/
+header .nav-separator {
+    display: none;
 }

@@ -138,6 +138,17 @@ return [
          * bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white.
          */
         'footer' => null,
+
+        /**
+         * Use this to pass classes to the table displayed in List Operation
+         * It defaults to: "table table-striped table-hover nowrap rounded card-table table-vcenter card-table shadow-xs border-xs"
+         */
+        'table' => null,
+
+        /**
+         * Use this to pass classes to the table wrapper component displayed in List Operation
+         */
+        'tableWrapper' => null,
     ],
 
     /**
