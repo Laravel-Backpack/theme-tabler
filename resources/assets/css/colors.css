@@ -1,3 +1,8 @@
+/**
+    This file declares css color variables for branding purposes.
+    Attention, "./color-adjustments.css" depends on this file to properly function.
+*/
+
 @charset "UTF-8";
 :root, [data-bs-theme=light] * {
     --tblr-black: #000;
