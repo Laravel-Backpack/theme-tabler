@@ -10,7 +10,7 @@
                 @include(backpack_view('auth.register.inc.form'))
                 @if (config('backpack.base.registration_open'))
                     <div class="text-center text-muted mt-4">
-                        <a tabindex="6" href="{{ route('backpack.auth.login') }}" tabindex="-1">{{ trans('backpack::base.login') }}</a>
+                        <a tabindex="6" href="{{ route('backpack.auth.login') }}">{{ trans('backpack::base.login') }}</a>
                     </div>
                 @endif
             </div>
