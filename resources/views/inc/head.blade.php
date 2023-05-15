@@ -11,7 +11,7 @@
 @stack('before_styles')
 
 @include(backpack_view('inc.theme_styles'))
-@include('crud::inc.styles'))
+@include('crud::inc.styles')
 
 @yield('after_styles')
 @stack('after_styles')
