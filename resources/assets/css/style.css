@@ -1,3 +1,8 @@
+/**
+    This file adjusts things so that Tabler looks cool and is used always,
+    regardless of skin color applied and dark/light mode used.
+*/
+
 .sidebar-toggler {
     background-color: transparent;
 }
@@ -35,11 +40,20 @@ button.buttons-collection:after {
     color: var(--tblr-gray-200);
 }
 
-.table-hover tbody tr td a.btn.btn-sm.btn-link i {
+table tbody tr td a.btn.btn-sm.btn-link i,
+.btn.btn-light.btn-sm.border.popup_selector i,
+.btn.btn-light.btn-sm.border.clear_elfinder_picker i,
+button.browse i,
+a.btn.btn-sm.btn-secondary.bulk-button i {
     margin-right: 3px;
 }
 
-.table-hover tbody tr td.dtr-control span {
+.btn.btn-light.btn-sm.border.popup_selector,
+.btn.btn-light.btn-sm.border.clear_elfinder_picker {
+    box-shadow: none;
+}
+
+table tbody tr td.dtr-control span {
     margin-left: 3px;
 }
 
@@ -367,10 +381,33 @@ div.tab-container ul li.nav-item .active {
     color: var(--tblr-light-text)
 }
 
+button.browse,
+div.btn-file,
+div.array-controls button.btn-light {
+    box-shadow: none;
+}
+
 /*input file*/
-[data-bs-theme=dark] .backstrap-file-label {
+[data-bs-theme=dark] label.backstrap-file-label {
     background-color: var(--tblr-primary-border-subtle) !important;
     border-color: var(--tblr-bg-surface);
+}
+
+[data-bs-theme=dark] label.backstrap-file-label::after,
+[data-bs-theme=dark] div.btn-file {
+    background-color: var(--tblr-gray-500);
+    color: var(--tblr-light);
+}
+
+[data-bs-theme=dark] div.array-controls button.btn-light {
+    background-color: transparent;
+    border-color: var(--tblr-primary);
+    color: var(--tblr-primary);
+}
+
+[data-bs-theme=dark] div.array-controls button.btn-light:hover {
+    background-color: var(--tblr-primary);
+    color: var(--tblr-light);
 }
 
 /*modal overlay*/
@@ -410,7 +447,7 @@ a.actions-buttons-column:hover {
 
 a.actions-buttons-column:hover:after,
 a.actions-buttons-column.show:after {
-    color: var(--tblr-light-text);
+    color: var(--tblr-light);
 }
 
 [data-bs-theme=dark] a.actions-buttons-column {
@@ -455,9 +492,11 @@ body {
 }
 
 /*Sidebar fixed or not fixed, that's the question*/
-.navbar-vertical:not(.navbar-fixed) {
-    position: absolute !important;
-    overflow-y: scroll;
+@media (min-width: 992px) {
+    .navbar-vertical:not(.navbar-fixed) {
+        position: absolute !important;
+        overflow-y: scroll;
+    }
 }
 
 [data-bs-theme=dark] .select2-container--bootstrap .select2-dropdown {
@@ -472,6 +511,8 @@ div.controls button.delete-element {
     background-color: var(--tblr-danger) !important;
     color: #fff;
     border: none;
+    height: 25px !important;
+    width: 25px !important;
 }
 
 .repeatable-group {
@@ -493,4 +534,28 @@ label {
 /*Hide separators in horizontal layouts*/
 header .nav-separator {
     display: none;
+}
+
+.header-operation h3 {
+    font-size: 25px;
+    line-height: 27px !important;
+}
+
+ol li.ui-sortable-placeholder.placeholder {
+    width: 100%;
+    height: 35px;
+}
+
+div.row div.form-group {
+    padding-bottom: 10px;
+}
+
+tr.array-row td:has(span.ui-sortable-handle) {
+    vertical-align: middle !important;
+}
+
+[data-bs-theme=dark] tr.array-row td span.ui-sortable-handle,
+[data-bs-theme=dark] tr.array-row td button.removeItem {
+    background-color: var(--tblr-gray-600);
+    color: var(--tblr-light);
 }

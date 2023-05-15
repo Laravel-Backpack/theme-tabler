@@ -1,5 +1,10 @@
+/**
+    This file declares css color variables for branding purposes.
+    Attention, "./color-adjustments.css" depends on this file to properly function.
+*/
+
 @charset "UTF-8";
-:root, [data-bs-theme=light] {
+:root, [data-bs-theme=light] * {
     --tblr-black: #000;
     --tblr-white: #fff;
     --tblr-gray: #4c496c;
@@ -165,13 +170,12 @@
     --tblr-danger-text: var(--tblr-danger);
 }
 
-[data-bs-theme=dark] body,
-[data-bs-theme=dark] .page-body,
-[data-bs-theme=dark] header,
-[data-bs-theme=dark] aside,
-[data-bs-theme=dark] table,
-[data-bs-theme=dark] th,
-[data-bs-theme=dark] tr {
+header.navbar-dark,
+div.navbar-dark {
+    --tblr-navbar-border-color: #333152;
+}
+
+[data-bs-theme=dark] * {
     --tblr-gray: #4c496c !important;
     --tblr-gray-dark: #211d3b !important;
     --tblr-gray-100: #f1f5f9 !important;
@@ -238,4 +242,5 @@
     --tblr-bg-main-color: #201723;
     --tblr-bg-forms: var(--tblr-dark-mode-border-color) !important;
     --tblr-danger-text: var(--tblr-danger);
+    --tblr-navbar-border-color: #333152 !important;
 }
