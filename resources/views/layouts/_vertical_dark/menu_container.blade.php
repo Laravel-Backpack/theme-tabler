@@ -7,6 +7,7 @@
                     <li class="nav-item me-2">
                         @includeWhen(backpack_theme_config('options.showColorModeSwitcher'), backpack_view('layouts.partials.switch_theme'))
                     </li>
+                    @include(backpack_view('inc.topbar_right_content'))
                     @include(backpack_view('inc.menu_user_dropdown'))
                 </div>
             </ul>
