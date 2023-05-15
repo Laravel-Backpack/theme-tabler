@@ -199,7 +199,6 @@
 
 #crudTable_wrapper .table-striped > tbody > tr:nth-of-type(odd) > * {
     /*box-shadow: none;*/
-    O
 }
 
 [data-bs-theme=dark] header.top div.navbar-collapse div.navbar {
