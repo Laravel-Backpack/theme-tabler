@@ -1,3 +1,9 @@
+/**
+    This file includes styles to help apply a skin color on top of Tabler's default
+    and it ensures all css color variables declared in "./colors.css" are applied correctly,
+    particularly for dark mode.
+*/
+
 [data-bs-theme=dark] body {
     background-color: var(--tblr-bg-main-color);
 }
@@ -201,4 +207,25 @@
 
 [data-bs-theme=dark] .form-selectgroup-check {
     background-color: var(--tblr-bg-surface);
+}
+
+[data-bs-theme=dark] span.input-group-text {
+    border-color: var(--tblr-primary-border-subtle);
+}
+
+td a.btn.btn-sm.btn-link,
+button.inline-create-button {
+    color: var(--tblr-primary);
+}
+
+td a.btn.btn-sm.btn-link:hover,
+button.inline-create-button:hover {
+    text-decoration: none;
+    color: rgba(var(--tblr-primary-rgb), .8);
+}
+
+aside.navbar-dark,
+header.navbar-dark,
+div.navbar-dark {
+    background-color: #291f2f;
 }

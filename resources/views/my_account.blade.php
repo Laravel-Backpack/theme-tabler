@@ -48,15 +48,15 @@
         @endif
 
         {{-- UPDATE INFO FORM --}}
-        <div class="col-lg-8">
+        <div class="col-lg-8 mb-4">
             <form class="form" action="{{ route('backpack.account.info.store') }}" method="post">
 
                 {!! csrf_field() !!}
 
-                <div class="card padding-10">
+                <div class="card">
 
                     <div class="card-header">
-                        {{ trans('backpack::base.update_account_info') }}
+                        <h3 class="card-title">{{ trans('backpack::base.update_account_info') }}</h3>
                     </div>
 
                     <div class="card-body backpack-profile-form bold-labels">
@@ -91,7 +91,7 @@
         </div>
 
         {{-- CHANGE PASSWORD FORM --}}
-        <div class="col-lg-8">
+        <div class="col-lg-8 mb-4">
             <form class="form" action="{{ route('backpack.account.password') }}" method="post">
 
                 {!! csrf_field() !!}
@@ -99,7 +99,7 @@
                 <div class="card padding-10">
 
                     <div class="card-header">
-                        {{ trans('backpack::base.change_password') }}
+                        <h3 class="card-title">{{ trans('backpack::base.change_password') }}</h3>
                     </div>
 
                     <div class="card-body backpack-profile-form bold-labels">
