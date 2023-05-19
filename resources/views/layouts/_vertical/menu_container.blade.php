@@ -4,9 +4,11 @@
             <ul class="nav navbar-nav d-flex flex-row align-items-center justify-content-between w-100 d-block d-lg-none">
                 @include(backpack_view('layouts.partials.mobile_toggle_btn'), ['forceWhiteLabelText' => true])
                 <div class="d-flex flex-row align-items-center">
+                    @include(backpack_view('inc.topbar_left_content'))
                     <li class="nav-item me-2">
                         @includeWhen(backpack_theme_config('options.showColorModeSwitcher'), backpack_view('layouts.partials.switch_theme'))
                     </li>
+                    @include(backpack_view('inc.topbar_right_content'))
                     @include(backpack_view('inc.menu_user_dropdown'))
                 </div>
             </ul>
