@@ -43,7 +43,7 @@
 
 @include(backpack_view('inc.footer'))
 
-@include('crud::inc.scripts')
+@include(backpack_view('inc.scripts'))
 @include(backpack_view('inc.theme_scripts'))
 
 @yield('after_scripts')
