@@ -56,13 +56,13 @@ return [
          * Hint: List, Create, Update operations do not look great with it, but only pages with content that can overlap the header!
          */
         'urlsUsingOverLapEffect' => [
-            backpack_url('dashboard'),
+            url(config('backpack.base.route_prefix') . '/dashboard'),
         ],
 
         /**
          * The color mode used by default.
          */
-        'defaultColorMode' => 'dark', // light, dark
+        'defaultColorMode' => 'light', // light, dark
 
         /**
          * When true, a switch is displayed to let admins choose their favorite theme mode.
