@@ -25,7 +25,7 @@
         @endif
     </div>
 
-    <div class="mb-3">
+    <div class="mb-4">
         <label class="form-label" for="password_confirmation">{{ trans('backpack::base.confirm_password') }}</label>
         <input tabindex="4" type="password" class="form-control {{ $errors->has('password_confirmation') ? 'is-invalid' : '' }}" name="password_confirmation" id="password_confirmation" value="">
         @if ($errors->has('password_confirmation'))
@@ -33,7 +33,7 @@
         @endif
     </div>
 
-    <div class="form-group mt-3">
+    <div class="form-group">
         <div>
             <button tabindex="5" type="submit" class="btn btn-primary w-100">
                 {{ trans('backpack::base.register') }}
