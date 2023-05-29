@@ -1,18 +1,12 @@
-{{-- =================================================== --}}
-{{-- ========== Top menu items (ordered left) ========== --}}
-{{-- =================================================== --}}
+{{-- Top menu items (ordered left) --}}
 @if (backpack_auth()->check())
     <ul class="nav navbar-nav d-md-down-none">
         {{-- Topbar. Contains the left part --}}
         @include(backpack_view('inc.topbar_left_content'))
     </ul>
 @endif
-{{-- ========== End of top menu left items ========== --}}
 
-
-{{-- ========================================================= --}}
-{{-- ========= Top menu right items (ordered right) ========== --}}
-{{-- ========================================================= --}}
+{{-- Top menu right items (ordered right) --}}
 <ul class="nav navbar-nav d-flex flex-row @if(backpack_theme_config('html_direction') == 'rtl') me-0 @endif">
     @if (backpack_auth()->guest())
         <li class="nav-item">
@@ -32,4 +26,3 @@
         @include(backpack_view('inc.menu_user_dropdown'))
     @endif
 </ul>
-{{-- ========== End of top menu right items ========== --}}
