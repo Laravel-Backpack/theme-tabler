@@ -68,11 +68,6 @@
     background-color: var(--tblr-light-border-subtle) !important;
 }
 
-/*tables - list operation*/
-[data-bs-theme=dark] #crudTable_wrapper .table-striped > tbody > tr:nth-of-type(even) > * {
-    /*--tblr-table-accent-bg: var(--tblr-bg-surface);*/
-}
-
 /*inputs*/
 [data-bs-theme=dark] input[type=checkbox]:not(:checked).form-check-input {
     background-color: var(--tblr-primary-border-subtle);
@@ -198,7 +193,7 @@
 }
 
 #crudTable_wrapper .table-striped > tbody > tr:nth-of-type(odd) > * {
-    /*box-shadow: none;*/
+    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.03);
 }
 
 [data-bs-theme=dark] header.top div.navbar-collapse div.navbar {
