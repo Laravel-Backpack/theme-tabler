@@ -1,1 +1,0 @@
-</{{ $widget['wrapper']['element'] ?? 'div' }}>

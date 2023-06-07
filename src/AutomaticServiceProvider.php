@@ -60,23 +60,7 @@ trait AutomaticServiceProvider
         }
 
         if ($this->packageDirectoryExistsAndIsNotEmpty('resources/views')) {
-            // Load published views
-            if (is_dir($this->publishedViewsPath())) {
-                $this->loadViewsFrom($this->publishedViewsPath(), $this->vendorNameDotPackageName());
-            }
-
-            // Fallback to package views
-            $this->loadViewsFrom($this->packageViewsPath(), $this->vendorNameDotPackageName());
-
-            // Add default ViewNamespaces
-            foreach (['buttons', 'columns', 'fields', 'filters', 'widgets'] as $viewNamespace) {
-                if ($this->packageDirectoryExistsAndIsNotEmpty("resources/views/$viewNamespace")) {
-                    ViewNamespaces::addFor($viewNamespace, $this->vendorNameDotPackageName()."::{$viewNamespace}");
-                }
-            }
-
-            // Add basset view path
-            Basset::addViewPath($this->packageViewsPath());
+            $this->loadViews();
         }
 
         if ($this->packageDirectoryExistsAndIsNotEmpty('database/migrations')) {
@@ -91,6 +75,32 @@ trait AutomaticServiceProvider
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
         }
+    }
+
+    public function loadViews()
+    {
+        // if this addon is a theme, but isn't active, don't load any views
+        if ($this->theme && !$this->packageIsActiveTheme()) {
+            return;
+        }
+
+        // Load published views
+        if (is_dir($this->publishedViewsPath())) {
+            $this->loadViewsFrom($this->publishedViewsPath(), $this->vendorNameDotPackageName());
+        }
+
+        // Fallback to package views
+        $this->loadViewsFrom($this->packageViewsPath(), $this->vendorNameDotPackageName());
+
+        // Add default ViewNamespaces
+        foreach (['buttons', 'columns', 'fields', 'filters', 'widgets'] as $viewNamespace) {
+            if ($this->packageDirectoryExistsAndIsNotEmpty("resources/views/$viewNamespace")) {
+                ViewNamespaces::addFor($viewNamespace, $this->vendorNameDotPackageName() . "::{$viewNamespace}");
+            }
+        }
+
+        // Add basset view path
+        Basset::addViewPath($this->packageViewsPath());
     }
 
     /**
@@ -247,5 +257,13 @@ trait AutomaticServiceProvider
         }
 
         return false;
+    }
+
+    public function packageIsActiveTheme()
+    {
+        $viewNamespace = $this->vendorNameDotPackageName() . '::';
+
+        return config('backpack.ui.view_namespace') === $viewNamespace ||
+            config('backpack.ui.view_namespace_fallback') === $viewNamespace;
     }
 }
