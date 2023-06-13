@@ -6,7 +6,7 @@
     @include(backpack_view('inc.head'))
 </head>
 
-<body class="{{ backpack_theme_config('classes.body') }}" data-bp-layout='right-vertical'>
+<body class="{{ backpack_theme_config('classes.body') }}" data-bp-layout="right-vertical">
 
 @include(backpack_view('layouts.partials.light_dark_mode_logic'))
 
