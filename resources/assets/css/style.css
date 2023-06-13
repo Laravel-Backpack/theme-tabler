@@ -541,6 +541,7 @@ header .nav-separator {
     line-height: 27px !important;
 }
 
+
 ol li.ui-sortable-placeholder.placeholder {
     width: 100%;
     height: 35px;
@@ -558,4 +559,21 @@ tr.array-row td:has(span.ui-sortable-handle) {
 [data-bs-theme=dark] tr.array-row td button.removeItem {
     background-color: var(--tblr-gray-600);
     color: var(--tblr-light);
+}
+
+/* Horizontal Overlap Layout */
+.navbar-overlap:after {
+    height: 13rem;
+}
+
+body[data-bp-layout=horizontal-overlap] .header-operation {
+    color: var(--tblr-gray-200);
+}
+
+body[data-bp-layout=horizontal-overlap] .breadcrumb .active {
+    color: var(--tblr-gray-200);
+}
+
+body[data-bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
+    color: var(--tblr-gray-200);
 }

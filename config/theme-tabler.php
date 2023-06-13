@@ -51,18 +51,6 @@ return [
      */
     'options' => [
         /**
-         * When using horizontal_overlap layout, the overlap effect is not applied to all pages, but only a few (those that look nice).
-         * Indicate the url segments that should use an overlap effect — we include the dashboard as an example.
-         * Hint: List, Create, Update operations do not look great with it, but only pages with content that can overlap the header!
-         * 
-         * We will automatically run `backpack_url('dashboard')` on the provided url segments at runtime configuration.
-         * Then we compare the current url with the generated one to decide when to use the overlap effect
-         */
-        'urlsUsingOverLapEffect' => [
-            'dashboard',
-        ],
-
-        /**
          * The color mode used by default.
          */
         'defaultColorMode' => 'light', // light, dark
