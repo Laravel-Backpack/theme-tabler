@@ -54,7 +54,7 @@ return [
          * When using horizontal_overlap layout, the overlap effect is not applied to all pages, but only a few (those that look nice).
          * Indicate the url segments that should use an overlap effect — we include the dashboard as an example.
          * Hint: List, Create, Update operations do not look great with it, but only pages with content that can overlap the header!
-         * 
+         *
          * We will automatically run `backpack_url('dashboard')` on the provided url segments at runtime configuration.
          * Then we compare the current url with the generated one to decide when to use the overlap effect
          */
@@ -63,14 +63,23 @@ return [
         ],
 
         /**
+         * The available color modes.
+         */
+        'colorModes' => [
+            'system' => 'la-desktop',
+            'light' => 'la-sun',
+            'dark' => 'la-moon',
+        ],
+
+        /**
          * The color mode used by default.
          */
-        'defaultColorMode' => 'light', // light, dark
+        'defaultColorMode' => 'system', // system, light, dark
 
         /**
          * When true, a switch is displayed to let admins choose their favorite theme mode.
          * When false, the theme will only use the "defaultColorMode" set above.
-         * In case "defaultColorMode" is null, light is the default.
+         * In case "defaultColorMode" is null, system is the default.
          */
         'showColorModeSwitcher' => true,
 

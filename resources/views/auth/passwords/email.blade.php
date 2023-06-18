@@ -16,12 +16,7 @@
                             <div class="nav-link disabled" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">{{ trans('backpack::base.step') }} 2</div>
                         </li>
                         <li class="nav-item ms-auto" role="presentation">
-                            <a href="javascript:void(0);" onclick="colorMode.switch()" class="nav-link hide-theme-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Enable dark mode" data-bs-original-title="Enable dark mode">
-                                <i class="la la-sun fs-2"></i>
-                            </a>
-                            <a href="javascript:void(0);" onclick="colorMode.switch()" class="nav-link hide-theme-light" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Enable light mode" data-bs-original-title="Enable light mode">
-                                <i class="la la-moon fs-2"></i>
-                            </a>
+                            @includeWhen(backpack_theme_config('options.showColorModeSwitcher'), backpack_view('layouts.partials.switch_theme'))
                         </li>
                     </ul>
                 </div>

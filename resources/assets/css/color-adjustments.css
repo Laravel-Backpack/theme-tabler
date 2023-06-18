@@ -29,7 +29,8 @@
     border: var(--tblr-card-border-width) solid var(--tblr-light-border-subtle);
 }
 
-[data-bs-theme=dark] .card-header, [data-bs-theme=dark] .card-footer {
+[data-bs-theme=dark] .card-header,
+[data-bs-theme=dark] .card-footer {
     background: var(--tblr-bg-surface);
     border-color: var(--tblr-light-border-subtle) !important;
 }
