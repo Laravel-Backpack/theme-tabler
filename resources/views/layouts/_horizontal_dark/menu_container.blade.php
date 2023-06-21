@@ -36,7 +36,6 @@
         </ul>
         <div class="collapse navbar-collapse" id="mobile-menu">
             <ul class="navbar-nav pt-lg-3">
-                <li class="px-3 fw-bold">{{ ucfirst(strtolower(trans('backpack::base.administration'))) }}</li>
                 @include(backpack_view('inc.sidebar_content'))
             </ul>
         </div>

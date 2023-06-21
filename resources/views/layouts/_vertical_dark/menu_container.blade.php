@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="mobile-menu">
                 <ul class="navbar-nav pt-lg-3">
                     @include(backpack_view('layouts._vertical.sidebar_content_top'))
-                    <li class="nav-separator">{{ ucfirst(strtolower(trans('backpack::base.administration'))) }}</li>
+                    <li class="nav-separator"></li>
                     @include(backpack_view('inc.sidebar_content'))
                 </ul>
             </div>
