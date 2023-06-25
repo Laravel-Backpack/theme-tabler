@@ -156,6 +156,7 @@ header.top div ul.navbar-nav li.nav-item a.nav-link span.badge {
 
 [data-bs-theme=dark] aside .navbar-collapse .dropdown-toggle:hover:after {
     color: var(--tblr-primary);
+    margin-right: 5px !important;
 }
 
 aside .navbar-collapse .dropdown-toggle:after {
@@ -558,4 +559,59 @@ tr.array-row td:has(span.ui-sortable-handle) {
 [data-bs-theme=dark] tr.array-row td button.removeItem {
     background-color: var(--tblr-gray-600);
     color: var(--tblr-light);
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #F8FAFC !important;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black !important;
+    text-shadow: none !important;
+}
+
+.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__ {
+    color: #7c69ef !important
+}
+
+.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property {
+    color: #207a8c !important;
+}
+
+.hljs-class .hljs-title,.hljs-title,.hljs-title.class_ {
+    color: #42ba96 !important;
+}
+
+[data-bs-theme=dark] :not(pre) > code[class*="language-"],
+[data-bs-theme=dark] pre[class*="language-"] {
+	background: #1B2234 !important;
+}
+
+[data-bs-theme=dark] code[class*="language-"],
+[data-bs-theme=dark] pre[class*="language-"] {
+    color: white !important;
+    text-shadow: none !important;
+}
+
+[data-bs-theme=dark] .hljs-addition,
+[data-bs-theme=dark] .hljs-code,
+[data-bs-theme=dark] .hljs-string,
+[data-bs-theme=dark] .hljs-title.class_.inherited__ {
+    color: #ebff87 !important
+}
+
+[data-bs-theme=dark] .hljs-attribute,
+[data-bs-theme=dark] .hljs-function .hljs-title,
+[data-bs-theme=dark] .hljs-section,
+[data-bs-theme=dark] .hljs-title.function_,
+[data-bs-theme=dark] .ruby .hljs-property {
+    color: #62d6e8 !important;
+}
+
+[data-bs-theme=dark] .hljs-class .hljs-title,
+[data-bs-theme=dark] .hljs-title,
+[data-bs-theme=dark] .hljs-title.class_ {
+    color: #00f769 !important;
 }
