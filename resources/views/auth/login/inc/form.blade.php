@@ -2,7 +2,7 @@
 <form method="POST" action="{{ route('backpack.auth.login') }}" autocomplete="off" novalidate="">
     @csrf
     <div class="mb-3">
-        <label class="form-label" for="{{ $username }}">{{ config('backpack.base.authentication_column_name') }}</label>
+        <label class="form-label" for="{{ $username }}">{{ trans(config('backpack.base.authentication_column_name')) }}</label>
         <input autofocus tabindex="1" type="text" name="{{ $username }}" value="{{ old($username) }}" id="{{ $username }}" class="form-control {{ $errors->has($username) ? 'is-invalid' : '' }}">
         @if ($errors->has($username))
             <div class="invalid-feedback">{{ $errors->first($username) }}</div>
