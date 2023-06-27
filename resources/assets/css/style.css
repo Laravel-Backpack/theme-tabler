@@ -572,15 +572,15 @@ tr.array-row td:has(span.ui-sortable-handle) {
     height: 13rem;
 }
 
-body[data-bp-layout=horizontal-overlap] .header-operation,
-body[data-bp-layout=horizontal-overlap] [bp-section=page-heading] {
+body[bp-layout=horizontal-overlap] .header-operation,
+body[bp-layout=horizontal-overlap] [bp-section=page-heading] {
     color: var(--tblr-gray-200);
 }
 
-body[data-bp-layout=horizontal-overlap] .breadcrumb .active {
+body[bp-layout=horizontal-overlap] .breadcrumb .active {
     color: var(--tblr-gray-200);
 }
 
-body[data-bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
+body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
     color: var(--tblr-gray-200);
 }
