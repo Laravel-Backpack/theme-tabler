@@ -561,12 +561,19 @@ tr.array-row td:has(span.ui-sortable-handle) {
     color: var(--tblr-light);
 }
 
+/* Page headers */
+
+[bp-section=page-heading] {
+    line-height: normal;
+}
+
 /* Horizontal Overlap Layout */
 .navbar-overlap:after {
     height: 13rem;
 }
 
-body[data-bp-layout=horizontal-overlap] .header-operation {
+body[data-bp-layout=horizontal-overlap] .header-operation,
+body[data-bp-layout=horizontal-overlap] [bp-section=page-heading] {
     color: var(--tblr-gray-200);
 }
 
