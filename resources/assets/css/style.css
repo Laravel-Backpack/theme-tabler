@@ -559,3 +559,14 @@ tr.array-row td:has(span.ui-sortable-handle) {
     background-color: var(--tblr-gray-600);
     color: var(--tblr-light);
 }
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --tblr-gutter-x: calc(var(--tblr-page-padding) * 2) !important;
+}
+
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--tblr-navbar-brand-font-size);
+}
