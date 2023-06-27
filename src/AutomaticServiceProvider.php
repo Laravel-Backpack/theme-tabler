@@ -126,7 +126,7 @@ trait AutomaticServiceProvider
         if ($this->packageDirectoryExistsAndIsNotEmpty('config')) {
             $this->publishes([
                 $this->packageConfigFile() => $this->publishedConfigFile(),
-            ], 'config');
+            ], 'tabler-config');
         }
 
         // Publishing the views.
