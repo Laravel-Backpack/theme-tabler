@@ -22,7 +22,7 @@ return [
      * Possible values: horizontal, horizontal_dark, horizontal_overlap, vertical,
      * vertical_dark, vertical_transparent (legacy theme), right_vertical, right_vertical_dark, right_vertical_transparent
      */
-    'layout' => 'vertical_transparent',
+    'layout' => 'horizontal_overlap',
 
     /**
      * Pick a login page layout.
@@ -50,18 +50,6 @@ return [
      * these options will help you achieve that.
      */
     'options' => [
-        /**
-         * When using horizontal_overlap layout, the overlap effect is not applied to all pages, but only a few (those that look nice).
-         * Indicate the url segments that should use an overlap effect — we include the dashboard as an example.
-         * Hint: List, Create, Update operations do not look great with it, but only pages with content that can overlap the header!
-         * 
-         * We will automatically run `backpack_url('dashboard')` on the provided url segments at runtime configuration.
-         * Then we compare the current url with the generated one to decide when to use the overlap effect
-         */
-        'urlsUsingOverLapEffect' => [
-            'dashboard',
-        ],
-
         /**
          * The color mode used by default.
          */
@@ -93,7 +81,7 @@ return [
         /**
          * When true, horizontal layouts will display the classic top bar on top to free some space when multiple nav items are used.
          */
-        'doubleTopBarInHorizontalLayouts' => true,
+        'doubleTopBarInHorizontalLayouts' => false,
     ],
 
     /**

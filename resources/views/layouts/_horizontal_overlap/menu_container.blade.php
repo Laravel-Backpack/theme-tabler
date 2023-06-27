@@ -1,5 +1,5 @@
 @php
-  $shouldApplyOverlapEffect = in_array(url()->current(), backpack_theme_config('options.urlsUsingOverLapEffect') ?? []);
+  $shouldApplyOverlapEffect = backpack_theme_config('layout') == 'horizontal_overlap';
 @endphp
 
 <header class="{{ backpack_theme_config('classes.menuHorizontalContainer') ?? 'navbar-expand-lg top' }}">

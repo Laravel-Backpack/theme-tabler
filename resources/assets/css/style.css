@@ -541,6 +541,7 @@ header .nav-separator {
     line-height: 27px !important;
 }
 
+
 ol li.ui-sortable-placeholder.placeholder {
     width: 100%;
     height: 35px;
@@ -560,6 +561,7 @@ tr.array-row td:has(span.ui-sortable-handle) {
     color: var(--tblr-light);
 }
 
+/* fix doubleTopBarInHorizontalLayouts */
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     --tblr-gutter-x: calc(var(--tblr-page-padding) * 2) !important;
 }
@@ -569,4 +571,26 @@ tr.array-row td:has(span.ui-sortable-handle) {
     flex-direction: column;
     justify-content: center;
     font-size: var(--tblr-navbar-brand-font-size);
+  
+/* Page headers */
+[bp-section=page-heading] {
+    line-height: normal;
+}
+
+/* Horizontal Overlap Layout */
+.navbar-overlap:after {
+    height: 13rem;
+}
+
+body[bp-layout=horizontal-overlap] .header-operation,
+body[bp-layout=horizontal-overlap] [bp-section=page-heading] {
+    color: var(--tblr-gray-200);
+}
+
+body[bp-layout=horizontal-overlap] .breadcrumb .active {
+    color: var(--tblr-gray-200);
+}
+
+body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
+    color: var(--tblr-gray-200);
 }
