@@ -507,14 +507,6 @@ div.controls {
     top: -5px;
 }
 
-div.controls button.delete-element {
-    background-color: var(--tblr-danger) !important;
-    color: #fff;
-    border: none;
-    height: 25px !important;
-    width: 25px !important;
-}
-
 .repeatable-group {
     padding-bottom: 12px;
 }
