@@ -571,6 +571,7 @@ tr.array-row td:has(span.ui-sortable-handle) {
     flex-direction: column;
     justify-content: center;
     font-size: var(--tblr-navbar-brand-font-size);
+}
   
 /* Page headers */
 [bp-section=page-heading] {
