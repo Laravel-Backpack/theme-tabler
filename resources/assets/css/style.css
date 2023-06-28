@@ -562,9 +562,6 @@ tr.array-row td:has(span.ui-sortable-handle) {
 }
 
 /* fix doubleTopBarInHorizontalLayouts */
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    --tblr-gutter-x: calc(var(--tblr-page-padding) * 2) !important;
-}
 
 .nav-brand {
     display: flex;
