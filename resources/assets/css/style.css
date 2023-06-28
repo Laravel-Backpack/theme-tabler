@@ -52,6 +52,7 @@ a.btn.btn-sm.btn-secondary.bulk-button i {
     margin-right: 3px;
 }
 
+.navbar,
 .btn.btn-light.btn-sm.border.popup_selector,
 .btn.btn-light.btn-sm.border.clear_elfinder_picker {
     box-shadow: none;
@@ -66,18 +67,16 @@ table tbody tr td.dtr-control span {
     margin-top: 25px;
     margin-bottom: 5px;
     font-weight: bold;
+    color: var(--tblr-navbar-color);
 }
 
-[data-bs-theme=dark] #crudTable_wrapper thead, [data-bs-theme=dark] #crudTable_wrapper tfoot {
-    background-color: var(--tblr-dark-mode-border-color);
+.table thead,
+.table tfoot {
+    background: var(--tblr-bg-surface-tertiary);
 }
 
 [data-bs-theme=light] tbody {
     background-color: var(--tblr-table-bg);
-}
-
-[data-bs-theme=dark] #crudTable_wrapper .table-striped > tbody > tr:nth-of-type(odd) > * {
-    color: var(--tblr-table-color);
 }
 
 [data-bs-theme=dark] #crudTable_processing.dataTables_processing.card {
@@ -98,10 +97,6 @@ table tbody tr td.dtr-control span {
 .page-body .container-fluid h2 {
     font-size: 27px;
     font-weight: 400;
-}
-
-[data-bs-theme=dark] .btn-link, [data-bs-theme=dark] a:not(.btn):not(.nav-link, .dropdown-item) {
-    color: var(--tblr-gray-400) !important;
 }
 
 [data-bs-theme=dark] .btn-link:hover, [data-bs-theme=dark] a:not(.btn):hover {
@@ -138,6 +133,7 @@ aside .sidebar-toggler i {
 aside .nav-item {
     margin-top: 3px;
     margin-bottom: 3px;
+    color: var(--tblr-navbar-color);
 }
 
 aside .navbar-nav .nav-item.dropdown span.badge {
@@ -476,15 +472,11 @@ body {
 
 /*Adjust topbar*/
 .topbar-transparent {
-    background-color: var(--tblr-gray-100) !important;
-}
-
-[data-bs-theme=dark] .topbar-transparent {
-    background-color: var(--tblr-navbar-bg) !important;
+    background-color: transparent !important;
 }
 
 /*Sidebar shortcuts*/
-.sidebar-shortcuts :not(:first-child):not(.hide-theme):before {
+.sidebar-shortcuts :not(:first-child):not(.d-none):before {
     content: "|";
     color: var(--tblr-gray-300);
     margin-left: 10px;
