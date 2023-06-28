@@ -60,10 +60,6 @@
     --tblr-danger-border-subtle: #f2b5bd;
     --tblr-light-border-subtle: #e2e8f0;
     --tblr-dark-border-subtle: #736c91;
-    --tblr-font-sans-serif: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
-    --tblr-font-monospace: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-    --tblr-gradient: linear-gradient(180deg, hsla(0, 0%, 100%, .15), hsla(0, 0%, 100%, 0));
-    --tblr-body-font-family: var(--tblr-font-sans-serif);
     --tblr-body-font-size: 0.875rem;
     --tblr-body-font-weight: 400;
     --tblr-body-line-height: 1.4285714286;
@@ -83,26 +79,10 @@
     --tblr-tertiary-bg-rgb: 241, 245, 249;
     --tblr-link-color: #7c69ef;
     --tblr-link-color-rgb: 124, 105, 239;
-    --tblr-link-decoration: none;
     --tblr-link-hover-color: #6354bf;
     --tblr-link-hover-color-rgb: 99, 84, 191;
-    --tblr-link-hover-decoration: underline;
-    --tblr-code-color: var(--tblr-gray-600);
-    --tblr-highlight-bg: #fdeccc;
-    --tblr-border-width: 1px;
-    --tblr-border-style: solid;
     --tblr-border-color: #e7e6e7;
     --tblr-border-color-translucent: rgba(102, 98, 108, .16);
-    --tblr-border-radius: 4px;
-    --tblr-border-radius-sm: 2px;
-    --tblr-border-radius-lg: 8px;
-    --tblr-border-radius-xl: 1rem;
-    --tblr-border-radius-xxl: 2rem;
-    --tblr-border-radius-2xl: var(--tblr-border-radius-xxl);
-    --tblr-border-radius-pill: 100rem;
-    --tblr-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
-    --tblr-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
-    --tblr-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
     --tblr-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, .075);
     --tblr-focus-ring-width: 0.25rem;
     --tblr-focus-ring-opacity: 0.25;
@@ -118,8 +98,8 @@
 [data-bs-theme=dark] {
     --tblr-body-color: var(--tblr-gray-400);
     --tblr-body-color-rgb: 160, 155, 190;
-    --tblr-body-bg: #1a0f2a;
-    --tblr-body-bg-rgb: 26, 15, 42;
+    --tblr-body-bg: #181818;
+    --tblr-body-bg-rgb: 24, 24, 24;
     --tblr-emphasis-color: #fff;
     --tblr-emphasis-color-rgb: 255, 255, 255;
     --tblr-secondary-color: rgba(160, 155, 190, .75);
