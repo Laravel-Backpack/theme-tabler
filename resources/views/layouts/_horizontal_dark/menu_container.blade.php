@@ -4,7 +4,7 @@
             <div class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
                 <ul class="navbar-nav">
                     @unless(backpack_theme_config('options.doubleTopBarInHorizontalLayouts'))
-                        <li>
+                        <li class="nav-brand">
                             <a class="nav-link" href="{{ backpack_url('dashboard') }}">
                                 {!! backpack_theme_config('project_logo') !!}
                             </a>
