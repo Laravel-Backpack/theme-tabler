@@ -1,5 +1,5 @@
 @php
-  $shouldApplyOverlapEffect = in_array(url()->current(), backpack_theme_config('options.urlsUsingOverLapEffect') ?? []);
+  $shouldApplyOverlapEffect = backpack_theme_config('layout') == 'horizontal_overlap';
 @endphp
 
 <header class="{{ backpack_theme_config('classes.menuHorizontalContainer') ?? 'navbar-expand-lg top' }}">
@@ -8,7 +8,7 @@
             <div class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
                 <ul class="navbar-nav">
                     @unless(backpack_theme_config('options.doubleTopBarInHorizontalLayouts'))
-                        <li>
+                        <li class="nav-brand">
                             <a class="nav-link" href="{{ backpack_url('dashboard') }}">
                                 {!! backpack_theme_config('project_logo') !!}
                             </a>
@@ -39,7 +39,6 @@
         </ul>
         <div class="collapse navbar-collapse" id="mobile-menu">
             <ul class="navbar-nav pt-lg-3">
-                <li class="px-3 fw-bold">{{ ucfirst(strtolower(trans('backpack::base.administration'))) }}</li>
                 @include(backpack_view('inc.sidebar_content'))
             </ul>
         </div>
