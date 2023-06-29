@@ -1,5 +1,5 @@
 @if (backpack_auth()->check())
-    <aside class="{{ backpack_theme_config('classes.sidebar') ?? 'navbar navbar-vertical navbar-expand-lg navbar-light' }} @if(backpack_theme_config('options.sidebarFixed')) navbar-fixed @endif">
+    <aside data-bs-theme={{ $theme ?? 'system' }} class="{{ backpack_theme_config('classes.sidebar') ?? 'navbar navbar-vertical '.(($right ?? false) ? 'navbar-right' : '').' navbar-expand-lg navbar-'.($theme ?? 'light') }} @if(backpack_theme_config('options.sidebarFixed')) navbar-fixed @endif">
         <div class="container-fluid">
             <ul class="nav navbar-nav d-flex flex-row align-items-center justify-content-between w-100 d-block d-lg-none">
                 @include(backpack_view('layouts.partials.mobile_toggle_btn'), ['forceWhiteLabelText' => true])
@@ -17,7 +17,7 @@
                     {!! backpack_theme_config('project_logo') !!}
                 </a>
             </h1>
-            @include(backpack_view('layouts.partials.sidebar_shortcuts'))
+            @includeWhen($shortcuts ?? true, backpack_view('layouts.partials.sidebar_shortcuts'))
             <div class="collapse navbar-collapse" id="mobile-menu">
                 <ul class="navbar-nav pt-lg-3">
                     @include(backpack_view('layouts._vertical.sidebar_content_top'))
