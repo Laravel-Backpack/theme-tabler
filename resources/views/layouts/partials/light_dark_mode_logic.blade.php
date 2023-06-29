@@ -1,40 +1,74 @@
 <script>
-    const defaultColorMode = window.localStorage.getItem('mode')
-        ? window.localStorage.getItem('mode')
-        : '{{ backpack_theme_config('options.defaultColorMode') ?? 'light' }}';
-    const body = document.getElementsByTagName('body')[0];
-    const html = document.getElementsByTagName('html')[0];
+    class ColorMode {
+        constructor(states, defaultColorMode) {
+            this.value = null;
+            this.valueSystem = null;
+            this.listeners = [];
+            this.states = states;
 
-    // Allow users to subscribe to an event that listens for changes in the color mode
-    // and adjust what's been displayed as needed (like images, etc)
-    colorMode = {
-        value: null,
-        set(theme) {
-            const previousTheme = theme === 'light'
-                ? 'dark'
-                : 'light';
+            this.set(window.localStorage.getItem('colorMode') ?? defaultColorMode);
 
-            html.dataset.bsTheme = theme;
-            body.classList.remove('theme-' + previousTheme);
-            body.classList.add('theme-' + theme);
+            // listen for color scheme changes
+            const query = window.matchMedia('(prefers-color-scheme: dark)');
+            query.addEventListener('change', e => this.onColorSchemeChange(e));
+            this.onColorSchemeChange(query);
+        }
 
-            window.localStorage.setItem('mode', theme);
+        set(theme = 'system', fromSystemChange = false) {
+            // clear previous theme attributes
+            window.localStorage.removeItem('colorMode');
+            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.removeAttribute('data-bs-theme');
+            document.body.className = document.body.className.replace(/theme-\w+/, '').trim();
 
-            this.value = theme;
-            this.colorModeListener(theme);
-        },
+            // store changes if not from color scheme changes
+            if(!fromSystemChange) {
+                this.value = theme;
+
+                if(theme !== 'system') {
+                    window.localStorage.setItem('colorMode', theme);
+                    document.documentElement.dataset.theme = theme;
+                }
+            }
+
+            if(theme === 'system') theme = this.valueSystem;
+
+            document.documentElement.dataset.bsTheme = theme;
+            document.body.classList.add(`theme-${theme}`);
+
+            this.listeners.forEach(listener => listener && listener(this.value));
+        }
+
         get() {
             return this.value;
-        },
-        switch: function () {
-            this.set(this.value === 'light' ? 'dark' : 'light');
-        },
-        colorModeListener: function (theme) {
-        },
-        registerListener: function (listener) {
-            this.colorModeListener = listener;
+        }
+
+        onColorSchemeChange(query) {
+            this.valueSystem = query.matches ? 'dark' : 'light';
+            if(this.value === 'system') this.set(this.valueSystem, true);
+        }
+
+        switch() {
+            let current = this.states.indexOf(this.value);
+            let next = current + 1 >= this.states.length ? 0 : current + 1;
+
+            this.set(this.states[next]);
+        }
+
+        onChange(callback) {
+            return this.listeners.push(callback);
+        }
+
+        offChange(reference) {
+            this.listeners[reference - 1] = null;
         }
     }
 
-    colorMode.set(defaultColorMode);
+    const colorMode = new ColorMode(
+        // color modes list
+        @json(array_keys(backpack_theme_config('options.colorModes') ?? [])),
+
+        // default color mode
+        @json(backpack_theme_config('options.defaultColorMode') ?? null)
+    );
 </script>

@@ -51,14 +51,24 @@ return [
      */
     'options' => [
         /**
+        /**
+         * The available color modes.
+         */
+        'colorModes' => [
+            'system' => 'la-desktop',
+            'light' => 'la-sun',
+            'dark' => 'la-moon',
+        ],
+
+        /**
          * The color mode used by default.
          */
-        'defaultColorMode' => 'light', // light, dark
+        'defaultColorMode' => 'system', // system, light, dark
 
         /**
          * When true, a switch is displayed to let admins choose their favorite theme mode.
          * When false, the theme will only use the "defaultColorMode" set above.
-         * In case "defaultColorMode" is null, light is the default.
+         * In case "defaultColorMode" is null, system is the default.
          */
         'showColorModeSwitcher' => true,
 

@@ -3,6 +3,10 @@
     regardless of skin color applied and dark/light mode used.
 */
 
+html:not([data-theme]) .show-theme-system { display: initial!important; }
+html[data-theme=light] .show-theme-light { display: initial!important; } 
+html[data-theme=dark] .show-theme-dark { display: initial!important; }
+
 .sidebar-toggler {
     background-color: transparent;
 }
