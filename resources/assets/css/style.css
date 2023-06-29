@@ -553,8 +553,16 @@ tr.array-row td:has(span.ui-sortable-handle) {
     color: var(--tblr-light);
 }
 
-/* Page headers */
+/* fix doubleTopBarInHorizontalLayouts */
 
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--tblr-navbar-brand-font-size);
+}
+  
+/* Page headers */
 [bp-section=page-heading] {
     line-height: normal;
 }
