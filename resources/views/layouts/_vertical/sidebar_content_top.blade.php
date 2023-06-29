@@ -8,7 +8,15 @@
     @else
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="true">
-                <span class="avatar avatar-sm rounded-circle me-2" style="background-image: url({{ backpack_avatar_url(backpack_auth()->user()) }})"></span> {{ backpack_user()->name }}
+                <span class="avatar avatar-sm rounded-circle me-2">
+                    <img class="avatar avatar-sm rounded-circle bg-transparent" src="{{ backpack_avatar_url(backpack_auth()->user()) }}"
+                        alt="{{ backpack_auth()->user()->name }}" onerror="this.style.display='none'"
+                        style="margin: 0;position: absolute;left: 0;z-index: 1;">
+                    <span class="avatar avatar-sm rounded-circle backpack-avatar-menu-container text-center">
+                        {{ backpack_user()->getAttribute('name') ? mb_substr(backpack_user()->name, 0, 1, 'UTF-8') : 'A' }}
+                    </span>
+                </span>
+                {{ backpack_user()->name }}
             </a>
             <div class="dropdown-menu" data-bs-popper="static">
                 <a class="dropdown-item" href="{{ route('backpack.account.info') }}">

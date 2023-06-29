@@ -582,3 +582,16 @@ body[bp-layout=horizontal-overlap] .breadcrumb .active {
 body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
     color: var(--tblr-gray-200);
 }
+
+/* avatar fallback */
+.backpack-avatar-menu-container {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: var(--tblr-primary);
+    border-radius: 50%;
+    color: #FFF;
+    line-height: 35px;
+    font-size: 85%;
+    font-weight: 300;
+}
