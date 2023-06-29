@@ -2,14 +2,10 @@
 
 namespace Backpack\ThemeTabler;
 
-use Illuminate\Support\ServiceProvider;
+use Backpack\CRUD\ThemeServiceProvider;
 
-class AddonServiceProvider extends ServiceProvider
+class AddonServiceProvider extends ThemeServiceProvider
 {
-    use AutomaticServiceProvider;
-
-    protected $vendorName = 'backpack';
-    protected $packageName = 'theme-tabler';
-    protected $commands = [];
-    protected $theme = true;
+    protected string $vendorName = 'backpack';
+    protected string $packageName = 'theme-tabler';
 }
