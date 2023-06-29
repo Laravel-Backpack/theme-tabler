@@ -466,8 +466,10 @@ a.actions-buttons-column.show:after {
     color: var(--tblr-dark-text);
 }
 
+/*Force the scrollbar to always be visible, to prevent flicker on AJAX-loading pages.*/
 body {
     scrollbar-gutter: stable;
+    overflow-y: scroll;
 }
 
 /*Adjust topbar*/
