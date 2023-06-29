@@ -8,7 +8,7 @@
     @else
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="true">
-                <span class="avatar avatar-sm rounded-circle me-2" style="background-image: url({{ app(Creativeorange\Gravatar\Gravatar::class)->get(backpack_user()->email, ['size' => 80]) }})"></span> {{ backpack_user()->name }}
+                <span class="avatar avatar-sm rounded-circle me-2" style="background-image: url({{ backpack_avatar_url(backpack_auth()->user()) }})"></span> {{ backpack_user()->name }}
             </a>
             <div class="dropdown-menu" data-bs-popper="static">
                 <a class="dropdown-item" href="{{ route('backpack.account.info') }}">
