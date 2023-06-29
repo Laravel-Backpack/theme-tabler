@@ -31,7 +31,7 @@ composer require backpack/theme-tabler
 **Step 3. (Optional)** Publish the theme config file:
 
 ```bash
-php artisan vendor:publish --tag="tabler-config"
+php artisan vendor:publish --tag="theme-tabler-config"
 ```
 
 ## Overriding
