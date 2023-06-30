@@ -4,7 +4,7 @@
 */
 
 html:not([data-theme]) .show-theme-system { display: initial!important; }
-html[data-theme=light] .show-theme-light { display: initial!important; } 
+html[data-theme=light] .show-theme-light { display: initial!important; }
 html[data-theme=dark] .show-theme-dark { display: initial!important; }
 
 .sidebar-toggler {
@@ -109,7 +109,8 @@ aside .navbar-collapse .dropdown-toggle {
     padding-right: 0 !important;
 }
 
-aside .navbar-collapse .dropdown-item {
+aside .navbar-collapse .dropdown-item,
+aside .navbar-collapse .dropdown-header {
     padding-left: 25px !important;
     padding-right: 0 !important;
 }
@@ -559,7 +560,7 @@ tr.array-row td:has(span.ui-sortable-handle) {
     justify-content: center;
     font-size: var(--tblr-navbar-brand-font-size);
 }
-  
+
 /* Page headers */
 [bp-section=page-heading] {
     line-height: normal;
