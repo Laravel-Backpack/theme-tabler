@@ -102,6 +102,11 @@ return [
      */
     'classes' => [
         /**
+         * Use this to pass classes to the table wrapper component displayed in List Operation
+         */
+        'body' => null,
+
+        /**
          * For background colors use:
          * bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info, bg-blue, bg-light-blue,
          * bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white.
