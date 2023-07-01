@@ -596,3 +596,16 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
     font-size: 85%;
     font-weight: 300;
 }
+
+
+/* devtools adjustments */
+
+[data-bs-theme="light"] [bp-section=devtools-preview-files] .nav.nav-pills {
+    background: white;
+    border-radius: 4px;
+}
+
+[data-bs-theme="light"] [bp-section=devtools-preview-files] .tab-content {
+    background: white;
+    border-radius: 4px;
+}
