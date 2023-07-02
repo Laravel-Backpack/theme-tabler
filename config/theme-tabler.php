@@ -102,7 +102,7 @@ return [
      */
     'classes' => [
         /**
-         * Use this to pass classes to the table wrapper component displayed in List Operation
+         * Use this to pass classes to the <body> HTML element, on all pages.
          */
         'body' => null,
 
