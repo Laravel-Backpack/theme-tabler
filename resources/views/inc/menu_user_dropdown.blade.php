@@ -10,7 +10,7 @@
         </span>
         <div class="d-none d-xl-block ps-2">
             <div>{{ backpack_user()->name }}</div>
-            <div class="mt-1 small text-muted">{{ __('Admin') }}</div>
+            <div class="mt-1 small text-muted">{{ trans('backpack::base.admin') }}</div>
         </div>
     </a>
     <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
