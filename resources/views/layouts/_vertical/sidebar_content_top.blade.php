@@ -19,10 +19,12 @@
                 {{ backpack_user()->name }}
             </a>
             <div class="dropdown-menu" data-bs-popper="static">
-                <a class="dropdown-item" href="{{ route('backpack.account.info') }}">
-                    <i class="nav-icon la la-lock d-block"></i>
-                    {{ trans('backpack::base.my_account') }}
-                </a>
+                @if(config('backpack.base.setup_my_account_routes'))
+                    <a class="dropdown-item" href="{{ route('backpack.account.info') }}">
+                        <i class="nav-icon la la-lock d-block"></i>
+                        {{ trans('backpack::base.my_account') }}
+                    </a>
+                @endif
                 <a class="dropdown-item text-danger" href="{{ backpack_url('logout') }}">
                     <i class="nav-icon la la-sign-out-alt d-block"></i>
                     {{ trans('backpack::base.logout') }}
