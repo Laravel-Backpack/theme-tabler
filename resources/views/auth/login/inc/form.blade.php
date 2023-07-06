@@ -22,7 +22,7 @@
             <input tabindex="3" type="checkbox" class="form-check-input">
             <span class="form-check-label">{{ trans('backpack::base.remember_me') }}</span>
         </label>
-        @if (backpack_users_have_email())
+        @if (backpack_users_have_email() && backpack_email_column() == 'email' && config('backpack.base.setup_password_recovery_routes', true))
             <div class="form-label-description">
                 <a tabindex="4" href="{{ route('backpack.auth.password.reset') }}">{{ trans('backpack::base.forgot_your_password') }}</a>
             </div>

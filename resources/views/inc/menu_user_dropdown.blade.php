@@ -14,8 +14,10 @@
         </div>
     </a>
     <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-        <a href="{{ route('backpack.account.info') }}" class="dropdown-item"><i class="la la-user me-2"></i>{{ trans('backpack::base.my_account') }}</a>
-        <div class="dropdown-divider"></div>
+        @if(config('backpack.base.setup_my_account_routes'))
+            <a href="{{ route('backpack.account.info') }}" class="dropdown-item"><i class="la la-user me-2"></i>{{ trans('backpack::base.my_account') }}</a>
+            <div class="dropdown-divider"></div>
+        @endif
         <a href="{{ backpack_url('logout') }}" class="dropdown-item"><i class="la la-lock me-2"></i>{{ trans('backpack::base.logout') }}</a>
     </div>
 </div>
