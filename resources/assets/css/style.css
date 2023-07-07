@@ -739,3 +739,10 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 [data-bs-theme=dark] .table-icons .btn-warning {
     background-color: var(--tblr-primary) !important;
 }
+
+/* Fix border btn-file */
+.btn-file {
+    border-top-right-radius: var(--tblr-border-radius-sm) !important;
+    border-bottom-right-radius: var(--tblr-border-radius-sm) !important;
+    border-radius: var(--tblr-border-radius-sm) !important;
+}
