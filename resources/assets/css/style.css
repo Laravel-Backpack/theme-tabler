@@ -781,3 +781,9 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 [data-bs-theme=dark] .bg-light {
     background-color: var(--tblr-bg-surface) !important;
 }
+
+/* Fix floating header */
+
+[data-bs-theme=dark] table.fixedHeader-floating {
+    background-color: var(--tblr-bg-surface);
+}
