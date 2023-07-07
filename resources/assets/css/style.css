@@ -751,3 +751,13 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 [data-bs-theme=dark] .swal-button--cancel {
     color: #fff !important;
 }
+
+/* Fix export */
+[data-bs-theme=dark] .dt-button-collection .dropdown-menu {
+    background-color: var(--tblr-dark) !important;
+}
+
+[data-bs-theme=dark] .dt-button-collection .dropdown-menu .dropdown-item:hover {
+    background-color: var(--tblr-primary) !important;
+    color: #fff;
+}
