@@ -615,3 +615,14 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 [data-bs-theme=dark] .alert-danger {
     background-color: var(--tblr-bg-surface);
 }
+
+/* Swal */
+
+[data-bs-theme=dark] .swal-modal {
+    background-color: var(--tblr-bg-surface);
+}
+
+[data-bs-theme=dark] .swal-title,
+[data-bs-theme=dark] .swal-text {
+    color: var(--tblr-dark-text);
+}
