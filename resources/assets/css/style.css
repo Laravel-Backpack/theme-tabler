@@ -626,3 +626,27 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 [data-bs-theme=dark] .swal-text {
     color: var(--tblr-dark-text);
 }
+
+/* CKEditor */
+
+[data-bs-theme=dark] .ck.ck-editor__main>.ck-editor__editable,
+[data-bs-theme=dark] .ck.ck-toolbar {
+    background: var(--tblr-bg-surface) !important;
+    border-color: var(--tblr-primary-border-subtle) !important;
+}
+
+[data-bs-theme=dark] .ck.ck-toolbar .ck.ck-toolbar__separator {
+    background: var(--tblr-primary-border-subtle) !important;
+}
+
+[data-bs-theme=dark] .ck.ck-button {
+    color: var(--tblr-body-color) !important;
+}
+
+[data-bs-theme=dark] .ck.ck-button:hover {
+    background: var(--tblr-tabler) !important;
+}
+
+[data-bs-theme=dark] .ck.ck-button.ck-on {
+    background: var(--tblr-tabler) !important;
+}
