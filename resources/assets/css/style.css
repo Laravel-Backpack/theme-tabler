@@ -746,3 +746,8 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
     border-bottom-right-radius: var(--tblr-border-radius-sm) !important;
     border-radius: var(--tblr-border-radius-sm) !important;
 }
+
+/* Fix modal cancel color */
+[data-bs-theme=dark] .swal-button--cancel {
+    color: #fff !important;
+}
