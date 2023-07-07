@@ -696,3 +696,28 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 [data-bs-theme=dark] .select2-dropdown {
     background-color: var(--tblr-bg-surface) !important;
 }
+
+/* Phone field */
+
+[data-bs-theme=dark] .iti .iti__flag-container,
+[data-bs-theme=dark] .iti .iti__selected-flag {
+    background-color: var(--tblr-bg-surface-secondary) !important;
+}
+
+[data-bs-theme=dark] .iti .iti__selected-dial-code {
+    color: var(--tblr-muted) !important;
+}
+
+[data-bs-theme=dark] .iti .iti__country-list {
+    background-color: var(--tblr-dark) !important;
+}
+
+[data-bs-theme=dark] .iti .iti__country-name {
+    color: var(--tblr-body-color) !important;
+}
+
+[data-bs-theme=dark] .iti .iti__active,
+[data-bs-theme=dark] .iti .iti__highlight {
+    background-color: var(--tblr-primary) !important;
+    color: #fff;
+}
