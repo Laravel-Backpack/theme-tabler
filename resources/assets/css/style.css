@@ -680,3 +680,19 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 [data-bs-theme=dark] .EasyMDEContainer .editor-toolbar button.active {
     background: var(--tblr-tabler) !important;
 }
+
+/* Select2 badge */
+
+[data-bs-theme=dark] .select2-selection__choice {
+    background: var(--tblr-tabler) !important;
+    color: var(--tblr-bg-surface) !important;
+    border-color: var(--tblr-tabler) !important;
+}
+
+[data-bs-theme=dark] .select2-selection__choice .select2-selection__choice__remove {
+    color: var(--tblr-bg-surface) !important;
+}
+
+[data-bs-theme=dark] .select2-dropdown {
+    background-color: var(--tblr-bg-surface) !important;
+}
