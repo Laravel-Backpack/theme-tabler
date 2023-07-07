@@ -609,3 +609,9 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
     background: white;
     border-radius: 4px;
 }
+
+/* Alerts */
+
+[data-bs-theme=dark] .alert-danger {
+    background-color: var(--tblr-bg-surface);
+}
