@@ -650,3 +650,33 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 [data-bs-theme=dark] .ck.ck-button.ck-on {
     background: var(--tblr-tabler) !important;
 }
+
+/* EasyMDE */
+
+[data-bs-theme=dark] .EasyMDEContainer,
+[data-bs-theme=dark] .EasyMDEContainer .editor-toolbar,
+[data-bs-theme=dark] .EasyMDEContainer .CodeMirror {
+    background: var(--tblr-bg-surface) !important;
+    border-color: var(--tblr-primary-border-subtle) !important;
+}
+
+[data-bs-theme=dark] .EasyMDEContainer .editor-toolbar,
+[data-bs-theme=dark] .EasyMDEContainer button {
+    color: var(--tblr-body-color) !important;
+}
+
+[data-bs-theme=dark] .EasyMDEContainer .CodeMirror-code {
+    color: var(--tblr-body-color) !important;
+}
+
+[data-bs-theme=dark] .EasyMDEContainer .CodeMirror-cursor {
+    border-left: 1px solid var(--tblr-body-color) !important;
+}
+
+[data-bs-theme=dark] .EasyMDEContainer .editor-toolbar button:hover {
+    background: var(--tblr-tabler) !important;
+}
+
+[data-bs-theme=dark] .EasyMDEContainer .editor-toolbar button.active {
+    background: var(--tblr-tabler) !important;
+}
