@@ -721,3 +721,21 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
     background-color: var(--tblr-primary) !important;
     color: #fff;
 }
+
+/* Icon Picker */
+
+[data-bs-theme=dark] .iconpicker {
+    background-color: transparent;
+    border-color: var(--tblr-primary);
+    color: var(--tblr-primary);
+}
+
+[data-bs-theme=dark] .table-icons td,
+[data-bs-theme=dark] .table-icons .btn-icon {
+    max-width: 35px !important;
+    max-height: 30px !important;
+}
+
+[data-bs-theme=dark] .table-icons .btn-warning {
+    background-color: var(--tblr-primary) !important;
+}
