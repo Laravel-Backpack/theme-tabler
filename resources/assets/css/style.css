@@ -761,3 +761,17 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
     background-color: var(--tblr-primary) !important;
     color: #fff;
 }
+
+/* Fix visilibity */
+[data-bs-theme=dark] .dt-button-collection {
+    background-color: var(--tblr-dark) !important;
+}
+
+[data-bs-theme=dark] .buttons-colvis .dropdown-menu .dropdown-item:hover {
+    background-color: var(--tblr-primary) !important;
+    color: #fff;
+}
+
+[data-bs-theme=dark] .dt-button-collection {
+    background-color: var(--tblr-dark) !important;
+}
