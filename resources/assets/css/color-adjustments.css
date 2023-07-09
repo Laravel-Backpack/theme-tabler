@@ -183,14 +183,3 @@
 [data-bs-theme=dark] span.input-group-text {
     border-color: var(--tblr-primary-border-subtle);
 }
-
-td a.btn.btn-sm.btn-link,
-button.inline-create-button {
-    color: var(--tblr-primary);
-}
-
-td a.btn.btn-sm.btn-link:hover,
-button.inline-create-button:hover {
-    text-decoration: none;
-    color: rgba(var(--tblr-primary-rgb), .8);
-}

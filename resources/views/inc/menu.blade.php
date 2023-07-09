@@ -7,7 +7,7 @@
 @endif
 
 {{-- Top menu right items (ordered right) --}}
-<ul class="nav navbar-nav d-flex flex-row @if(backpack_theme_config('html_direction') == 'rtl') me-0 @endif">
+<ul class="nav navbar-nav d-flex flex-row flex-shrink-0 @if(backpack_theme_config('html_direction') == 'rtl') me-0 @endif">
     @if (backpack_auth()->guest())
         <li class="nav-item">
             <a class="nav-link" href="{{ route('backpack.auth.login') }}">{{ trans('backpack::base.login') }}</a>
