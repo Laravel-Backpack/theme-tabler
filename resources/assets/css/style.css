@@ -21,7 +21,7 @@ header .sidebar-toggler i {
     font-family: "Line Awesome Free";
     content: "\f107";
     font-weight: 900;
-    font-size: 12px;
+    font-size: 10px;
     margin-left: 3px;
 }
 
@@ -32,7 +32,7 @@ button.buttons-collection:after {
     font-family: "Line Awesome Free";
     content: "\f107";
     font-weight: 900;
-    font-size: 12px;
+    font-size: 10px;
     margin-left: 3px;
 }
 
@@ -70,9 +70,77 @@ table tbody tr td.dtr-control span {
     color: var(--tblr-navbar-color);
 }
 
-.table thead,
-.table tfoot {
+.table thead th,
+.table tfoot th {
+    background-color: transparent!important;
+}
+
+/* Remove once https://github.com/tabler/tabler/pull/1645 is merged */
+.table thead th,
+.table tfoot th {
     background: var(--tblr-bg-surface-tertiary);
+    font-size: .625rem;
+    font-weight: var(--tblr-font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    line-height: 1rem;
+    color: var(--tblr-muted);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    white-space: nowrap;
+}
+
+.table thead th,
+.table tfoot th {
+    font-weight: 700;
+}
+
+table .btn-link {
+    color: var(--tblr-primary);
+}
+table .btn-link:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: rgba(var(--tblr-primary-rgb), .8);
+}
+table .btn-link:active {
+    background-color: transparent!important;
+    border-color: transparent!important;
+    text-decoration: underline;
+}
+
+.navbar .navbar-nav {
+    min-height: initial;
+}
+
+.navbar.navbar-filters {
+    color: var(--tblr-body-color);
+    background-color: var(--tblr-card-bg);
+    border: var(--tblr-card-border-width) solid var(--tblr-card-border-color);
+    border-radius: var(--tblr-card-border-radius);
+    box-shadow: var(--tblr-card-box-shadow)!important;
+    margin: 0.8rem 0!important;
+    --tblr-card-border-width: var(--tblr-border-width);
+    --tblr-card-border-color: var(--tblr-border-color-translucent);
+    --tblr-card-border-radius: var(--tblr-border-radius);
+    --tblr-card-box-shadow: var(--tblr-shadow-card);
+    --tblr-card-bg: var(--tblr-bg-surface);
+    padding: 0.5rem 1rem!important;
+}
+
+.navbar.navbar-filters .nav-link {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 80%;
+    color: var(--tblr-muted)!important;
+}
+
+.navbar.navbar-filters + div {
+    overflow: hidden;
+}
+
+.form-control[type="search"] {
+    border-radius: var(--tblr-border-radius)!important;
 }
 
 [data-bs-theme=light] tbody {
@@ -165,7 +233,7 @@ aside .navbar-collapse .dropdown-toggle:after {
     color: var(--tblr-light-text);
     content: "\f107";
     font-weight: 900;
-    font-size: 12px;
+    font-size: 10px;
     margin-left: 3px;
 }
 
@@ -595,6 +663,14 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
     line-height: 35px;
     font-size: 85%;
     font-weight: 300;
+}
+
+
+/* Remove once https://github.com/tabler/tabler/pull/1647 is merged */
+.form-control:focus,
+.form-select:focus {
+    border-color: rgba(var(--tblr-primary-rgb), 0.5);
+    box-shadow: 0 0 transparent, 0 0 0 0.25rem rgba(var(--tblr-primary-rgb),.25);
 }
 
 

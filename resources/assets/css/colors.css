@@ -151,6 +151,8 @@
     --tblr-bg-main-color: #181818;
     --tblr-bg-forms: var(--tblr-dark-mode-border-color);
     --tblr-danger-text: var(--tblr-danger);
+    --tblr-danger: #E25A6A;
+    --tblr-danger-rgb: 226, 90, 106;
     --tblr-navbar-color: rgba(255, 255, 255, 0.7);
     --tblr-bg-surface-tertiary: #ffffff02;
     --tblr-navbar-border-color: transparent;
