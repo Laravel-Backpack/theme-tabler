@@ -80,14 +80,6 @@
     border-color: var(--tblr-primary-border-subtle);
 }
 
-[data-bs-theme=dark] input:not(input[type=hidden]).form-control:focus,
-[data-bs-theme=dark] textarea.form-control:focus,
-[data-bs-theme=dark] select.form-control:focus,
-[data-bs-theme=dark] select.form-select:focus,
-[data-bs-theme=dark] :not(.navbar-filters) .select2-selection--single:focus {
-    box-shadow: 0 0 3px var(--tblr-primary);
-}
-
 [data-bs-theme=dark] input[type=date].form-control::-webkit-calendar-picker-indicator {
     filter: invert(0.8);
 }
