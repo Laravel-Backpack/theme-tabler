@@ -115,8 +115,9 @@
 
 [data-bs-theme=dark] .input-group button.popup_selector,
 [data-bs-theme=dark] .input-group button.clear_elfinder_picker {
-    background-color: var(--tblr-dark) !important;
-    color: var(--tblr-light-text);
+    background-color: var(--tblr-bg-surface) !important;
+    border-color: var(--tblr-primary-border-subtle) !important;
+    color: var(--tblr-dark-text);
 }
 
 [data-bs-theme=dark] .input-group button.popup_selector:hover,
