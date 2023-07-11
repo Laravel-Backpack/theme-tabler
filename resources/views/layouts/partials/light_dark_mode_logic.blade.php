@@ -36,11 +36,15 @@
             document.documentElement.dataset.bsTheme = theme;
             document.body.classList.add(`theme-${theme}`);
 
-            this.listeners.forEach(listener => listener && listener(this.value));
+            this.listeners.forEach(listener => listener && listener(this.result));
         }
 
         get() {
             return this.value;
+        }
+
+        get result() {
+            return this.value === 'system' ? this.valueSystem : this.value;
         }
 
         onColorSchemeChange(query) {
