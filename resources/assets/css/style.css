@@ -235,6 +235,7 @@ aside .navbar-collapse .dropdown-toggle:after {
     font-weight: 900;
     font-size: 10px;
     margin-left: 3px;
+    padding-right: 0.75rem;
 }
 
 span.badge.bg-warning {
