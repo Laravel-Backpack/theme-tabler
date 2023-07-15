@@ -889,10 +889,12 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 [data-bs-theme=dark] .tox .tox-tbtn--bespoke,
 [data-bs-theme=dark] .tox .tox-promotion-link {
     background-color: transparent !important;
+    color: var(--tblr-body-color) !important;
 }
 
 [data-bs-theme=dark] .tox .tox-mbtn,
-[data-bs-theme=dark] .tox .tox-tbtn {
+[data-bs-theme=dark] .tox .tox-tbtn,
+[data-bs-theme=dark] .tox .tox-statusbar__path-item {
     color: var(--tblr-body-color) !important;
 }
 
