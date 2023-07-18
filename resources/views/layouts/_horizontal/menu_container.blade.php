@@ -5,7 +5,7 @@
                 <ul class="navbar-nav">
                     @unless(backpack_theme_config('options.doubleTopBarInHorizontalLayouts'))
                         <li class="nav-brand">
-                            <a class="nav-link" href="{{ backpack_url('dashboard') }}">
+                            <a class="nav-link" href="{{ url(backpack_theme_config('home_link')) }}">
                                 {!! backpack_theme_config('project_logo') !!}
                             </a>
                         </li>
