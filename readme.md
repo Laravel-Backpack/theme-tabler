@@ -21,7 +21,7 @@ The file structure inside this package has changed a bit from Backpack v3-v5. We
 composer require backpack/theme-tabler
 ```
 
-**Step 2.** Go to `config/backpack/base.php` and change your view namespace:
+**Step 2.** Go to `config/backpack/ui.php` and change your view namespace:
 
 ```diff
 -    'view_namespace' => 'backpack::',
