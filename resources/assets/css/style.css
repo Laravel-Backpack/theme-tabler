@@ -910,3 +910,10 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 [data-bs-theme=dark] .tox button.tox-tbtn--enabled {
     background: var(--tblr-tabler) !important;
 }
+
+/* Range */
+input[type="range"] {
+    border: solid 1px var(--tblr-primary-border-subtle); /* To make more contrast could use --tblr-tabler */
+    border-radius: 6px;
+    height: 6px;
+}
