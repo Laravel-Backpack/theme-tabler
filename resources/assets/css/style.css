@@ -912,7 +912,7 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 }
 
 /* Range */
-input[type="range"] {
+[data-bs-theme=dark] input[type="range"] {
     border: solid 1px var(--tblr-primary-border-subtle); /* To make more contrast could use --tblr-tabler */
     border-radius: 6px;
     height: 6px;
