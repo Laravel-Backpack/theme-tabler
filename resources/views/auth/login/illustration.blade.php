@@ -28,3 +28,14 @@
         </div>
     </div>
 @endsection
+
+@section('after_scripts')
+    <script>
+        $('body').on('click', '.toggle-password', function () {
+            var selector = $(this).closest(".input-group").find("input.form-control");
+            $("i#toggler").toggleClass("la-eye la-eye-slash");
+            var type = selector.attr('type') === 'password' ? 'text' : 'password';
+            selector.attr("type", type);
+        });
+    </script>
+@endsection
