@@ -68,7 +68,7 @@
         }
     }
 
-    const colorMode = new ColorMode(
+    window.colorMode = new ColorMode(
         // color modes list
         @json(array_keys(backpack_theme_config('options.colorModes') ?? [])),
 
