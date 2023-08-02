@@ -640,8 +640,8 @@ tr.array-row td:has(span.ui-sortable-handle) {
     height: 13rem;
 }
 
-body[bp-layout=horizontal-overlap] .header-operation,
-body[bp-layout=horizontal-overlap] [bp-section=page-heading] {
+[data-bs-theme=dark] body[bp-layout=horizontal-overlap] .header-operation,
+[data-bs-theme=dark] body[bp-layout=horizontal-overlap] [bp-section=page-heading] {
     color: var(--tblr-gray-200);
 }
 
