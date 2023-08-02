@@ -912,7 +912,7 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 }
 
 /* Range */
-[data-bs-theme=dark] input[type="range"] {
+[data-bs-theme=dark] .form-range {
     border: solid 0.06rem var(--tblr-primary-border-subtle); /* To make more contrast could use --tblr-tabler */
     border-radius: 0.4rem;
     height: 0.4rem;
