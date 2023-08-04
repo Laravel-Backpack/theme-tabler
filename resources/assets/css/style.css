@@ -913,6 +913,15 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
     background: var(--tblr-tabler) !important;
 }
 
+[data-bs-theme=dark] #cboxOverlay {
+	background: transparent !important;
+	-webkit-backdrop-filter: blur(4px) !important;
+	backdrop-filter: blur(4px) !important;
+}
+
+[data-bs-theme=dark] #colorbox {
+    background: transparent !important;
+
 /* Range */
 [data-bs-theme=dark] .form-range {
     border: solid 1px var(--tblr-primary-border-subtle); /* To make more contrast could use --tblr-tabler */
