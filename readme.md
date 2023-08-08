@@ -13,7 +13,19 @@ The file structure inside this package has changed a bit from Backpack v3-v5. We
 ![all-layouts](https://user-images.githubusercontent.com/33960976/230347568-36f1a08e-6ee5-4534-ace3-9c4b259ca754.gif)
 
 
-## Installating
+## Installing
+
+### Automatic installation
+
+Because this a 1st party theme, you can quickly install it using
+
+```
+php artisan backpack:require:theme-tabler
+```
+
+Alternatively, follow the manual installation process below.
+
+## Manual installation
 
 **Step 1.** Install via Composer
 
