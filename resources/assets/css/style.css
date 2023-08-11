@@ -655,6 +655,18 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
     color: var(--tblr-gray-200);
 }
 
+body[bp-layout=horizontal-overlap] .nav-item > a {
+    color: var(--tblr-gray-400);
+}
+
+[data-bs-theme=dark] body[bp-layout=horizontal-overlap] .nav-item > a {
+    color: var(--tblr-gray-500);
+}
+
+[data-bs-theme=dark] body[bp-layout=horizontal-overlap] .nav-item > a.active {
+    color: var(--tblr-gray-100);
+}
+
 /* avatar fallback */
 .backpack-avatar-menu-container {
     position: absolute;
@@ -921,7 +933,7 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 
 [data-bs-theme=dark] #colorbox {
     background: transparent !important;
-
+}
 /* Range */
 [data-bs-theme=dark] .form-range {
     border: solid 1px var(--tblr-primary-border-subtle); /* To make more contrast could use --tblr-tabler */
