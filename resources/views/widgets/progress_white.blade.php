@@ -7,7 +7,7 @@
   <div class="{{ $widget['class'] ?? 'card' }}">
     <div class="card-body">
       @if (isset($widget['value']))
-      <div class="text-value">{!! $widget['value'] !!}</div>
+      <div class="text-value"><strong>{!! $widget['value'] !!}</strong></div>
       @endif
 
       @if (isset($widget['description']))

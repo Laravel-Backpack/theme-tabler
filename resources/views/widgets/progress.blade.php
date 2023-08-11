@@ -19,7 +19,7 @@
 
     <div class="card-body">
         @if (isset($widget['description']))
-            <div class="@if(($widget['ribbon'][0] ?? '') === 'bottom') pe-3 @endif">{!! $widget['description'] !!}</div>
+            <div class="card-title @if(($widget['ribbon'][0] ?? '') === 'bottom') pe-3 @endif">{!! $widget['description'] !!}</div>
         @endif
 
         @if (isset($widget['value']))
