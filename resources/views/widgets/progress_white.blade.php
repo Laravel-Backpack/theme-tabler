@@ -13,15 +13,15 @@
       @if (isset($widget['description']))
       <div>{!! $widget['description'] !!}</div>
       @endif
-      
+
       @if (isset($widget['progress']))
       <div class="progress progress-xs my-2">
         <div class="{{ $widget['progressClass'] ?? 'progress-bar bg-info' }}" role="progressbar" style="width: {{ $widget['progress']  }}%" aria-valuenow="{{ $widget['progress']  }}" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
       @endif
-      
+
       @if (isset($widget['hint']))
-      <small class="text-muted">{!! $widget['hint'] !!}</small>
+      <small>{!! $widget['hint'] !!}</small>
       @endif
     </div>
 
