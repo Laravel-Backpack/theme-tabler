@@ -1,10 +1,16 @@
 @php
   // defaults; backwards compatibility with Backpack 4.0 widgets
   $widget['wrapper']['class'] = $widget['wrapper']['class'] ?? $widget['wrapperClass'] ?? 'col-sm-6 col-lg-3';
+  $accentColor = $widget['accentColor'] ?? 'info';
 @endphp
 
 @includeWhen(!empty($widget['wrapper']), backpack_view('widgets.inc.wrapper_start'))
   <div class="{{ $widget['class'] ?? 'card' }}">
+    @if ($widget['ribbon'] ?? false)
+        <div class="ribbon ribbon-{{ $widget['ribbon'][0] ?? 'top' }} bg-{{ $accentColor }} @if(($widget['ribbon'][0] ?? '') === 'bottom') mb-3 @endif">
+            <i class="la {{ $widget['ribbon'][1] ?? '' }} fs-3"></i>
+        </div>
+    @endif
     <div class="card-body">
       @if (isset($widget['value']))
       <div class="text-value"><strong>{!! $widget['value'] !!}</strong></div>
@@ -16,8 +22,10 @@
 
       @if (isset($widget['progress']))
       <div class="progress progress-xs my-2">
-        <div class="{{ $widget['progressClass'] ?? 'progress-bar bg-info' }}" role="progressbar" style="width: {{ $widget['progress']  }}%" aria-valuenow="{{ $widget['progress']  }}" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
+        <div class="{{ $widget['progressClass'] ?? 'progress-bar' }} bg-{{$accentColor}}" style="width: {{ $widget['progress']  }}%" role="progressbar" aria-valuenow="{{ $widget['progress']  }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ $widget['progress']  }}% Complete">
+            <span class="visually-hidden">{{ $widget['progress']  }}% Complete</span>
+        </div>
+    </div>
       @endif
 
       @if (isset($widget['hint']))
