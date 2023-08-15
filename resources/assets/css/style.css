@@ -940,3 +940,7 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
     border-radius: 0.4rem;
     height: 0.4rem;
 }
+
+.card-body .subheader {
+    color: inherit;
+}
