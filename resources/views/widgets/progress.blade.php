@@ -34,7 +34,7 @@
 
         @if (isset($widget['progress']))
             <div class="progress progress-sm">
-                <div class="progress-bar bg-{{ $accentColor }}" style="width: {{ $widget['progress']  }}%" role="progressbar" aria-valuenow="{{ $widget['progress']  }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ $widget['progress']  }}% Complete">
+                <div class="{{ $widget['progressClass'] ?? 'progress-bar' }} bg-{{$accentColor}}" style="width: {{ $widget['progress']  }}%" role="progressbar" aria-valuenow="{{ $widget['progress']  }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ $widget['progress']  }}% Complete">
                     <span class="visually-hidden">{{ $widget['progress']  }}% Complete</span>
                 </div>
             </div>

@@ -51,7 +51,6 @@ return [
      */
     'options' => [
         /**
-        /**
          * The available color modes.
          */
         'colorModes' => [

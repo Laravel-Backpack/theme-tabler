@@ -13,7 +13,19 @@ The file structure inside this package has changed a bit from Backpack v3-v5. We
 ![all-layouts](https://user-images.githubusercontent.com/33960976/230347568-36f1a08e-6ee5-4534-ace3-9c4b259ca754.gif)
 
 
-## Installation
+## Installing
+
+### Automatic installation
+
+Because this a 1st party theme, you can quickly install it using
+
+```
+php artisan backpack:require:theme-tabler
+```
+
+Alternatively, follow the manual installation process below.
+
+## Manual installation
 
 **Step 1.** Install via Composer
 
@@ -33,6 +45,14 @@ composer require backpack/theme-tabler
 ```bash
 php artisan vendor:publish --tag="theme-tabler-config"
 ```
+
+## Uninstalling
+
+To uninstall this Backpack theme:
+
+1. Remove the composer package. Eg. `composer remove backpack/theme-tabler`
+2. Delete the config file. Eg. `rm -rf config/backpack/theme-tabler.php`
+3. Install a new theme (eg. `php artisan backpack:require:theme-coreuiv4`) or change the `view_namespace` in `config/backpack/ui.php` to the theme you want to be active.
 
 ## Overriding
 
