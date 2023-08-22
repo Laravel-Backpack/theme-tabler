@@ -177,9 +177,29 @@ aside .navbar-collapse .dropdown-toggle {
     padding-right: 0 !important;
 }
 
-aside .navbar-collapse .dropdown-item,
-aside .navbar-collapse .dropdown-header {
-    padding-left: 25px !important;
+/* Allow two levels of nesting. */
+.navbar-vertical.navbar-expand-lg .navbar-collapse .dropdown-menu .dropdown-menu .dropdown-menu .dropdown-item {
+    padding-left: calc(calc(calc(var(--tblr-page-padding) * 2)/ 2) + 2rem);
+}
+
+.navbar-vertical.navbar-expand-lg .navbar-collapse .dropdown-menu .dropdown-menu  .dropdown-item {
+    padding-left: calc(calc(calc(var(--tblr-page-padding) * 2)/ 2) + 1.5rem);
+}
+
+.navbar-vertical.navbar-expand-lg .navbar-collapse .dropdown-menu .dropdown-item {
+    padding-left: calc(calc(calc(var(--tblr-page-padding) * 2)/ 2) + 1rem);
+}
+
+aside .navbar-collapse .dropdown-menu .dropdown-header {
+    padding-left: calc(calc(calc(var(--tblr-page-padding) * 2)/ 2) + 1rem);
+    padding-right: 0 !important;
+}
+aside .navbar-collapse .dropdown-menu .dropdown-menu .dropdown-header {
+    padding-left: calc(calc(calc(var(--tblr-page-padding) * 2)/ 2) + 1.5rem);
+    padding-right: 0 !important;
+}
+aside .navbar-collapse .dropdown-menu .dropdown-menu .dropdown-menu .dropdown-header {
+    padding-left: calc(calc(calc(var(--tblr-page-padding) * 2)/ 2) + 2rem);
     padding-right: 0 !important;
 }
 

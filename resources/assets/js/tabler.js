@@ -1,6 +1,14 @@
-// Set menu auto close state
-document.querySelectorAll('header a.nav-link.dropdown-toggle').forEach(el => el.dataset.bsAutoClose = 'true');
-document.querySelectorAll('aside a.nav-link.dropdown-toggle').forEach(el => el.dataset.bsAutoClose = 'false');
+// Set menu auto close state if not set by developer
+document.querySelectorAll('header a.nav-link.dropdown-toggle').forEach(function(el) {
+    if (!el.getAttribute("data-bs-auto-close")) {
+        el.dataset.bsAutoClose = 'true';
+    }
+});
+document.querySelectorAll('aside a.nav-link.dropdown-toggle').forEach(function(el) {
+    if (!el.getAttribute("data-bs-auto-close")) {
+        el.dataset.bsAutoClose = 'false';
+    }
+});
 
 // Bar layout - Highlight active section/page
 [...document.querySelectorAll('aside a[href], header.top a[href]')]
