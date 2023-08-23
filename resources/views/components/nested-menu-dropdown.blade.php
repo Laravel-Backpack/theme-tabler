@@ -1,7 +1,7 @@
 <div class="dropend">
     <a {{ $attributes->merge([
         'class' => 'dropdown-item dropdown-toggle',
-        'href' => $link ?? '#teste',
+        'href' => $link ?? '',
         'data-bs-toggle'=> 'dropdown',
         'role' => 'button',
         'aria-expanded' => 'false',
@@ -14,3 +14,17 @@
         {!! $slot !!}
     </div>
 </div>
+
+@bassetBlock('nested-dropdown-menu.js')
+<script type="text/javascript">
+    document.querySelectorAll('aside a.nav-link.dropdown-toggle').forEach(function(el) {
+        el.dataset.bsAutoClose = 'false';
+    });
+    document.querySelectorAll('header a.nav-link.dropdown-toggle').forEach(function(el) {
+        let dropdownMenu = el.nextElementSibling;
+        let hasNested = dropdownMenu.querySelector('.dropend');
+        
+        el.dataset.bsAutoClose = hasNested ? 'outside' : 'true';
+    });
+</script>
+@endBassetBlock

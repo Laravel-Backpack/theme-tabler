@@ -1,3 +1,6 @@
+@if($nested)
+    @include(backpack_view('components.nested-menu-dropdown'))
+@else
 <li class="nav-item dropdown">
     <a {{ $attributes->merge([
         'class' => 'nav-link dropdown-toggle',
@@ -15,17 +18,4 @@
     {!! $slot !!}
     </div>
 </li>
-
-@bassetBlock('dropdown-menu-js.js')
-<script type="text/javascript">
-    document.querySelectorAll('header a.nav-link.dropdown-toggle').forEach(function(el) {
-        let dropdownMenu = el.nextElementSibling;
-        let hasNested = dropdownMenu.querySelector('.dropend');
-        
-        el.dataset.bsAutoClose = hasNested ? 'outside' : 'true';
-    });
-    document.querySelectorAll('aside a.nav-link.dropdown-toggle').forEach(function(el) {
-        el.dataset.bsAutoClose = 'false';
-    });
-</script>
-@endBassetBlock
+@endif
