@@ -1,5 +1,5 @@
 @if($nested)
-    @include(backpack_view('components.nested-menu-dropdown'))
+    @include(backpack_view('components.partials.nested-menu-dropdown'))
 @else
 <li class="nav-item dropdown">
     <a {{ $attributes->merge([
