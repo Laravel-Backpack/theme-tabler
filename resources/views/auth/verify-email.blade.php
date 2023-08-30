@@ -7,7 +7,7 @@
                 {!! backpack_theme_config('project_logo') !!}
             </div>
             <div class="card card-md">
-                <div class="card-body pt-3">
+                <div class="card-body">
                 {{ trans('backpack::base.verify_email.email_verification_required') }}
 
                 @if (session('status') == 'verification-link-sent')
@@ -28,11 +28,11 @@
                 <div class="card-footer">
                 <form method="POST" action="{{ route('verification.send') }}">
                     @csrf
-                    <button type="submit" class="btn btn-sm btn-primary float-start" tabindex="6">{{ trans('backpack::base.verify_email.resend_verification_link') }}</button>   
+                    <button type="submit" class="btn btn-primary float-start" tabindex="6">{{ trans('backpack::base.verify_email.resend_verification_link') }}</button>   
                 </form>
                 <form method="POST" action="{{ backpack_url('logout') }}">
                     @csrf
-                    <button type="submit" class="btn btn-sm button-secondary float-end" tabindex="7"><i class="la la-lock me-2"></i>{{ trans('backpack::base.logout') }}</button>   
+                    <button type="submit" class="btn button-secondary float-end" tabindex="7"><i class="la la-lock me-2"></i>{{ trans('backpack::base.logout') }}</button>   
                 </form>     
                 </div>       
            
