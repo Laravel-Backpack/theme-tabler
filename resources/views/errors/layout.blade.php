@@ -1,4 +1,8 @@
-@extends(backpack_view(backpack_user() && backpack_theme_config('layout') ? 'layouts.'.backpack_theme_config('layout') : 'errors.blank'))
+@php
+$isLoggedInAndVerified = backpack_user() && (config('backpack.base.setup_email_verification_routes', false) ? backpack_user()->hasVerifiedEmail() : true);
+@endphp
+
+@extends(backpack_view($isLoggedInAndVerified && backpack_theme_config('layout') ? 'layouts.'.backpack_theme_config('layout') : 'errors.blank'))
 
 @section('content')
 <style>
