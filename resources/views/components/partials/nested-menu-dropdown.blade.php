@@ -1,7 +1,7 @@
 <div class="dropend">
     <a {{ $attributes->merge([
         'class' => 'dropdown-item dropdown-toggle',
-        'href' => $link ?? '',
+        'href' => $link ?? '#',
         'data-bs-toggle'=> 'dropdown',
         'role' => 'button',
         'aria-expanded' => 'false',

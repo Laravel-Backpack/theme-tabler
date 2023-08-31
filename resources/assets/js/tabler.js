@@ -15,7 +15,30 @@ document.querySelectorAll('aside a.nav-link.dropdown-toggle').forEach(function(e
     .filter(el => window.location.href.split("#")[0].split("?")[0] === el.href)
     .forEach(el => {
         while (/(nav-item|nav-link|dropdown)/.test(el.className)) {
-            if (el.previousElementSibling?.dataset.bsAutoClose === 'false') el.classList.add('show');
+            if (el.previousElementSibling?.dataset.bsAutoClose === 'false')  {
+                el.classList.add('show');
+            }
+            let container = el.parentElement?.parentElement;
+            let parentContainer = container;
+            while(parentContainer.classList.contains('dropend')) {
+                parentContainer.querySelector('a.dropdown-toggle').classList.add('active');
+                parentContainer = parentContainer.parentElement?.parentElement;
+            }
+    
+            if(parentContainer?.classList.contains('nav-item')) {
+                parentContainer.classList.add('active');
+            
+                parentContainer.querySelector('a.dropdown-toggle').addEventListener('click', function () {
+                    [...parentContainer.querySelectorAll('.active')].forEach(function(activeDropdown) {
+                        if(activeDropdown.classList.contains('dropdown-toggle') && activeDropdown !== el) {
+                            setTimeout(function() {
+                            activeDropdown.click();                      
+                            }, 10);
+                        }
+                    });
+                }); 
+
+            }
             el.classList.add('active');
             el = el.parentElement;
         }
