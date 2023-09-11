@@ -72,7 +72,7 @@
 
                             <div class="col-md-6 form-group">
                                 @php
-                                    $label = trans('backpack::base.'.config('backpack.base.authentication_column_name'));
+                                    $label = trans('backpack::base.'.strtolower(config('backpack.base.authentication_column_name')));
                                     $field = backpack_authentication_column();
                                 @endphp
                                 <label class="required">{{ $label }}</label>
