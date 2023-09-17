@@ -32,6 +32,7 @@
             </div>
         </li>
     @endif
+    <li class="nav-separator"></li>
 @endif
 
 {{--
