@@ -10,7 +10,7 @@
     </div>
 
     <div class="mb-3">
-        <label class="form-label" for="{{ backpack_authentication_column() }}">{{ trans(config('backpack.base.authentication_column_name')) }}</label>
+        <label class="form-label" for="{{ backpack_authentication_column() }}">{{ trans('backpack::base.'.strtolower(config('backpack.base.authentication_column_name'))) }}</label>
         <input tabindex="2" type="{{ backpack_authentication_column()==backpack_email_column()?'email':'text'}}" class="form-control {{ $errors->has(backpack_authentication_column()) ? 'is-invalid' : '' }}" name="{{ backpack_authentication_column() }}" id="{{ backpack_authentication_column() }}" value="{{ old(backpack_authentication_column()) }}">
         @if ($errors->has(backpack_authentication_column()))
             <div class="invalid-feedback">{{ $errors->first(backpack_authentication_column()) }}</div>
