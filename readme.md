@@ -46,6 +46,89 @@ composer require backpack/theme-tabler
 php artisan vendor:publish --tag="theme-tabler-config"
 ```
 
+## Config
+Note: Any value set here will override the ones defined in config/backpack/ui.php when this theme is in use.
+
+**Change layout:** Simply pick a layout
+```php
+/**
+ * Possible values: horizontal, horizontal_dark, horizontal_overlap, vertical,
+ * vertical_dark, vertical_transparent (legacy theme), right_vertical, right_vertical_dark, right_vertical_transparent
+ */
+'layout' => 'horizontal_overlap',
+```
+
+**Change auth layout:** Pick a login page layout
+```php
+'auth_layout' => 'default', //Possible values: default, illustration, cover
+```
+
+**Add CSS:** Here you can easily load your own extra CSS styles.
+
+```php
+'styles' => [
+  base_path('vendor/backpack/theme-tabler/resources/assets/css/color-adjustments.css'),
+  base_path('vendor/backpack/theme-tabler/resources/assets/css/colors.css'),
+ // add your css here
+],
+```
+
+**Add JS:** Here you can easily include your own JS files.
+
+```php
+'scripts' => [],
+```
+
+**More configs:** Get more out of theme-tabler.
+- Take more control on `Dark Mode`
+- Make `Container` fluid to utilize the space
+- Choose how `Header`, `Sidebar` should be
+
+```php
+'options' => [
+   /**
+    * The available color modes.
+    */
+    'colorModes' => [
+        'system' => 'la-desktop',
+        'light' => 'la-sun',
+        'dark' => 'la-moon',
+    ],
+
+    /**
+     * The color mode used by default.
+     */
+    'defaultColorMode' => 'system', // system, light, dark
+
+    /**
+     * When true, a switch is displayed to let admins choose their favorite theme mode.
+     * When false, the theme will only use the "defaultColorMode" set above.
+     * In case "defaultColorMode" is null, system is the default.
+     */
+    'showColorModeSwitcher' => true,
+
+    /**
+     * Fix the top-header component (present in "vertical_transparent") and the menu when the layout type is set as "horizontal".
+     * This value is skipped when the layout type is horizontal-overlap, using false as default.
+     */
+    'useStickyHeader' => false,
+
+    /**
+     * When true, the content area will take the whole screen width.
+     */
+    'useFluidContainers' => false,
+
+    /**
+     * When true, the sidebar content for vertical layouts will not scroll with the rest of the content.
+     */
+    'sidebarFixed' => false,
+
+    /**
+     * When true, horizontal layouts will display the classic top bar on top to free some space when multiple nav items are used.
+     */
+    'doubleTopBarInHorizontalLayouts' => false,
+],
+```
 ## Uninstalling
 
 To uninstall this Backpack theme:
