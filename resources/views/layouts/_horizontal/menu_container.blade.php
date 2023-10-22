@@ -1,4 +1,4 @@
-<header data-bs-theme={{ $theme ?? 'system' }} class="{{ backpack_theme_config('classes.menuHorizontalContainer') ?? 'navbar-expand-lg top' }}">
+<header data-bs-theme="{{ $theme ?? 'system' }}" class="{{ backpack_theme_config('classes.menuHorizontalContainer') ?? 'navbar-expand-lg top' }}">
     <div class="collapse navbar-collapse" id="navbar-menu">
         <div class="d-print-none {{ backpack_theme_config('classes.menuHorizontalContent') ?? 'navbar navbar-expand-lg navbar-'.($theme ?? 'light').' navbar-'.(($overlap ?? false) ? 'overlap' : '') }}">
             <div class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
@@ -21,7 +21,7 @@
 </header>
 
 {{-- we use this here to display the mobile menu --}}
-<aside data-bs-theme={{ $theme ?? 'system' }} class="navbar navbar-expand-lg navbar-{{ $theme ?? 'light' }} d-block d-lg-none">
+<aside data-bs-theme="{{ $theme ?? 'system' }}" class="navbar navbar-expand-lg navbar-{{ $theme ?? 'light' }} d-block d-lg-none">
     <div class="container-fluid">
         <ul class="nav navbar-nav d-flex flex-row align-items-center justify-content-between w-100">
             @include(backpack_view('layouts.partials.mobile_toggle_btn'), ['forceWhiteLabelText' => true])
