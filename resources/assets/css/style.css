@@ -668,7 +668,11 @@ tr.array-row td:has(span.ui-sortable-handle) {
 }
 
 body[bp-layout=horizontal-overlap] .breadcrumb .active {
-    color: var(--tblr-gray-200);
+    color: var(--tblr-gray-700);
+}
+
+[data-bs-theme=dark] body[bp-layout=horizontal-overlap] .breadcrumb .active {
+    color: var(--tblr-gray-300);
 }
 
 body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
@@ -676,11 +680,11 @@ body[bp-layout=horizontal-overlap] .navbar-filters .navbar-nav .nav-link {
 }
 
 body[bp-layout=horizontal-overlap] .nav-item > a {
-    color: var(--tblr-gray-400);
+    color: var(--tblr-gray-800);
 }
 
 [data-bs-theme=dark] body[bp-layout=horizontal-overlap] .nav-item > a {
-    color: var(--tblr-gray-500);
+    color: var(--tblr-gray-300);
 }
 
 [data-bs-theme=dark] body[bp-layout=horizontal-overlap] .nav-item > a.active {
