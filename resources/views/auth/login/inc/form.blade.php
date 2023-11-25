@@ -12,7 +12,14 @@
         <label class="form-label" for="password">
             {{ trans('backpack::base.password') }}
         </label>
-        <input tabindex="2" type="password" name="password" id="password" class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}" value="">
+        <div class="input-group input-group-flat">
+            <input tabindex="2" type="password" name="password" id="password" class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}" value="">
+            <button type="button" data-toggle="tooltip"
+                    data-original-title="Show/Hide"
+                    class="btn btn-outline-primary border-grey height-50 toggle-password">
+                <i id="toggler" class=" la la-eye"></i>
+            </button>
+        </div>
         @if ($errors->has('password'))
             <div class="invalid-feedback">{{ $errors->first('password') }}</div>
         @endif
