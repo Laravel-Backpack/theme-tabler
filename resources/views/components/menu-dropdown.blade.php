@@ -16,11 +16,11 @@
             @if($title)<span>{{ $title }}</span>@endif
         </a>
         <div class="dropdown-menu {{ $open ? 'show' : '' }} dropdown-submenu" aria-labelledby="{{$dropdownId}}">
-        @if($withColumns)
+        @if(isset($withColumns) && $withColumns)
             <div class="dropdown-menu-columns">
         @endif
             {!! $slot !!}
-        @if($withColumns)
+        @if(isset($withColumns) && $withColumns)
             </div>
         @endif
         </div>
@@ -40,11 +40,11 @@
         @if($title)<span>{{ $title }}</span>@endif
     </a>
     <div class="dropdown-menu {{ $open ? 'show' : '' }}" data-bs-popper="static" aria-labelledby="{{$dropdownId}}">
-    @if($withColumns)
+    @if(isset($withColumns) && $withColumns)
         <div class="dropdown-menu-columns">
     @endif
         {!! $slot !!}
-    @if($withColumns)
+    @if(isset($withColumns) && $withColumns)
         </div>
     @endif
     </div>
