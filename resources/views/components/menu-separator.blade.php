@@ -1,1 +1,1 @@
-<li {{ $attributes->merge(['class' => 'nav-separator']) }}>{{ $title }}</li>
+<span {{ $attributes->merge(['class' => 'nav-separator']) }}>{{ $title }}</span>
