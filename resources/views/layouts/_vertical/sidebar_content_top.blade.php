@@ -6,7 +6,7 @@
             </a>
         </li>
     @else
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown d-none d-lg-block">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="true">
                 <span class="avatar avatar-sm rounded-circle me-2">
                     <img class="avatar avatar-sm rounded-circle bg-transparent" src="{{ backpack_avatar_url(backpack_auth()->user()) }}"
