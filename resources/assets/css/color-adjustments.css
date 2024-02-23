@@ -5,7 +5,7 @@
 */
 
 [data-bs-theme=dark] ::placeholder {
-    color: rgba(var(--tblr-body-color-rgb), 0.5) !important;
+    color: rgba(var(--tblr-light-text), 0.5) !important;
 }
 
 [data-bs-theme=dark] ul.pagination li.paginate_button.page-item.active a.page-link {
@@ -13,7 +13,7 @@
 }
 
 [data-bs-theme=dark] .select2-selection--multiple input {
-    color: rgba(var(--tblr-body-color-rgb), 0.5) !important;
+    color: rgba(var(--tblr-light-text), 0.5) !important;
 }
 
 /*cards*/
