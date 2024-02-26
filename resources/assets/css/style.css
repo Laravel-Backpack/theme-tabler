@@ -290,6 +290,7 @@ header.top div.dropdown-menu a.dropdown-item i {
     border: 0 !important;
     border-radius: 0 !important;
     caret-color: var(--tblr-light-text);
+    color: var(--tblr-light-text);
 }
 
 [data-bs-theme=dark] .navbar-filters .dropdown-menu {
@@ -312,7 +313,7 @@ header.top div.dropdown-menu a.dropdown-item i {
     background-color: var(--tblr-dark) !important;
 }
 
-[data-bs-theme=dark] .navbar-filters .select2-selection__rendered {
+[data-bs-theme=dark] .navbar-filters .select2-selection__rendered:not(input) {
     color: var(--tblr-muted) !important;
 }
 

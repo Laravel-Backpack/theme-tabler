@@ -5,15 +5,15 @@
 */
 
 [data-bs-theme=dark] ::placeholder {
-    color: rgba(var(--tblr-body-color-rgb), 0.5) !important;
+    color: rgba(var(--tblr-light-text), 0.5) !important;
 }
 
 [data-bs-theme=dark] ul.pagination li.paginate_button.page-item.active a.page-link {
     color: var(--tblr-light) !important;
 }
 
-[data-bs-theme=dark] .select2-selection--multiple input {
-    color: rgba(var(--tblr-body-color-rgb), 0.5) !important;
+[data-bs-theme=dark] .select2-selection--multiple input:not(:focus) {
+    color: rgba(var(--tblr-light-text), 0.5) !important;
 }
 
 /*cards*/
@@ -70,6 +70,15 @@
     background-color: var(--tblr-primary-border-subtle);
 }
 
+[data-bs-theme=dark] input[type=checkbox]:not(:checked).form-check-input::after {
+    background-color: var(--tblr-bg-surface);
+}
+
+[data-bs-theme=dark] input[type=checkbox]:checked.form-check-input {
+    background-color: var(--tblr-primary);
+    border-color: var(--tblr-primary);
+}
+
 [data-bs-theme=dark] input:not(input[type=hidden]).form-control,
 [data-bs-theme=dark] textarea.form-control,
 [data-bs-theme=dark] select.form-control,
@@ -78,6 +87,11 @@
 [data-bs-theme=dark] .select2-container .select2-dropdown .select2-search input.select2-search__field {
     background-color: var(--tblr-bg-surface);
     border-color: var(--tblr-primary-border-subtle);
+    color: rgba(var(--tblr-light-text), 0.5);
+}
+
+[data-bs-theme=dark] .select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+    color: rgba(var(--tblr-light-text), 0.5);
 }
 
 [data-bs-theme=dark] input[type=date].form-control::-webkit-calendar-picker-indicator {
@@ -104,6 +118,15 @@
 [data-bs-theme=dark] .select2-container .select2-dropdown .select2-search {
     background-color: var(--tblr-dark) !important;
 }
+
+[data-bs-theme=dark] :not(.navbar-filters) .select2-results ul.select2-results__options li.select2-results__option:not(.select2-results__option--highlighted)[aria-selected=true] {
+    color: var(--tblr-primary) !important;
+}
+
+[data-bs-theme=dark] select[multiple]:focus option:checked {
+    background: var(--tblr-primary) linear-gradient(0deg, var(--tblr-primary) 0%, var(--tblr-primary) 100%);
+}
+
 
 [data-bs-theme=dark] .input-group button.popup_selector,
 [data-bs-theme=dark] .input-group button.clear_elfinder_picker {
