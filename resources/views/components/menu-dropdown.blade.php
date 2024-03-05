@@ -9,7 +9,7 @@
             'data-bs-toggle'=> 'dropdown',
             'role' => 'button',
             'aria-expanded' => 'false',
-            'data-bs-auto-close' => 'outside',
+            'data-bs-auto-close' => 'false',
             'id' => $dropdownId, 
             ]) }}>
             @if($icon)<i class="nav-icon {{ $icon }} d-block d-lg-none d-xl-block"></i>@endif
@@ -32,8 +32,7 @@
         'href' => $link ?? '#',
         'data-bs-toggle'=> 'dropdown',
         'role' => 'button',
-        'aria-expanded' => 'false',
-        'data-bs-auto-close' => 'outside',
+        'data-bs-auto-close' => 'false',
     ]) }}>
 
         @if($icon)<i class="nav-icon {{ $icon }} d-block d-lg-none d-xl-block"></i>@endif
