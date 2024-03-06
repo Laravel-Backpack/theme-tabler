@@ -179,11 +179,11 @@ table .btn-link:active {
     background-color: var(--tblr-dropdown-link-active-bg);
 }
 
-@media (min-width: 992px) {
+
 [data-menu-theme=dark].navbar-vertical.navbar-expand-lg .navbar-collapse .dropdown-menu .dropdown-item.active {
     color: var(--tblr-navbar-active-color);
 }
-}
+
 
 /*aside*/
 aside .navbar-collapse .dropdown-toggle {
