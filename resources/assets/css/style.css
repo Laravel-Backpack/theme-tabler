@@ -169,8 +169,21 @@ table .btn-link:active {
 
 [data-bs-theme=dark] .btn-link:hover, [data-bs-theme=dark] a:not(.btn):hover {
     background-color: transparent;
+}
+
+[data-bs-theme=dark] .btn-link:hover, [data-bs-theme=dark] a:not(.btn):hover, [data-menu-theme=dark] .btn-link:hover, [data-menu-theme=dark] a:not(.btn):hover {
     color: var(--tblr-gray-200) !important;
 }
+
+[data-menu-theme=dark] .btn-link:hover, [data-menu-theme=dark] a:not(.btn):hover {
+    background-color: var(--tblr-dropdown-link-active-bg);
+}
+
+
+[data-menu-theme=dark].navbar-vertical.navbar-expand-lg .navbar-collapse .dropdown-menu .dropdown-item.active {
+    color: var(--tblr-navbar-active-color);
+}
+
 
 /*aside*/
 aside .navbar-collapse .dropdown-toggle {
@@ -215,7 +228,7 @@ aside .sidebar-toggler i {
     color: white;
 }
 
-[data-bs-theme=dark] aside a:not(.btn):hover {
+[data-menu-theme=dark] aside a:not(.btn):hover {
     color: var(--tblr-primary) !important;
 }
 
@@ -243,7 +256,7 @@ header.top div ul.navbar-nav li.nav-item a.nav-link span.badge {
     top: -5px;
 }
 
-[data-bs-theme=dark] aside .navbar-collapse .dropdown-toggle:hover:after {
+[data-menu-theme=dark] aside .navbar-collapse .dropdown-toggle:hover:after {
     color: var(--tblr-primary);
 }
 

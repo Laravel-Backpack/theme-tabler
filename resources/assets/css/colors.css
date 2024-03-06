@@ -4,7 +4,7 @@
 */
 
 @charset "UTF-8";
-:root, [data-bs-theme=light] {
+:root, [data-bs-theme=light], [data-menu-theme=light] {
     --tblr-gray: #4c496c;
     --tblr-gray-dark: #211d3b;
     --tblr-gray-100: #f1f5f9;
@@ -95,7 +95,7 @@
     --tblr-navbar-border-color: transparent;
 }
 
-[data-bs-theme=dark] {
+[data-bs-theme=dark], [data-menu-theme=dark] {
     --tblr-body-color: var(--tblr-gray-400);
     --tblr-body-color-rgb: 160, 155, 190;
     --tblr-body-bg: #181818;
