@@ -33,6 +33,7 @@
         'data-bs-toggle'=> 'dropdown',
         'role' => 'button',
         'data-bs-auto-close' => 'false',
+        'id' => $dropdownId,
     ]) }}>
 
         @if($icon)<i class="nav-icon {{ $icon }} d-block d-lg-none d-xl-block"></i>@endif
