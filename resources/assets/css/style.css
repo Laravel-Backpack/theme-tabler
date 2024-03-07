@@ -873,7 +873,7 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
 }
 
 /* Fix modal cancel color */
-[data-bs-theme=dark] .swal-button--cancel {
+.swal-button--cancel {
     color: #fff !important;
 }
 
