@@ -95,9 +95,21 @@ table tbody tr td.dtr-control span {
     font-weight: 700;
 }
 
-table .btn-link {
+table .btn-link, #form_tabs p .btn-link:not(:hover) {
     color: var(--tblr-primary);
 }
+
+#form_tabs p .btn-link:hover {
+    background-color: transparent;
+    color: var(--tblr-btn-hover-color);
+    text-decoration: underline;
+}
+
+[data-bs-theme=dark] #form_tabs p .btn-link:not(:hover) {
+    color: rgba(var(--tblr-link-color-rgb), var(--tblr-link-opacity, 1));
+
+}
+
 table .btn-link:hover {
     text-decoration: none;
     background-color: transparent;
@@ -171,8 +183,11 @@ table .btn-link:active {
     background-color: transparent;
 }
 
-[data-bs-theme=dark] .btn-link:hover, [data-bs-theme=dark] a:not(.btn):hover, [data-menu-theme=dark] .btn-link:hover, [data-menu-theme=dark] a:not(.btn):hover {
-    color: var(--tblr-gray-200) !important;
+[data-bs-theme=dark] .btn-link:hover, 
+[data-bs-theme=dark] a:not(.btn):hover, 
+[data-menu-theme=dark] .btn-link:hover, 
+[data-menu-theme=dark] a:not(.btn):hover {
+    color: var(--tblr-gray-200);
 }
 
 [data-menu-theme=dark] .btn-link:hover, [data-menu-theme=dark] a:not(.btn):hover {
