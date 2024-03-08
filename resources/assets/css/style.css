@@ -101,6 +101,8 @@ table .btn-link, #form_tabs p .btn-link:not(:hover) {
 
 #form_tabs p .btn-link:hover {
     background-color: transparent;
+    color: var(--tblr-btn-hover-color);
+    text-decoration: underline;
 }
 
 [data-bs-theme=dark] #form_tabs p .btn-link:not(:hover) {
