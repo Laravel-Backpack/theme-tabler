@@ -199,3 +199,7 @@
 [data-bs-theme=dark] span.input-group-text {
     border-color: var(--tblr-primary-border-subtle);
 }
+
+[data-bs-theme=light] [bp-layout=horizontal-overlap] .page-body {
+    color: var(--tblr-gray-400);
+}
