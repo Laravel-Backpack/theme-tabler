@@ -153,7 +153,7 @@ The more files you copy-paste and customize, the more difficult it will be to up
 mkdir -p resources/views/vendor/backpack/theme-tabler
 
 # copy the blade file inside the folder we created above
-cp -i vendor/backpack/theme-tabler/resources/views/dashboard.blade.php resources/views/vendor/backpack/theme-tabler/dashboard.blade.php
+cp -i vendor/backpack/crud/src/resources/views/ui/dashboard.blade.php resources/views/vendor/backpack/theme-tabler/dashboard.blade.php
 ```
 
 ## Change log
