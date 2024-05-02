@@ -993,3 +993,11 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
 .card-body .subheader {
     color: inherit;
 }
+
+.alert {
+    background: var(--tblr-surface);
+}
+
+[data-bs-theme=dark] .alert {
+    color: var(--tblr-gray-400);
+}
