@@ -999,5 +999,5 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
 }
 
 [data-bs-theme=dark] .alert {
-    color: var(--tblr-gray-400) !important;
+    color: var(--tblr-gray-400);
 }
