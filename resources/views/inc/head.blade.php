@@ -4,6 +4,8 @@
 <meta name="robots" content="{{ backpack_theme_config('meta_robots_content', 'noindex, nofollow') }}">
 @endif
 
+@includeWhen(view()->exists('vendor.backpack.ui.inc.header_metas'), 'vendor.backpack.ui.inc.header_metas')
+
 <meta name="csrf-token" content="{{ csrf_token() }}"/> {{-- Encrypted CSRF token for Laravel, in order for Ajax requests to work --}}
 <title>{{ isset($title) ? $title.' :: '.backpack_theme_config('project_name') : backpack_theme_config('project_name') }}</title>
 
