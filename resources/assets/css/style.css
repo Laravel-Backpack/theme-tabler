@@ -995,7 +995,7 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
 }
 
 .alert {
-    background: var(--tblr-surface);
+    background: var(--tblr-bg-surface);
 }
 
 [data-bs-theme=dark] .alert {
