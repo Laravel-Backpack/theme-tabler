@@ -12,7 +12,7 @@
             });
 
             // get alerts from the alert bag
-            var $alerts_from_php = {{ Illuminate\Support\Js::from(\Alert::getMessages()) }};
+            var $alerts_from_php = JSON.parse('@json(\Alert::getMessages())');
 
             // get the alerts from the localstorage
             var $alerts_from_localstorage = JSON.parse(localStorage.getItem('backpack_alerts')) ?
