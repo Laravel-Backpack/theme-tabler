@@ -93,6 +93,7 @@
     --tblr-form-invalid-border-color: #df4759;
     --tblr-danger-text: var(--tblr-danger);
     --tblr-navbar-border-color: transparent;
+    --bg-switch-checked-color: var(--tblr-primary);
 }
 
 [data-bs-theme=dark], [data-menu-theme=dark] {
