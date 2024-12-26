@@ -1043,3 +1043,7 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
     width:3.5em;
     height: 1.8em;
 }
+
+label.switch-label {
+    padding-top: 0.1em;
+}
