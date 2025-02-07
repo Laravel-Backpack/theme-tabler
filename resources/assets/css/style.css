@@ -541,6 +541,7 @@ footer {
 /*bulk buttons*/
 #bottom_buttons a.btn.btn-sm {
     padding: 5px 10px;
+    margin-top: 5px;
 }
 
 [data-bs-theme=dark] #crudTable_wrapper table tbody tr td input[type=editable_text],
