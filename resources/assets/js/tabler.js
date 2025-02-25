@@ -1,6 +1,6 @@
 // Bar layout - Highlight active section/page
 [...document.querySelectorAll('aside a[href], header.top a[href]')]
-    .filter(el => window.location.href.split("#")[0].split("?")[0] === el.href)
+    .filter(el => window.location.href.split("#")[0] === el.href)
     .forEach(el => {
         while (/(nav-item|nav-link|dropdown)/.test(el.className)) {
             let parentContainer = el.parentElement?.parentElement;
