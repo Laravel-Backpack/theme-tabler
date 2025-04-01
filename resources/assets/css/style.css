@@ -159,7 +159,7 @@ table .btn-link:active {
     background-color: var(--tblr-table-bg);
 }
 
-[data-bs-theme=dark] #crudTable_processing.dataTables_processing.card {
+[data-bs-theme=dark] .dataTables_processing.card {
     background-color: var(--tblr-dark);
     border-radius: 0;
 }
@@ -299,16 +299,16 @@ header.top div.dropdown-menu a.dropdown-item i {
 }
 
 /*table hover*/
-#crudTable_wrapper .table-striped > tbody > tr:hover > * {
+.dataTables_wrapper .table-striped > tbody > tr:hover > * {
     box-shadow: none !important;
     background-color: rgba(var(--tblr-primary-rgb),.1);
 }
 
-[data-bs-theme=light] table#crudTable {
+[data-bs-theme=light] table.dataTable {
     background-color: var(--tblr-white);
 }
 
-[data-bs-theme=dark] table#crudTable {
+[data-bs-theme=dark] table.dataTable {
     background-color: var(--tblr-bg-surface);
 }
 
@@ -544,13 +544,13 @@ footer {
     margin-top: 5px;
 }
 
-[data-bs-theme=dark] #crudTable_wrapper table tbody tr td input[type=editable_text],
-[data-bs-theme=dark] #crudTable_wrapper table tbody tr td select {
+[data-bs-theme=dark] .dataTables_wrapper table tbody tr td input[type=editable_text],
+[data-bs-theme=dark] .dataTables_wrapper table tbody tr td select {
     color: var(--tblr-light-text);
     border-bottom: 1px dashed var(--tblr-gray-700) !important;
 }
 
-[data-bs-theme=dark] #crudTable_wrapper table tbody tr td input[type=editable_text]:focus {
+[data-bs-theme=dark] .dataTables_wrapper table tbody tr td input[type=editable_text]:focus {
     --bs-table-accent-bg: none !important;
     box-shadow: none !important;
 }
@@ -816,189 +816,4 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
 
 [data-bs-theme=dark] .EasyMDEContainer .editor-toolbar button:hover {
     background: var(--tblr-tabler) !important;
-}
-
-[data-bs-theme=dark] .EasyMDEContainer .editor-toolbar button.active {
-    background: var(--tblr-tabler) !important;
-}
-
-/* Select2 badge */
-
-[data-bs-theme=dark] .select2-selection__choice {
-    background: var(--tblr-tabler) !important;
-    color: var(--tblr-bg-surface) !important;
-    border-color: var(--tblr-tabler) !important;
-}
-
-[data-bs-theme=dark] .select2-selection__choice .select2-selection__choice__remove {
-    color: var(--tblr-bg-surface) !important;
-}
-
-[data-bs-theme=dark] .select2-dropdown {
-    background-color: var(--tblr-bg-surface) !important;
-}
-
-/* Phone field */
-
-[data-bs-theme=dark] .iti .iti__flag-container,
-[data-bs-theme=dark] .iti .iti__selected-flag {
-    background-color: var(--tblr-bg-surface-secondary) !important;
-}
-
-[data-bs-theme=dark] .iti .iti__selected-dial-code {
-    color: var(--tblr-muted) !important;
-}
-
-[data-bs-theme=dark] .iti .iti__country-list {
-    background-color: var(--tblr-dark) !important;
-}
-
-[data-bs-theme=dark] .iti .iti__country-name {
-    color: var(--tblr-body-color) !important;
-}
-
-[data-bs-theme=dark] .iti .iti__active,
-[data-bs-theme=dark] .iti .iti__highlight {
-    background-color: var(--tblr-primary) !important;
-    color: #fff;
-}
-
-/* Icon Picker */
-
-[data-bs-theme=dark] .iconpicker {
-    background-color: transparent;
-    border-color: var(--tblr-primary);
-    color: var(--tblr-primary);
-}
-
-[data-bs-theme=dark] .table-icons td,
-[data-bs-theme=dark] .table-icons .btn-icon {
-    max-width: 35px !important;
-    max-height: 30px !important;
-}
-
-[data-bs-theme=dark] .table-icons .btn-warning {
-    background-color: var(--tblr-primary) !important;
-}
-
-/* Fix border btn-file */
-.btn-file {
-    border-top-right-radius: var(--tblr-border-radius-sm) !important;
-    border-bottom-right-radius: var(--tblr-border-radius-sm) !important;
-    border-radius: var(--tblr-border-radius-sm) !important;
-}
-
-/* Fix modal cancel color */
-.swal-button--cancel {
-    color: #fff !important;
-}
-
-/* Fix export */
-[data-bs-theme=dark] .dt-button-collection .dropdown-menu {
-    background-color: var(--tblr-dark) !important;
-}
-
-[data-bs-theme=dark] .dt-button-collection .dropdown-menu .dropdown-item:hover {
-    background-color: var(--tblr-primary) !important;
-    color: #fff;
-}
-
-/* Fix visilibity */
-[data-bs-theme=dark] .dt-button-collection {
-    background-color: var(--tblr-dark) !important;
-}
-
-[data-bs-theme=dark] .buttons-colvis .dropdown-menu .dropdown-item:hover {
-    background-color: var(--tblr-primary) !important;
-    color: #fff;
-}
-
-[data-bs-theme=dark] .dt-button-collection {
-    background-color: var(--tblr-dark) !important;
-}
-
-/* Modal Inline Creation */
-
-[data-bs-theme=dark] .bg-light {
-    background-color: var(--tblr-bg-surface) !important;
-}
-
-/* Fix floating header */
-
-[data-bs-theme=dark] table.fixedHeader-floating {
-    background-color: var(--tblr-bg-surface);
-}
-
-/* TinyMCE */
-
-[data-bs-theme=dark] .tox,
-[data-bs-theme=dark] .tox .tox-editor-container,
-[data-bs-theme=dark] .tox .tox-editor-header,
-[data-bs-theme=dark] .tox .tox-menubar,
-[data-bs-theme=dark] .tox .tox-toolbar__primary,
-[data-bs-theme=dark] .tox .tox-edit-area html {
-    background-color: var(--tblr-bg-surface) !important;
-}
-
-[data-bs-theme=dark] .tox-tinymce {
-    border-color: var(--tblr-primary-border-subtle) !important;
-}
-
-[data-bs-theme=dark] .tox .tox-menubar+.tox-toolbar-overlord {
-    border-color: var(--tblr-primary-border-subtle) !important;
-}
-
-[data-bs-theme=dark] .tox .tox-statusbar,
-[data-bs-theme=dark] .tox .tox-promotion,
-[data-bs-theme=dark] .tox .tox-toolbar-overlord,
-[data-bs-theme=dark] .tox .tox-tbtn--bespoke,
-[data-bs-theme=dark] .tox .tox-promotion-link {
-    background-color: transparent !important;
-    color: var(--tblr-body-color) !important;
-}
-
-[data-bs-theme=dark] .tox .tox-mbtn,
-[data-bs-theme=dark] .tox .tox-tbtn,
-[data-bs-theme=dark] .tox .tox-statusbar__path-item {
-    color: var(--tblr-body-color) !important;
-}
-
-[data-bs-theme=dark] .tox .tox-statusbar__branding svg,
-[data-bs-theme=dark] .tox .tox-icon svg,
-[data-bs-theme=dark] .tox .tox-tbtn__select-chevron svg {
-    fill: var(--tblr-body-color) !important;
-}
-
-[data-bs-theme=dark] .tox button:hover,
-[data-bs-theme=dark] .tox button.tox-mbtn--active,
-[data-bs-theme=dark] .tox button.tox-tbtn--enabled {
-    background: var(--tblr-tabler) !important;
-}
-
-[data-bs-theme=dark] #cboxOverlay {
-	background: transparent !important;
-	-webkit-backdrop-filter: blur(4px) !important;
-	backdrop-filter: blur(4px) !important;
-}
-
-[data-bs-theme=dark] #colorbox {
-    background: transparent !important;
-}
-/* Range */
-[data-bs-theme=dark] .form-range {
-    border: solid 1px var(--tblr-primary-border-subtle); /* To make more contrast could use --tblr-tabler */
-    border-radius: 0.4rem;
-    height: 0.4rem;
-}
-
-.card-body .subheader {
-    color: inherit;
-}
-
-.alert {
-    background: var(--tblr-bg-surface);
-}
-
-[data-bs-theme=dark] .alert {
-    color: var(--tblr-gray-400);
 }
