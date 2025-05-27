@@ -539,7 +539,7 @@ footer {
 }
 
 /*bulk buttons*/
-#bottom_buttons a.btn.btn-sm {
+.bottom_buttons a.btn.btn-sm {
     padding: 5px 10px;
 }
 
