@@ -4,8 +4,8 @@
 @bassetBlock('tabler-menu-javascript.js')
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function() {
-        [...document.querySelectorAll('aside .dropdown-toggle.active')].forEach(el => { 
-            let bsDropdown = bootstrap.Dropdown.getInstance(el);
+        [...document.querySelectorAll('aside .dropdown-toggle.active')].forEach(el => {
+            let bsDropdown = window.tabler.Dropdown.getInstance(el);
             if(typeof bsDropdown !== 'undefined' && bsDropdown !== null) {
                 bsDropdown.show();
                 el.blur();                 
@@ -16,7 +16,7 @@
         // in topbar we can use `click outside` to close the menu, but here we don't want
         // the menu closing while we interact with the page, only when another main menu is clicked
         [...document.querySelectorAll('aside .nav-item.dropdown')].forEach(el => {
-        let bsDropdown = bootstrap.Dropdown.getInstance(el.firstElementChild);
+        let bsDropdown = window.tabler.Dropdown.getInstance(el.firstElementChild);
         if(typeof bsDropdown !== 'undefined' && bsDropdown !== null) {
             bsDropdown._config.autoClose = false;
             bsDropdown.update();
@@ -24,16 +24,15 @@
             bsDropdown._element.addEventListener('show.bs.dropdown', function(e) {
                 let openDropdownInstance = document.querySelector('aside .nav-link.dropdown-toggle.show');
                 if(openDropdownInstance !== null) {
-                    let openDropdown = bootstrap.Dropdown.getInstance(openDropdownInstance);
+                    let openDropdown = window.tabler.Dropdown.getInstance(openDropdownInstance);
                     openDropdown.hide();
                 }
-            });
-            
+            });   
         }
         });
 
         [...document.querySelectorAll('header.top .dropdown-toggle, aside .dropdown-toggle')].forEach(el => {
-            let bsDropdown = bootstrap.Dropdown.getInstance(el);
+            let bsDropdown = window.tabler.Dropdown.getInstance(el);
             if(typeof bsDropdown !== 'undefined' && bsDropdown !== null) {
                 if(!bsDropdown._element.classList.contains('nav-link')) {
                     bsDropdown._element.addEventListener('show.bs.dropdown', function(e) {
@@ -60,14 +59,12 @@
                         }
                     });
                 }
-                
-            }
-                         
+            }             
         });
 
         // closes the main dropdown when clicking outside
         [...document.querySelectorAll('header.top .nav-item.dropdown')].forEach(el => {
-            let bsDropdown = bootstrap.Dropdown.getInstance(el.firstElementChild);
+            let bsDropdown = window.tabler.Dropdown.getInstance(el.firstElementChild);
             if(typeof bsDropdown !== 'undefined' && bsDropdown !== null) {
                 bsDropdown._config.autoClose = 'outside';
                 bsDropdown.update();
