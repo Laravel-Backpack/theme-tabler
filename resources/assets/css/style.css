@@ -691,9 +691,18 @@ tr.array-row td:has(span.ui-sortable-handle) {
 }
 
 @media (min-width: 992px) {
-    body[bp-layout=horizontal-overlap] .header-operation,
-    body[bp-layout=horizontal-overlap] [bp-section=page-heading] {
-        color: var(--tblr-gray-200);
+    body[bp-layout=horizontal-overlap] .header-operation {
+    color: var(--tblr-gray-200);
+    }
+
+    [data-bs-theme=light] body[bp-layout=horizontal-overlap] .datatable-widget-wrapper>.header-operation,
+    [data-bs-theme=light] body[bp-layout=horizontal-overlap] .datatable-widget-wrapper>.header-operation:not([bp-section=crud-operation-list] .header-operation) {
+        color: var(--tblr-body-color);
+    }
+
+    body[bp-layout=horizontal-overlap] [bp-section=crud-operation-list] .header-operation,
+    body[bp-layout=horizontal-overlap] .datatable-widget-wrapper>.header-operation {
+        padding-left: 0px;
     }
 }
 
