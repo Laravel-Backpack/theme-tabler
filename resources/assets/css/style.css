@@ -691,9 +691,16 @@ tr.array-row td:has(span.ui-sortable-handle) {
 }
 
 @media (min-width: 992px) {
-    body[bp-layout=horizontal-overlap] .header-operation,
-    body[bp-layout=horizontal-overlap] [bp-section=page-heading] {
+    body[bp-layout=horizontal-overlap] .header-operation {
         color: var(--tblr-gray-200);
+    }
+
+    [data-bs-theme=light] body[bp-layout=horizontal-overlap] .datatable-header:not([bp-section=crud-operation-list] .datatable-header) {
+        color: var(--tblr-body-color);
+    }
+
+    body[bp-layout=horizontal-overlap] .datatable-header {
+        padding-left: 0px;
     }
 }
 
