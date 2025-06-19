@@ -99,6 +99,11 @@ table .btn-link, #form_tabs p .btn-link:not(:hover) {
     color: var(--tblr-primary);
 }
 
+.bp-datagrid .btn-link,
+.bp-datalist .btn-link {
+    color: var(--tblr-primary);
+}
+
 #form_tabs p .btn-link:hover {
     background-color: transparent;
     color: var(--tblr-btn-hover-color);
