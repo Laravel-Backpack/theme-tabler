@@ -1,6 +1,6 @@
 /**
-    This file adjusts things so that Tabler looks cool and is used always,
-    regardless of skin color applied and dark/light mode used.
+    This file adjusts Tabler styles to better fit Backpack for Laravel.
+    This file is always used, regardless of color skin applied and dark/light mode used.
 */
 
 html:not([data-theme]) .show-theme-system { display: initial!important; }
@@ -688,6 +688,14 @@ tr.array-row td:has(span.ui-sortable-handle) {
 /* Page headers */
 [bp-section=page-heading] {
     line-height: normal;
+}
+
+/* XXL containers for big displays */
+
+@media (min-width: 1600px) {
+    .container-xxl {
+        max-width: 1920px;
+    }
 }
 
 /* Horizontal Overlap Layout */

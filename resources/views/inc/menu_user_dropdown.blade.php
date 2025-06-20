@@ -1,4 +1,4 @@
-<div class="nav-item dropdown">
+<div class="nav-item dropdown pe-3">
     <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
         <span class="avatar avatar-sm rounded-circle">
             <img class="avatar avatar-sm rounded-circle bg-transparent" src="{{ backpack_avatar_url(backpack_auth()->user()) }}"

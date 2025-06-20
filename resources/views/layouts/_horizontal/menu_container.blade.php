@@ -1,7 +1,7 @@
 <header data-bs-theme={{ $theme ?? 'system' }} class="{{ backpack_theme_config('classes.menuHorizontalContainer') ?? 'navbar-expand-lg top' }}">
     <div class="collapse navbar-collapse" id="navbar-menu">
         <div class="d-print-none {{ backpack_theme_config('classes.menuHorizontalContent') ?? 'navbar navbar-expand-lg navbar-'.($theme ?? 'light').' navbar-'.(($overlap ?? false) ? 'overlap' : '') }}">
-            <div class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
+            <div class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xxl' }}">
                 <ul class="navbar-nav">
                     @unless(backpack_theme_config('options.doubleTopBarInHorizontalLayouts'))
                         <li class="nav-brand">

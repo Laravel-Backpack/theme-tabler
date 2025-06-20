@@ -19,7 +19,7 @@
         </div>
 
         <div class="page-body">
-            <main class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
+            <main class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xxl' }}">
 
                 @yield('before_breadcrumbs_widgets')
                 @includeWhen(isset($breadcrumbs), backpack_view('inc.breadcrumbs'))
