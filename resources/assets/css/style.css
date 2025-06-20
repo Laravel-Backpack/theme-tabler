@@ -164,7 +164,7 @@ table .btn-link:active {
     background-color: var(--tblr-table-bg);
 }
 
-[data-bs-theme=dark] #crudTable_processing.dataTables_processing.card {
+[data-bs-theme=dark] .dt-processing.card {
     background-color: var(--tblr-dark);
     border-radius: 0;
 }
@@ -304,18 +304,19 @@ header.top div.dropdown-menu a.dropdown-item i {
 }
 
 /*table hover*/
-#crudTable_wrapper .table-striped > tbody > tr:hover > * {
+.crud-table.table-striped > tbody > tr:hover > * {
     box-shadow: none !important;
-    background-color: rgba(var(--tblr-primary-rgb),.1);
+    background-color: rgba(var(--tblr-primary-rgb),.1)!important;
 }
 
-[data-bs-theme=light] table#crudTable {
+/*
+[data-bs-theme=light] table.crud-table {
     background-color: var(--tblr-white);
 }
 
-[data-bs-theme=dark] table#crudTable {
+[data-bs-theme=dark] table.crud-table {
     background-color: var(--tblr-bg-surface);
-}
+} */
 
 /*filters*/
 [data-bs-theme=dark] .navbar-filters .select2-container .select2-search input {
@@ -362,7 +363,12 @@ header.top div.dropdown-menu a.dropdown-item i {
 span.select2-selection.select2-selection--single,
 .select2-selection.select2-selection--multiple ul.select2-selection__rendered,
 .form-control {
-    border-radius: 0 !important;
+    /* border-radius: 0 !important; */
+    border-radius: var(--tblr-border-radius);
+}
+
+form .select2.select2-container {
+    border-radius: var(--tblr-border-radius);
 }
 
 [data-bs-theme=dark] .navbar-filters .select2-results ul.select2-results__options li.select2-results__option.select2-results__option--highlighted {
@@ -549,16 +555,16 @@ footer {
     margin-top: 5px;
 }
 
-[data-bs-theme=dark] #crudTable_wrapper table tbody tr td input[type=editable_text],
-[data-bs-theme=dark] #crudTable_wrapper table tbody tr td select {
+/* [data-bs-theme=dark] table.crud-table tbody tr td input[type=editable_text],
+[data-bs-theme=dark] table.crud-table tbody tr td select {
     color: var(--tblr-light-text);
     border-bottom: 1px dashed var(--tblr-gray-700) !important;
 }
 
-[data-bs-theme=dark] #crudTable_wrapper table tbody tr td input[type=editable_text]:focus {
+[data-bs-theme=dark] table.crud-table tbody tr td input[type=editable_text]:focus {
     --bs-table-accent-bg: none !important;
     box-shadow: none !important;
-}
+} */
 
 a.actions-buttons-column {
     border: none;
@@ -600,6 +606,7 @@ body {
 /*Adjust topbar*/
 .topbar-transparent {
     background-color: transparent !important;
+    box-shadow: none;
 }
 
 /*Sidebar shortcuts*/
