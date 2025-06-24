@@ -164,8 +164,8 @@ table .btn-link:active {
     background-color: var(--tblr-table-bg);
 }
 
-[data-bs-theme=dark] .dt-processing.card {
-    background-color: var(--tblr-dark);
+.dataTables_processing.card {
+    background-color: var(--tblr-bg-surface)!important;
     border-radius: 0;
 }
 
@@ -464,7 +464,7 @@ form .select2.select2-container {
     color: var(--tblr-light-text);
 }
 
-div.dtr-modal div.dtr-modal-background {
+[data-bs-theme=light] div.dtr-modal div.dtr-modal-background {
     /* background-color: rgba(var(--tblr-dark-rgb), 0.8) !important; */
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);

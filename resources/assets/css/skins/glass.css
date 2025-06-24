@@ -8,7 +8,7 @@ body {
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
 }
 
 /* SLIMBAR - reduced-width navbar when horizontal layout is active */
@@ -47,34 +47,34 @@ body[bp-layout=horizontal] .single-top-bar #navbar-menu .navbar {
     --tblr-bg-surface-backdrop: blur(5px);
     --tblr-bg-surface-backdrop-webkit: blur(5px);
 
-    /* Card footers */
-    /* --tblr-card-cap-bg: transparent; */
-
-    /* Dropdowns need to be more opaque */
-    --tblr-dropdown-bg: rgba(255, 255, 255, 0.9)!important;
+    /* Table styles */
     --tblr-table-striped-bg: rgba(255, 255, 255, 0.7)!important;
     --tblr-table-bg-typed: rgba(255, 255, 255, 0.7)!important;
-
-    /* Modals */
-    --tblr-modal-bg: rgba(255, 255, 255, 0.97) !important;
 }
 
-.card-footer,
-.modal-footer {
-    background-color: transparent;
+[data-bs-theme=light] .dropdown-menu {
+    --tblr-dropdown-bg: rgba(255, 255, 255, 1)!important;
 }
 
-[data-bs-theme=light] .dropdown-menu.show,
 [data-bs-theme=light] .modal-content {
-    background-color: rgba(255, 255, 255, 0.97) !important;
+    --tblr-modal-bg: rgba(255, 255, 255, 0.97) !important;
+    --tblr-footer-bg: transparent;
 }
 
-.table-striped>tbody>tr:nth-of-type(2n)>* {
+[data-bs-theme=light] .card {
+    --tblr-card-cap-bg: transparent;
+}
+
+[data-bs-theme=light] .table-striped>tbody>tr:nth-of-type(2n)>* {
     background-color: var(--tblr-table-striped-bg);
     background-color: rgba(255, 255, 255, 0.2) !important;
     --tblr-table-bg-type: rgba(255, 255, 255, 0.2) !important;
 }
 
-table.table.dataTable.table-striped>tbody>tr:nth-of-type(2n+1)>* {
+[data-bs-theme=light] table.table.dataTable.table-striped>tbody>tr:nth-of-type(2n+1)>* {
     box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-stripe), 0.03) !important;
+}
+
+.navbar {
+    --tblr-navbar-active-bg: rgba(var(--tblr-primary-rgb), 0.3);
 }
