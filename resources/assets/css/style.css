@@ -1044,3 +1044,12 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
 [data-bs-theme=dark] .alert {
     color: var(--tblr-gray-400);
 }
+
+table.dataTable thead>tr>th.dt-orderable-asc:hover,
+table.dataTable thead>tr>th.dt-orderable-desc:hover,
+table.dataTable thead>tr>td.dt-orderable-asc:hover,
+table.dataTable thead>tr>td.dt-orderable-desc:hover
+{
+    outline: none !important;
+    outline-offset: 0 !important;
+}
