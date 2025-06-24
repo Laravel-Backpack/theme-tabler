@@ -188,9 +188,9 @@ table .btn-link:active {
     background-color: transparent;
 }
 
-[data-bs-theme=dark] .btn-link:hover, 
-[data-bs-theme=dark] a:not(.btn):hover, 
-[data-menu-theme=dark] .btn-link:hover, 
+[data-bs-theme=dark] .btn-link:hover,
+[data-bs-theme=dark] a:not(.btn):hover,
+[data-menu-theme=dark] .btn-link:hover,
 [data-menu-theme=dark] a:not(.btn):hover {
     color: var(--tblr-gray-200);
 }
@@ -462,6 +462,21 @@ form .select2.select2-container {
 
 [data-bs-theme=dark] div.dtr-modal div.dtr-modal-display table.table.table-striped tr td {
     color: var(--tblr-light-text);
+}
+
+div.dtr-modal div.dtr-modal-background {
+    /* background-color: rgba(var(--tblr-dark-rgb), 0.8) !important; */
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    --tblr-modal-margin: 1.75rem;
+    background: var(--tblr-bg-surface)!important;
+}
+
+div.dtr-modal div.dtr-modal-display {
+    border: 1px solid var(--tblr-primary-border) !important;
+    background-color: var(--tblr-bg-surface) !important;
+    border-radius: var(--tblr-border-radius) !important;
+    box-shadow: var(--tblr-shadow) !important;
 }
 
 /*tabbed fields*/
