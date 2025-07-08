@@ -18,3 +18,8 @@
             el = el.parentElement;
         }
     });
+/**
+ * For backward compatibility with previous tabler version and other themes.
+ * In Tabler v1x, the bootstrap object is no longer available globally
+ */
+window.bootstrap = tabler.bootstrap;
