@@ -13,7 +13,7 @@
 <div class="page">
     <div class="page-wrapper">
 
-        <div class="@if(backpack_theme_config('options.doubleTopBarInHorizontalLayouts')) double-top-bar @else single-top-bar @endif @if(backpack_theme_config('options.useStickyHeader')) sticky-top @endif">
+        <div class="@if(backpack_theme_config('options.doubleTopBarInHorizontalLayouts')) double-top-bar @else single-top-bar @endif @if(backpack_theme_config('options.useStickyHeader')) sticky-top @endif @if(backpack_theme_config('options.useFluidContainers')) container-fluid @else container-xxl @endif">
             @includeWhen(backpack_theme_config('options.doubleTopBarInHorizontalLayouts'), backpack_view('layouts._horizontal.header_container'))
             @include(backpack_view('layouts._horizontal.menu_container'))
         </div>
