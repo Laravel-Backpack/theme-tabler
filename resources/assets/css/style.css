@@ -785,12 +785,6 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
     border-radius: 4px;
 }
 
-/* Alerts */
-
-[data-bs-theme=dark] .alert-danger {
-    background-color: var(--tblr-bg-surface);
-}
-
 /* Swal */
 
 [data-bs-theme=dark] .swal-modal {
@@ -1027,14 +1021,6 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
 
 .card-body .subheader {
     color: inherit;
-}
-
-.alert {
-    background: var(--tblr-bg-surface);
-}
-
-[data-bs-theme=dark] .alert {
-    color: var(--tblr-gray-400);
 }
 
 table.dataTable thead>tr>th.dt-orderable-asc:hover,
