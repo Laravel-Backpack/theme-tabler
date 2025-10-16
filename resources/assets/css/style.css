@@ -169,6 +169,10 @@ table .btn-link:active {
     border-radius: 0;
 }
 
+[data-bs-theme=dark] .dt-processing.card {
+    background-color: var(--tblr-bg-surface)!important;
+}
+
 [data-bs-theme=light] tbody {
     background-color: var(--tblr-table-bg);
 }
@@ -1017,6 +1021,10 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
     border: solid 1px var(--tblr-primary-border-subtle); /* To make more contrast could use --tblr-tabler */
     border-radius: 0.4rem;
     height: 0.4rem;
+}
+
+.card-body {
+    border-radius: inherit;
 }
 
 .card-body .subheader {

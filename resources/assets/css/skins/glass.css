@@ -2,23 +2,8 @@
 body[bp-layout=horizontal] .single-top-bar #navbar-menu .navbar {
     border-radius: 0.5rem;
     margin-top: 1rem;
-    margin-right: 3rem;
-    margin-left: 3rem;
-}
-
-/* media query for slimbar for between 992px to 1400px */
-@media (min-width: 992px) and (max-width: 1400px) {
-    body[bp-layout=horizontal] .single-top-bar #navbar-menu .navbar {
-        margin-right: 1rem;
-        margin-left: 1rem;
-    }
-}
-
-@media (min-width: 1600px) {
-    body[bp-layout=horizontal] .single-top-bar #navbar-menu .navbar {
-        margin-right: 1rem;
-        margin-left: 1rem;
-    }
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 /* :root, */
@@ -53,8 +38,6 @@ body[bp-layout=horizontal] .single-top-bar #navbar-menu .navbar {
 }
 
 [data-bs-theme=light] .table-striped>tbody>tr:nth-of-type(2n)>* {
-    background-color: var(--tblr-table-striped-bg);
-    background-color: rgba(255, 255, 255, 0.2) !important;
     --tblr-table-bg-type: rgba(255, 255, 255, 0.2) !important;
 }
 
