@@ -25,6 +25,13 @@ header .sidebar-toggler i {
     margin-left: 3px;
 }
 
+
+@media (min-width: 992px) {
+    :host,:root {
+        margin-left:0;
+    }
+}
+
 /*buttons center table*/
 button.buttons-collection:after {
     all: unset;
