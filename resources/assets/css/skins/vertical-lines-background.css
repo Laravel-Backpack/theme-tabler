@@ -1,0 +1,36 @@
+/*
+|--------------------------------------------------------------------------
+| Vertical Lines Background for Tabler and/or Backpack for Laravel
+|--------------------------------------------------------------------------
+|
+| This CSS file adds a vertical lines background pattern to the body element.
+| It uses CSS variables defined in Tabler for colors, ensuring consistency
+| with the overall theme. The background pattern adapts to both light and
+| dark modes.
+|
+| Created using: https://uiverse.io/SelfMadeSystem/spicy-insect-99
+*/
+
+body {
+    width: 100%;
+        height: 100%;
+        background: linear-gradient(var(--tblr-light) 1px, var(--tblr-primary-bg-subtle) 0),
+            linear-gradient(90deg, #fff, #ffff, #fff),
+            linear-gradient(in oklch longer hue -2deg, var(--tblr-danger), var(--tblr-danger));
+        background-size:
+            100% 2px,
+            100% 100%,
+            100% 100%;
+}
+
+[data-bs-theme=dark] body {
+    width: 100%;
+        height: 100%;
+        background: linear-gradient(#000 1px, #0000 0),
+            linear-gradient(90deg, #000, #0000, #000),
+            linear-gradient(in oklch longer hue -2deg, var(--tblr-danger), var(--tblr-danger));
+        background-size:
+            100% 2px,
+            100% 100%,
+            100% 100%;
+}
