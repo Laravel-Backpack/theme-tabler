@@ -13,7 +13,7 @@
 
 body {
     background-color: var(--tblr-gray-400);
-    background-image: radial-gradient(var(--tblr-gray-400) 0.55px, var(--tblr-light) 0.55px);
+    background-image: radial-gradient(var(--tblr-gray-400) 0.55px, var(--tblr-gray-100) 0.55px);
     background-size: 11px 11px;
 }
 

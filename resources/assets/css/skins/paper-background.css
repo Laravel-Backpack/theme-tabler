@@ -12,8 +12,8 @@
 */
 
 body {
-    background-color: var(--tblr-light);
-    background-image: linear-gradient(var(--tblr-gray-100) 1px, transparent 1px), linear-gradient(90deg, var(--tblr-gray-100) 1px, transparent 1px), linear-gradient(var(--tblr-gray-100) 0.5px, transparent 0.5px), linear-gradient(90deg, var(--tblr-gray-100) 0.5px, var(--tblr-light) 0.5px);
+    background-color: var(--tblr-gray-100);
+    background-image: linear-gradient(var(--tblr-gray-200) 1px, transparent 1px), linear-gradient(90deg, var(--tblr-gray-200) 1px, transparent 1px), linear-gradient(var(--tblr-gray-200) 0.5px, transparent 0.5px), linear-gradient(90deg, var(--tblr-gray-200) 0.5px, var(--tblr-gray-100) 0.5px);
     background-size: 65px 65px, 65px 65px, 13px 13px, 13px 13px;
     background-position: -1px -1px, -1px -1px, -0.5px -0.5px, -0.5px -0.5px;
 }

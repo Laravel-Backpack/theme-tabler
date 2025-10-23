@@ -14,7 +14,7 @@
 body {
     background-color: var(--tblr-gray-400);
     background-size: 20% 20%;
-    background-image: repeating-linear-gradient(to right, var(--tblr-gray-200), var(--tblr-gray-200) 1px, var(--tblr-light) 1px, var(--tblr-light));
+    background-image: repeating-linear-gradient(to right, var(--tblr-gray-200), var(--tblr-gray-200) 1px, var(--tblr-gray-100) 1px, var(--tblr-gray-100));
 
 }
 

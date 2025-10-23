@@ -34,7 +34,7 @@ body {
 
 html[data-bs-theme=light] {
     /* background: #f9f9f9; */
-    background: var(--tblr-light);
+    background: var(--tblr-gray-100);
 }
 
 [data-bs-theme=light] .page {
