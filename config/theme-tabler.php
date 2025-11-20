@@ -33,17 +33,16 @@ return [
     /**
      * Here you can easily load your own extra css styles.
      * Note: if you want to customize the style to create your own custom skin colors:
-     *   - make a copy of the file "vendor/backpack/theme-tabler/resources/assets/css/colors.css" into your project
+     *   - copy the file "vendor/backpack/theme-tabler/resources/assets/css/colors.css" into your project, with a different name
      *   - adjust colors variables as you wish
      *   - replace "base_path('vendor/backpack/theme-tabler/resources/assets/css/backpack-color-palette.css')," with the path to the file created above
-     *   - boom!
      */
     'styles' => [
         base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/backpack-color-palette.css'),
         base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/glass.css'),
-        // base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/fuzzy-background.css'),
+        base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/fuzzy-background.css'),
+        // base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/dotted-background.css'),
         // base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/vertical-lines-background.css'),
-        base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/dotted-background.css'),
         // base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/pinstripe-background.css'),
         // base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/paper-background.css'),
     ],
