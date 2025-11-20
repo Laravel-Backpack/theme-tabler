@@ -13,13 +13,13 @@
 <div class="page">
     <div class="page-wrapper">
 
-        <div class="@if(backpack_theme_config('options.useStickyHeader')) sticky-top @endif">
+        <div class="@if(backpack_theme_config('options.doubleTopBarInHorizontalLayouts')) double-top-bar @else single-top-bar @endif @if(backpack_theme_config('options.useStickyHeader')) sticky-top @endif @if(backpack_theme_config('options.useFluidContainers')) container-fluid @else container-xxl @endif">
             @includeWhen(backpack_theme_config('options.doubleTopBarInHorizontalLayouts'), backpack_view('layouts._horizontal.header_container'))
             @include(backpack_view('layouts._horizontal.menu_container'))
         </div>
 
         <div class="page-body">
-            <main class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xl' }}">
+            <main class="{{ backpack_theme_config('options.useFluidContainers') ? 'container-fluid' : 'container-xxl' }}">
 
                 @yield('before_breadcrumbs_widgets')
                 @includeWhen(isset($breadcrumbs), backpack_view('inc.breadcrumbs'))

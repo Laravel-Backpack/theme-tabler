@@ -1,6 +1,6 @@
 /**
-    This file adjusts things so that Tabler looks cool and is used always,
-    regardless of skin color applied and dark/light mode used.
+    This file adjusts Tabler styles to better fit Backpack for Laravel.
+    This file is always used, regardless of color skin applied and dark/light mode used.
 */
 
 html:not([data-theme]) .show-theme-system { display: initial!important; }
@@ -23,6 +23,13 @@ header .sidebar-toggler i {
     font-weight: 900;
     font-size: 10px;
     margin-left: 3px;
+}
+
+
+@media (min-width: 992px) {
+    :host,:root {
+        margin-left:0;
+    }
 }
 
 /*buttons center table*/
@@ -99,6 +106,11 @@ table .btn-link, #form_tabs p .btn-link:not(:hover) {
     color: var(--tblr-primary);
 }
 
+.bp-datagrid .btn-link,
+.bp-datalist .btn-link {
+    color: var(--tblr-primary);
+}
+
 #form_tabs p .btn-link:hover {
     background-color: transparent;
     color: var(--tblr-btn-hover-color);
@@ -159,9 +171,13 @@ table .btn-link:active {
     background-color: var(--tblr-table-bg);
 }
 
-[data-bs-theme=dark] #crudTable_processing.dataTables_processing.card {
-    background-color: var(--tblr-dark);
+.dataTables_processing.card {
+    background-color: var(--tblr-bg-surface)!important;
     border-radius: 0;
+}
+
+[data-bs-theme=dark] .dt-processing.card {
+    background-color: var(--tblr-bg-surface)!important;
 }
 
 [data-bs-theme=light] tbody {
@@ -183,9 +199,9 @@ table .btn-link:active {
     background-color: transparent;
 }
 
-[data-bs-theme=dark] .btn-link:hover, 
-[data-bs-theme=dark] a:not(.btn):hover, 
-[data-menu-theme=dark] .btn-link:hover, 
+[data-bs-theme=dark] .btn-link:hover,
+[data-bs-theme=dark] a:not(.btn):hover,
+[data-menu-theme=dark] .btn-link:hover,
 [data-menu-theme=dark] a:not(.btn):hover {
     color: var(--tblr-gray-200);
 }
@@ -299,18 +315,19 @@ header.top div.dropdown-menu a.dropdown-item i {
 }
 
 /*table hover*/
-#crudTable_wrapper .table-striped > tbody > tr:hover > * {
+.crud-table.table-striped > tbody > tr:hover > * {
     box-shadow: none !important;
-    background-color: rgba(var(--tblr-primary-rgb),.1);
+    background-color: rgba(var(--tblr-primary-rgb),.1)!important;
 }
 
-[data-bs-theme=light] table#crudTable {
+/*
+[data-bs-theme=light] table.crud-table {
     background-color: var(--tblr-white);
 }
 
-[data-bs-theme=dark] table#crudTable {
+[data-bs-theme=dark] table.crud-table {
     background-color: var(--tblr-bg-surface);
-}
+} */
 
 /*filters*/
 [data-bs-theme=dark] .navbar-filters .select2-container .select2-search input {
@@ -357,7 +374,12 @@ header.top div.dropdown-menu a.dropdown-item i {
 span.select2-selection.select2-selection--single,
 .select2-selection.select2-selection--multiple ul.select2-selection__rendered,
 .form-control {
-    border-radius: 0 !important;
+    /* border-radius: 0 !important; */
+    border-radius: var(--tblr-border-radius);
+}
+
+form .select2.select2-container {
+    border-radius: var(--tblr-border-radius);
 }
 
 [data-bs-theme=dark] .navbar-filters .select2-results ul.select2-results__options li.select2-results__option.select2-results__option--highlighted {
@@ -453,6 +475,21 @@ span.select2-selection.select2-selection--single,
     color: var(--tblr-light-text);
 }
 
+[data-bs-theme=light] div.dtr-modal div.dtr-modal-background {
+    /* background-color: rgba(var(--tblr-dark-rgb), 0.8) !important; */
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    --tblr-modal-margin: 1.75rem;
+    background: var(--tblr-bg-surface)!important;
+}
+
+div.dtr-modal div.dtr-modal-display {
+    border: 1px solid var(--tblr-primary-border) !important;
+    background-color: var(--tblr-bg-surface) !important;
+    border-radius: var(--tblr-border-radius) !important;
+    box-shadow: var(--tblr-shadow) !important;
+}
+
 /*tabbed fields*/
 div.tab-container div.tab-content {
     padding: 25px;
@@ -541,18 +578,19 @@ footer {
 /*bulk buttons*/
 #bottom_buttons a.btn.btn-sm {
     padding: 5px 10px;
+    margin-top: 5px;
 }
 
-[data-bs-theme=dark] #crudTable_wrapper table tbody tr td input[type=editable_text],
-[data-bs-theme=dark] #crudTable_wrapper table tbody tr td select {
+/* [data-bs-theme=dark] table.crud-table tbody tr td input[type=editable_text],
+[data-bs-theme=dark] table.crud-table tbody tr td select {
     color: var(--tblr-light-text);
     border-bottom: 1px dashed var(--tblr-gray-700) !important;
 }
 
-[data-bs-theme=dark] #crudTable_wrapper table tbody tr td input[type=editable_text]:focus {
+[data-bs-theme=dark] table.crud-table tbody tr td input[type=editable_text]:focus {
     --bs-table-accent-bg: none !important;
     box-shadow: none !important;
-}
+} */
 
 a.actions-buttons-column {
     border: none;
@@ -594,6 +632,7 @@ body {
 /*Adjust topbar*/
 .topbar-transparent {
     background-color: transparent !important;
+    box-shadow: none;
 }
 
 /*Sidebar shortcuts*/
@@ -690,9 +729,16 @@ tr.array-row td:has(span.ui-sortable-handle) {
 }
 
 @media (min-width: 992px) {
-    body[bp-layout=horizontal-overlap] .header-operation,
-    body[bp-layout=horizontal-overlap] [bp-section=page-heading] {
+    body[bp-layout=horizontal-overlap] .header-operation {
         color: var(--tblr-gray-200);
+    }
+
+    [data-bs-theme=light] body[bp-layout=horizontal-overlap] .datatable-header:not([bp-section=crud-operation-list] .datatable-header) {
+        color: var(--tblr-body-color);
+    }
+
+    body[bp-layout=horizontal-overlap] .datatable-header {
+        padding-left: 0px;
     }
 }
 
@@ -748,12 +794,6 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
 [data-bs-theme="light"] [bp-section=devtools-preview-files] .tab-content {
     background: white;
     border-radius: 4px;
-}
-
-/* Alerts */
-
-[data-bs-theme=dark] .alert-danger {
-    background-color: var(--tblr-bg-surface);
 }
 
 /* Swal */
@@ -990,16 +1030,21 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
     height: 0.4rem;
 }
 
+.card-body {
+    border-radius: inherit;
+}
+
 .card-body .subheader {
     color: inherit;
 }
 
-.alert {
-    background: var(--tblr-bg-surface);
-}
-
-[data-bs-theme=dark] .alert {
-    color: var(--tblr-gray-400);
+table.dataTable thead>tr>th.dt-orderable-asc:hover,
+table.dataTable thead>tr>th.dt-orderable-desc:hover,
+table.dataTable thead>tr>td.dt-orderable-asc:hover,
+table.dataTable thead>tr>td.dt-orderable-desc:hover
+{
+    outline: none !important;
+    outline-offset: 0 !important;
 }
 
 .switch-label .switch-slider::after {

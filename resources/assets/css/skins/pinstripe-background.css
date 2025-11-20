@@ -1,0 +1,24 @@
+/*
+|--------------------------------------------------------------------------
+| Pinstripe Background for Tabler and/or Backpack for Laravel
+|--------------------------------------------------------------------------
+|
+| This CSS file adds a pinstripe background pattern to the body element.
+| It uses CSS variables defined in Tabler for colors, ensuring consistency
+| with the overall theme. The background pattern adapts to both light and
+| dark modes.
+|
+| Created using: https://www.magicpattern.design/tools/css-backgrounds
+*/
+
+body {
+    background-color: var(--tblr-gray-400);
+    background-size: 20% 20%;
+    background-image: repeating-linear-gradient(to right, var(--tblr-gray-200), var(--tblr-gray-200) 1px, var(--tblr-gray-100) 1px, var(--tblr-gray-100));
+
+}
+
+[data-bs-theme=dark] body {
+    background-color: var(--tblr-dark);
+    background-image: repeating-linear-gradient(to right, var(--tblr-gray-800), var(--tblr-gray-800) 1px, var(--tblr-black) 1px, var(--tblr-black));
+}

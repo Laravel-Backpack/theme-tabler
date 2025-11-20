@@ -1,0 +1,24 @@
+/*
+|--------------------------------------------------------------------------
+| Paper Background for Tabler and/or Backpack for Laravel
+|--------------------------------------------------------------------------
+|
+| This CSS file adds a paper background pattern to the body element.
+| It uses CSS variables defined in Tabler for colors, ensuring consistency
+| with the overall theme. The background pattern adapts to both light and
+| dark modes.
+|
+| Created using: https://www.magicpattern.design/tools/css-backgrounds
+*/
+
+body {
+    background-color: var(--tblr-gray-100);
+    background-image: linear-gradient(var(--tblr-gray-200) 1px, transparent 1px), linear-gradient(90deg, var(--tblr-gray-200) 1px, transparent 1px), linear-gradient(var(--tblr-gray-200) 0.5px, transparent 0.5px), linear-gradient(90deg, var(--tblr-gray-200) 0.5px, var(--tblr-gray-100) 0.5px);
+    background-size: 65px 65px, 65px 65px, 13px 13px, 13px 13px;
+    background-position: -1px -1px, -1px -1px, -0.5px -0.5px, -0.5px -0.5px;
+}
+
+[data-bs-theme=dark] body {
+    background-color: var(--tblr-dark);
+    background-image: linear-gradient(var(--tblr-gray-900) 1px, transparent 1px), linear-gradient(90deg, var(--tblr-gray-900) 1px, transparent 1px), linear-gradient(var(--tblr-gray-900) 0.5px, transparent 0.5px), linear-gradient(90deg, var(--tblr-gray-900) 0.5px, var(--tblr-black) 0.5px);
+}

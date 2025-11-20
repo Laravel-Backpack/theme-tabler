@@ -1,0 +1,46 @@
+/*
+|--------------------------------------------------------------------------
+| Fuzzy ball skin for Tabler and/or Backpack for Laravel
+|--------------------------------------------------------------------------
+|
+| 🎨 This adds a quirky blurred SVG background using hsl(...) color stops.
+| 🛠️ To customize colors, just find & replace the HSL values below:
+|    - hsl(37, 99%25, 67%25) → color #1 (orange-ish)
+|    - hsl(316, 73%25, 52%25) → color #2 (pink/purple)
+|    - hsl(185, 100%25, 57%25) → color #3 (cyan)
+|
+| 💡 Tip: Use a URL encoder like https://yoksel.github.io/url-encoder/ if
+|         you want to regenerate or preview the SVG. The current one is
+|         encoded as a data URI inside background-image.
+*/
+
+body {
+    /* BlurBerry background */
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' viewBox='0 0 800 800'%3E%3Cdefs%3E%3Cfilter id='bbblurry-filter' x='-100%25' y='-100%25' width='400%25' height='400%25' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='40' x='0%25' y='0%25' width='100%25' height='100%25' in='SourceGraphic' edgeMode='none' result='blur'%3E%3C/feGaussianBlur%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23bbblurry-filter)'%3E%3Cellipse rx='150' ry='150' cx='462.9146816404486' cy='534.6882471935419' fill='hsl(37, 99%25, 67%25)'%3E%3C/ellipse%3E%3Cellipse rx='150' ry='150' cx='179.02369011526488' cy='367.0291623615862' fill='hsl(316, 73%25, 52%25)'%3E%3C/ellipse%3E%3Cellipse rx='150' ry='150' cx='245.39283048169654' cy='478.9292209148051' fill='hsl(185, 100%25, 57%25)'%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    min-height: 100%;
+}
+
+/* on mobile */
+@media (max-width: 991px) {
+    body {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' viewBox='0 0 400 800'%3E%3Cdefs%3E%3Cfilter id='bbblurry-filter' x='-50%25' y='-50%25' width='240%25' height='400%25' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='40' x='0%25' y='0%25' width='100%25' height='100%25' in='SourceGraphic' edgeMode='none' result='blur'%3E%3C/feGaussianBlur%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23bbblurry-filter)'%3E%3Cellipse rx='150' ry='150' cx='262.9146816404486' cy='334.6882471935419' fill='hsl(37, 99%25, 67%25)'%3E%3C/ellipse%3E%3Cellipse rx='150' ry='150' cx='79.02369011526488' cy='167.0291623615862' fill='hsl(316, 73%25, 52%25)'%3E%3C/ellipse%3E%3Cellipse rx='150' ry='150' cx='245.39283048169654' cy='478.9292209148051' fill='hsl(185, 100%25, 57%25)'%3E%3C/ellipse%3E%3C/g%3E%3C/svg%3E");
+        background-position: top left;
+    }
+}
+
+html[data-bs-theme=light] {
+    /* background: #f9f9f9; */
+    background: var(--tblr-gray-100);
+}
+
+[data-bs-theme=light] .page {
+    background: rgb(255 255 255 / 0.00);
+}
+
+[data-bs-theme=dark] .page {
+    background: rgba(0, 0, 0, 0.75);
+}

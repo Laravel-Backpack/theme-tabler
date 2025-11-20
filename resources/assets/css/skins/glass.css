@@ -1,0 +1,50 @@
+/* SLIMBAR - reduced-width navbar when horizontal layout is active */
+body[bp-layout=horizontal] .single-top-bar #navbar-menu .navbar {
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+/* :root, */
+[data-bs-theme=light],
+[data-menu-theme=light] {
+    /* Base surface variables */
+    --tblr-bg-surface: rgba(255, 255, 255, 0.7);
+    --tblr-bg-surface-tertiary: rgba(255, 255, 255, 0.7);
+
+    /* Glass effect properties */
+    --tblr-bg-surface-border: 1px solid rgba(255, 255, 255, 0.3);
+    --tblr-bg-surface-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --tblr-bg-surface-backdrop: blur(5px);
+    --tblr-bg-surface-backdrop-webkit: blur(5px);
+
+    /* Table styles */
+    --tblr-table-striped-bg: rgba(255, 255, 255, 0.7)!important;
+    --tblr-table-bg-typed: rgba(255, 255, 255, 0.7)!important;
+}
+
+[data-bs-theme=light] .dropdown-menu {
+    --tblr-dropdown-bg: rgba(255, 255, 255, 1)!important;
+}
+
+[data-bs-theme=light] .modal-content {
+    --tblr-modal-bg: rgba(255, 255, 255, 0.97) !important;
+    --tblr-footer-bg: transparent;
+}
+
+[data-bs-theme=light] .card {
+    --tblr-card-cap-bg: transparent;
+}
+
+[data-bs-theme=light] .table-striped>tbody>tr:nth-of-type(2n)>* {
+    --tblr-table-bg-type: rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-bs-theme=light] table.table.dataTable.table-striped>tbody>tr:nth-of-type(2n+1)>* {
+    box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-stripe), 0.03) !important;
+}
+
+.navbar {
+    --tblr-navbar-active-bg: rgba(var(--tblr-primary-rgb), 0.3);
+}

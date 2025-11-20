@@ -22,7 +22,7 @@ return [
      * Possible values: horizontal, horizontal_dark, horizontal_overlap, vertical,
      * vertical_dark, vertical_transparent (legacy theme), right_vertical, right_vertical_dark, right_vertical_transparent
      */
-    'layout' => 'horizontal_overlap',
+    'layout' => 'horizontal',
 
     /**
      * Pick a login page layout.
@@ -33,14 +33,18 @@ return [
     /**
      * Here you can easily load your own extra css styles.
      * Note: if you want to customize the style to create your own custom skin colors:
-     *   - make a copy of the file "vendor/backpack/theme-tabler/resources/assets/css/colors.css" into your project
+     *   - copy the file "vendor/backpack/theme-tabler/resources/assets/css/colors.css" into your project, with a different name
      *   - adjust colors variables as you wish
-     *   - replace "base_path('vendor/backpack/theme-tabler/resources/assets/css/colors.css')," with the path to the file created above
-     *   - boom!
+     *   - replace "base_path('vendor/backpack/theme-tabler/resources/assets/css/backpack-color-palette.css')," with the path to the file created above
      */
     'styles' => [
-        base_path('vendor/backpack/theme-tabler/resources/assets/css/color-adjustments.css'),
-        base_path('vendor/backpack/theme-tabler/resources/assets/css/colors.css'),
+        base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/backpack-color-palette.css'),
+        base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/glass.css'),
+        base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/fuzzy-background.css'),
+        // base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/dotted-background.css'),
+        // base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/vertical-lines-background.css'),
+        // base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/pinstripe-background.css'),
+        // base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/paper-background.css'),
     ],
 
     /**
@@ -80,7 +84,7 @@ return [
         /**
          * When true, the content area will take the whole screen width.
          */
-        'useFluidContainers' => false,
+        'useFluidContainers' => true,
 
         /**
          * When true, the sidebar content for vertical layouts will not scroll with the rest of the content.

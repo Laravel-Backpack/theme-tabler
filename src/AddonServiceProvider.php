@@ -2,6 +2,7 @@
 
 namespace Backpack\ThemeTabler;
 
+use Backpack\Basset\Facades\Basset;
 use Backpack\CRUD\ThemeServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
 use Illuminate\Support\Facades\Blade;
@@ -18,6 +19,5 @@ class AddonServiceProvider extends ThemeServiceProvider
         $this->app->afterResolving(BladeCompiler::class, function () {
             Blade::componentNamespace('Backpack\\ThemeTabler\\View\\Components', $this->packageName);
         });
-        
     }
 }

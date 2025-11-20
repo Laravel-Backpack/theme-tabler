@@ -1,0 +1,23 @@
+/*
+|--------------------------------------------------------------------------
+| Dotted Background for Tabler and/or Backpack for Laravel
+|--------------------------------------------------------------------------
+|
+| This CSS file adds a dotted background pattern to the body element.
+| It uses CSS variables defined in Tabler for colors, ensuring consistency
+| with the overall theme. The background pattern adapts to both light and
+| dark modes.
+|
+| Created using: https://www.magicpattern.design/tools/css-backgrounds
+*/
+
+body {
+    background-color: var(--tblr-gray-400);
+    background-image: radial-gradient(var(--tblr-gray-400) 0.55px, var(--tblr-gray-100) 0.55px);
+    background-size: 11px 11px;
+}
+
+[data-bs-theme=dark] body {
+    background-color: var(--tblr-dark);
+    background-image: radial-gradient(var(--tblr-dark) 0.55px, var(--tblr-black) 0.55px);
+}
