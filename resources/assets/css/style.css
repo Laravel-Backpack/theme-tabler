@@ -180,6 +180,16 @@ table .btn-link:active {
     background-color: var(--tblr-bg-surface)!important;
 }
 
+[data-bs-theme=dark] .dataTables_processing,
+[data-bs-theme=dark] .dt-processing {
+    background: var(--tblr-bg-surface) !important;
+}
+
+[data-bs-theme=dark] .dataTables_processing img,
+[data-bs-theme=dark] .dt-processing img {
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(188deg) brightness(0.75) !important;
+}
+
 [data-bs-theme=light] tbody {
     background-color: var(--tblr-table-bg);
 }
