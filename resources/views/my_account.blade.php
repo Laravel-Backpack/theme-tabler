@@ -79,6 +79,12 @@
                                 <input required class="form-control" type="{{ backpack_authentication_column()==backpack_email_column()?'email':'text' }}" name="{{ $field }}" value="{{ old($field) ? old($field) : $user->$field }}">
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label>{{ trans('backpack::base.current_password') }}</label>
+                                <input class="form-control" type="password" name="current_password" autocomplete="current-password" value="">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="card-footer">
