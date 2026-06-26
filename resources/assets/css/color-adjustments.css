@@ -79,13 +79,30 @@
     border-color: var(--tblr-primary);
 }
 
-[data-bs-theme=dark] input:not(input[type=hidden]).form-control,
-[data-bs-theme=dark] textarea.form-control,
-[data-bs-theme=dark] select.form-control,
-[data-bs-theme=dark] select.form-select {
+[data-bs-theme=dark] input:not(input[type=hidden]).form-control:not(:disabled),
+[data-bs-theme=dark] textarea.form-control:not(:disabled),
+[data-bs-theme=dark] select.form-control:not(:disabled),
+[data-bs-theme=dark] select.form-select:not(:disabled) {
     background-color: var(--tblr-bg-surface);
     border-color: var(--tblr-primary-border-subtle);
-    color: rgba(var(--tblr-light-text), 0.5);
+    color: rgba(var(--tblr-body-color-rgb), 0.5);
+}
+
+/* Disabled form controls in dark mode - subtle background shift to match light-mode feel */
+[data-bs-theme=dark] .form-control:disabled,
+[data-bs-theme=dark] .form-select:disabled,
+[data-bs-theme=dark] select:disabled {
+    background-color: var(--bp-form-disabled-bg);
+    color: var(--bp-form-disabled-color);
+}
+
+[data-bs-theme=dark] .form-check-input:disabled {
+    opacity: var(--bp-form-check-disabled-opacity);
+}
+
+[data-bs-theme=dark] .form-check-input:disabled ~ .form-check-label,
+[data-bs-theme=dark] .form-check-input[disabled] ~ .form-check-label {
+    opacity: var(--bp-form-check-label-disabled-opacity);
 }
 
 [data-bs-theme=dark] input[type=date].form-control::-webkit-calendar-picker-indicator {
@@ -113,6 +130,15 @@ html[data-bs-theme=dark] {
     --bp-select2-selection-border-color: var(--tblr-primary-border-subtle);
     --select2-selected-item-background: var(--tblr-primary);
     --select2-selected-item-color: #fff;
+
+    /* Disabled form controls */
+    --bp-form-disabled-bg: rgba(var(--tblr-body-color-rgb), 0.06);
+    --bp-form-disabled-color: rgba(var(--tblr-body-color-rgb), 0.3);
+    --bp-form-check-disabled-opacity: 0.5;
+    --bp-form-check-label-disabled-opacity: 0.6;
+
+    --bp-tinymce-content-bg: #221e26;
+    --bp-tinymce-content-color: #c9c1d6;
 }
 
 /*
@@ -263,4 +289,107 @@ html[data-bs-theme=dark] {
 
 [data-bs-theme=dark] span.input-group-text {
     border-color: var(--tblr-primary-border-subtle);
+}
+
+/* Summernote editor dark mode */
+[data-bs-theme=dark] .note-editor.note-frame {
+    border-color: var(--tblr-primary-border-subtle);
+}
+
+[data-bs-theme=dark] .note-editor .note-toolbar {
+    background-color: var(--tblr-bg-surface);
+    border-color: var(--tblr-primary-border-subtle);
+}
+
+[data-bs-theme=dark] .note-editor .note-btn {
+    color: var(--tblr-body-color);
+    background-color: transparent;
+    border-color: var(--tblr-border-color-translucent);
+}
+
+[data-bs-theme=dark] .note-editor .note-btn:hover,
+[data-bs-theme=dark] .note-editor .note-btn:focus {
+    color: var(--tblr-body-color);
+    background-color: var(--tblr-bg-surface-secondary);
+}
+
+[data-bs-theme=dark] .note-editor .note-btn.active,
+[data-bs-theme=dark] .note-editor .note-btn:active {
+    color: var(--tblr-light);
+    background-color: var(--tblr-primary);
+    border-color: var(--tblr-primary);
+}
+
+[data-bs-theme=dark] .note-editor .note-editing-area {
+    background-color: var(--tblr-bg-surface);
+}
+
+[data-bs-theme=dark] .note-editor .note-statusbar {
+    background-color: var(--tblr-bg-surface);
+    border-color: var(--tblr-primary-border-subtle);
+}
+
+[data-bs-theme=dark] .note-editor .note-status-output {
+    color: var(--tblr-body-color);
+}
+
+[data-bs-theme=dark] .note-dropdown-menu {
+    background-color: var(--tblr-bg-surface);
+    border-color: var(--tblr-border-color-translucent);
+}
+
+[data-bs-theme=dark] .note-dropdown-item {
+    color: var(--tblr-body-color);
+}
+
+[data-bs-theme=dark] .note-dropdown-item:hover {
+    background-color: var(--tblr-bg-surface-secondary);
+    color: var(--tblr-body-color);
+}
+
+[data-bs-theme=dark] .note-editor .note-modal-content {
+    background-color: var(--tblr-bg-surface);
+    border-color: var(--tblr-border-color-translucent);
+}
+
+[data-bs-theme=dark] .note-editor .note-modal-header {
+    border-color: var(--tblr-primary-border-subtle);
+}
+
+[data-bs-theme=dark] .note-editor .note-modal-footer {
+    border-color: var(--tblr-primary-border-subtle);
+}
+
+[data-bs-theme=dark] .note-editor .note-modal-title {
+    color: var(--tblr-body-color);
+}
+
+[data-bs-theme=dark] .note-editor .note-form-label {
+    color: var(--tblr-body-color);
+}
+
+[data-bs-theme=dark] .note-editor .note-input {
+    background-color: var(--tblr-bg-surface);
+    border-color: var(--tblr-primary-border-subtle);
+    color: var(--tblr-body-color);
+}
+
+[data-bs-theme=dark] .note-editor .note-input:focus {
+    background-color: var(--tblr-bg-surface);
+    border-color: var(--tblr-primary);
+}
+
+[data-bs-theme=dark] .note-editor .note-editable {
+    color: var(--tblr-body-color);
+    background-color: var(--tblr-bg-surface);
+}
+
+/* Summernote disabled state in dark mode */
+[data-bs-theme=dark] .note-editor.bp-disabled .note-editing-area {
+    opacity: 0.5;
+}
+
+/* TinyMCE disabled state in dark mode */
+[data-bs-theme=dark] .tox-tinymce.bp-disabled .tox-edit-area {
+    opacity: 0.5;
 }
