@@ -33,7 +33,7 @@ return [
     /**
      * Here you can easily load your own extra css styles.
      * Note: if you want to customize the style to create your own custom skin colors:
-     *   - copy the file "vendor/backpack/theme-tabler/resources/assets/css/colors.css" into your project, with a different name
+     *   - copy the file "vendor/backpack/theme-tabler/resources/assets/css/backpack-color-palette.css" into your project, with a different name
      *   - adjust colors variables as you wish
      *   - replace "base_path('vendor/backpack/theme-tabler/resources/assets/css/backpack-color-palette.css')," with the path to the file created above
      */
