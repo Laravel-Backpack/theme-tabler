@@ -82,7 +82,6 @@ table tbody tr td.dtr-control span {
     background-color: transparent!important;
 }
 
-/* Remove once https://github.com/tabler/tabler/pull/1645 is merged */
 .table thead th,
 .table tfoot th {
     background: var(--tblr-bg-surface-tertiary);
