@@ -12,7 +12,8 @@
     color: var(--tblr-light) !important;
 }
 
-[data-bs-theme=dark] .select2-selection--multiple input:not(:focus) {
+[data-bs-theme=dark] .select2-selection--multiple input:not(:focus),
+[data-bs-theme=dark] .select2-selection--multiple textarea:not(:focus) {
     color: rgba(var(--tblr-light-text), 0.5) !important;
 }
 
