@@ -113,14 +113,14 @@
 html[data-bs-theme=dark] {
     --bp-select2-container-border-color: var(--tblr-primary-border-subtle);
     --bp-select2-focus-bg: transparent;
-    --bp-select2-focus-border-color: var(--tblr-primary);
+    --bp-select2-focus-border-color: var(--bp-select2-container-border-color);
     --bp-select2-focus-box-shadow: none;
     --bp-select2-focus-color: rgba(var(--tblr-light-text), 0.5);
     --bp-select2-dropdown-bg: var(--tblr-dark);
     --bp-select2-dropdown-border-color: var(--tblr-border-color);
     --bp-select2-option-color: var(--tblr-body-color);
-    --bp-select2-option-selected-bg: var(--tblr-gray-800);
-    --bp-select2-option-selected-color: var(--tblr-primary);
+    --bp-select2-option-selected-bg: rgba(var(--tblr-primary-rgb, 124, 105, 239), 0.12);
+    --bp-select2-option-selected-color: var(--tblr-body-color);
     --bp-select2-option-disabled-color: var(--tblr-muted);
     --bp-select2-search-bg: var(--tblr-bg-surface);
     --bp-select2-search-color: rgba(var(--tblr-light-text), 0.5);
@@ -129,8 +129,6 @@ html[data-bs-theme=dark] {
     --bp-select2-choice-color: var(--tblr-bg-surface);
     --bp-select2-choice-border-color: var(--tblr-primary-border-subtle);
     --bp-select2-selection-border-color: var(--tblr-primary-border-subtle);
-    --select2-selected-item-background: var(--tblr-primary);
-    --select2-selected-item-color: #fff;
 
     /* Disabled form controls */
     --bp-form-disabled-bg: rgba(var(--tblr-body-color-rgb), 0.06);
@@ -181,6 +179,16 @@ html[data-bs-theme=dark] {
 [data-bs-theme=dark] .select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
     color: var(--bp-select2-choice-color);
     border-color: var(--bp-select2-choice-border-color);
+}
+
+[data-bs-theme=dark] .select2-container--bootstrap .select2-selection--multiple .select2-selection__clear,
+[data-bs-theme=dark] .select2-container--bootstrap .select2-selection--single .select2-selection__clear {
+    color: var(--tblr-muted);
+}
+
+[data-bs-theme=dark] .select2-container--bootstrap .select2-selection--multiple .select2-selection__clear:hover,
+[data-bs-theme=dark] .select2-container--bootstrap .select2-selection--single .select2-selection__clear:hover {
+    color: var(--tblr-light-text);
 }
 
 [data-bs-theme=dark] .select2-container--bootstrap .select2-selection {

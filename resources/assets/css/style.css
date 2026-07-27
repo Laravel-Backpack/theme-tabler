@@ -376,8 +376,7 @@ header.top div.dropdown-menu a.dropdown-item i {
     color: var(--tblr-muted) !important;
 }
 
-[data-bs-theme=dark] span.select2-selection.select2-selection--single,
-[data-bs-theme=dark] .select2-selection.select2-selection--multiple ul.select2-selection__rendered {
+[data-bs-theme=dark] span.select2-selection.select2-selection--single {
     border-style: solid !important;
     border-width: 1px !important;
     border-color: var(--tblr-primary-border-subtle) !important;
