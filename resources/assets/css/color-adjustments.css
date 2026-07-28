@@ -214,7 +214,7 @@ html[data-bs-theme=dark] {
 
 [data-bs-theme=dark] :not(.navbar-filters) .select2-selection--multiple {
     background-color: var(--tblr-bg-surface) !important;
-    border-color: var(--tblr-bg-surface) !important;
+    border-color: var(--tblr-primary-border-subtle) !important;
 }
 
 [data-bs-theme=dark] :not(.navbar-filters) .select2-container--open {
