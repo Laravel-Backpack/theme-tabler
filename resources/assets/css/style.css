@@ -82,7 +82,6 @@ table tbody tr td.dtr-control span {
     background-color: transparent!important;
 }
 
-/* Remove once https://github.com/tabler/tabler/pull/1645 is merged */
 .table thead th,
 .table tfoot th {
     background: var(--tblr-bg-surface-tertiary);
@@ -378,7 +377,7 @@ header.top div.dropdown-menu a.dropdown-item i {
 }
 
 [data-bs-theme=dark] span.select2-selection.select2-selection--single,
-[data-bs-theme=dark] .select2-selection.select2-selection--multiple ul.select2-selection__rendered {
+[data-bs-theme=dark] .select2-selection.select2-selection--multiple {
     border-style: solid !important;
     border-width: 1px !important;
     border-color: var(--tblr-primary-border-subtle) !important;
@@ -890,6 +889,77 @@ body[bp-layout=horizontal-overlap] .nav-item > a {
 
 [data-bs-theme=dark] .select2-dropdown {
     background-color: var(--tblr-bg-surface) !important;
+}
+
+/* Select2 4.1.0 compatibility — search field is now a <textarea>, clear/remove are <button> elements */
+.select2-search--inline .select2-search__field {
+    resize: none !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: hidden !important;
+    margin-top: 0 !important;
+}
+
+.select2-selection__clear,
+.select2-selection__choice__remove {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    font: inherit !important;
+    color: inherit !important;
+    cursor: pointer !important;
+}
+
+/* Fix clear button layout — in 4.1.0 the <button> sits inside .select2-selection before the <ul> */
+.select2-container--bootstrap .select2-selection--multiple {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0 !important;
+    min-height: 34px !important;
+}
+
+.select2-container--bootstrap .select2-selection--multiple .select2-selection__rendered {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0 !important;
+    flex: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.select2-container--bootstrap .select2-selection--multiple .select2-selection__clear {
+    float: none !important;
+    margin-top: 0 !important;
+    margin-left: auto !important;
+    order: 999 !important;
+    padding: 2px 6px !important;
+    flex-shrink: 0 !important;
+}
+
+.select2-container--bootstrap .select2-selection--multiple .select2-search--inline {
+    flex: 1 1 auto !important;
+    min-width: 60px !important;
+}
+
+.select2-selection--multiple .select2-selection__choice {
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.select2-selection--multiple .select2-selection__choice__display {
+    padding-left: 2px;
+    padding-right: 4px;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    word-break: break-word !important;
+}
+
+/* Allow choice tags to wrap full text instead of truncating */
+.select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
+    max-width: 100% !important;
 }
 
 /* Phone field */
