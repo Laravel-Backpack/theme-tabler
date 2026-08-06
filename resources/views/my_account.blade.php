@@ -149,5 +149,7 @@
             </form>
         </div>
 
+        @includeWhen(config('backpack.multi_auth.features.two_factor'), 'backpack.multi-auth::auth._two_factor_section', ['user' => $user])
+
     </div>
 @endsection
