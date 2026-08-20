@@ -41,3 +41,7 @@
         </div>
     </div>
 </form>
+
+@if (config('backpack.multi_auth.socialite.enabled') && View::exists('backpack.multi-auth::auth._socialite_login_buttons'))
+    @include('backpack.multi-auth::auth._socialite_login_buttons')
+@endif
