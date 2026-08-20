@@ -59,3 +59,7 @@
         <button tabindex="5" type="submit" class="btn btn-primary w-100">{{ trans('backpack::base.login') }}</button>
     </div>
 </form>
+
+@if (config('backpack.multi_auth.socialite.enabled') && View::exists('backpack.multi-auth::auth._socialite_login_buttons'))
+    @include('backpack.multi-auth::auth._socialite_login_buttons')
+@endif
