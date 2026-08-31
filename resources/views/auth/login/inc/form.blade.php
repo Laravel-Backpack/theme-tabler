@@ -63,10 +63,10 @@
     </div>
 </form>
 
-@if (config('backpack.multi-auth.socialite.enabled') && View::exists('backpack.multi-auth::auth._socialite_login_buttons'))
-    @include('backpack.multi-auth::auth._socialite_login_buttons')
-@endif
-
 @if (config('backpack.multi-auth.features.passkeys', false) && View::exists('backpack.multi-auth::auth._passkey_login_button'))
     @include('backpack.multi-auth::auth._passkey_login_button')
+@endif
+
+@if (config('backpack.multi-auth.socialite.enabled') && View::exists('backpack.multi-auth::auth._socialite_login_buttons'))
+    @include('backpack.multi-auth::auth._socialite_login_buttons')
 @endif
