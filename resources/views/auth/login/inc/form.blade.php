@@ -20,7 +20,7 @@
         <label class="form-label" for="{{ $username }}">{{ trans('backpack::base.'.strtolower(config('backpack.base.authentication_column_name'))) }}</label>
         <div class="input-group">
             <input autofocus tabindex="1" type="text" name="{{ $username }}" value="{{ old($username) }}" id="{{ $username }}" autocomplete="{{ ($username === 'email' ? 'email' : 'username') }} webauthn" class="form-control {{ $errors->has($username) ? 'is-invalid' : '' }}">
-            @includeWhen(config('backpack.multi_auth.features.magic_link', false), 'backpack.multi-auth::auth._magic_link_button', ['username' => $username])
+            @includeWhen(config('backpack.multi-auth.features.magic_link', false), 'backpack.multi-auth::auth._magic_link_button', ['username' => $username])
         </div>
         @if ($errors->has($username))
             <div class="invalid-feedback">{{ $errors->first($username) }}</div>
@@ -63,10 +63,10 @@
     </div>
 </form>
 
-@if (config('backpack.multi_auth.socialite.enabled') && View::exists('backpack.multi-auth::auth._socialite_login_buttons'))
+@if (config('backpack.multi-auth.socialite.enabled') && View::exists('backpack.multi-auth::auth._socialite_login_buttons'))
     @include('backpack.multi-auth::auth._socialite_login_buttons')
 @endif
 
-@if (config('backpack.multi_auth.features.passkeys', false) && View::exists('backpack.multi-auth::auth._passkey_login_button'))
+@if (config('backpack.multi-auth.features.passkeys', false) && View::exists('backpack.multi-auth::auth._passkey_login_button'))
     @include('backpack.multi-auth::auth._passkey_login_button')
 @endif
