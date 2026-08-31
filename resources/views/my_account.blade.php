@@ -149,11 +149,11 @@
             </form>
         </div>
 
-        @includeWhen(config('backpack.multi_auth.features.two_factor'), 'backpack.multi-auth::auth._two_factor_section', ['user' => $user])
+        @includeWhen(config('backpack.multi-auth.features.two_factor'), 'backpack.multi-auth::auth._two_factor_section', ['user' => $user])
 
-        @includeWhen(config('backpack.multi_auth.features.passkeys'), 'backpack.multi-auth::auth._passkeys_section', ['user' => $user])
+        @includeWhen(config('backpack.multi-auth.features.passkeys'), 'backpack.multi-auth::auth._passkeys_section', ['user' => $user])
 
-        @includeWhen(config('backpack.multi_auth.socialite.enabled'), 'backpack.multi-auth::auth._socialite_section', ['user' => $user])
+        @includeWhen(config('backpack.multi-auth.socialite.enabled'), 'backpack.multi-auth::auth._socialite_section', ['user' => $user])
 
     </div>
 @endsection
