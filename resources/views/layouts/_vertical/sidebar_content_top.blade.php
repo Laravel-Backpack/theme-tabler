@@ -25,13 +25,10 @@
                         {{ trans('backpack::base.my_account') }}
                     </a>
                 @endif
-                <a class="dropdown-item text-danger" href="{{ backpack_url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <a class="dropdown-item text-danger" href="{{ backpack_url('logout') }}">
                     <i class="nav-icon la la-sign-out-alt d-block"></i>
                     {{ trans('backpack::base.logout') }}
                 </a>
-                <form id="logout-form" method="POST" action="{{ route('backpack.auth.logout.store') }}" class="d-none">
-                    @csrf
-                </form>
             </div>
         </li>
     @endif
