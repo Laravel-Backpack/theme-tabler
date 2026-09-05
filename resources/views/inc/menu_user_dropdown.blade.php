@@ -18,9 +18,6 @@
             <a href="{{ route('backpack.account.info') }}" class="dropdown-item"><i class="la la-user me-2"></i>{{ trans('backpack::base.my_account') }}</a>
             <div class="dropdown-divider"></div>
         @endif
-        <a href="{{ backpack_url('logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="la la-lock me-2"></i>{{ trans('backpack::base.logout') }}</a>
-        <form id="logout-form" method="POST" action="{{ route('backpack.auth.logout.store') }}" class="d-none">
-            @csrf
-        </form>
+        <a href="{{ backpack_url('logout') }}" class="dropdown-item"><i class="la la-lock me-2"></i>{{ trans('backpack::base.logout') }}</a>
     </div>
 </div>
