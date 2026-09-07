@@ -1,0 +1,61 @@
+/*
+ * Honey skin for the Backpack Tabler theme.
+ *
+ * A warm honey-amber accent over a faint dot grid.
+ * Self-contained: the background pattern, the accent colour and a flush top bar,
+ * in one file. Load it after backpack-color-palette.css.
+ *
+ * Sections: 1. background  2. accent (light, then dark)  3. flush top bar
+ */
+
+/* 1. Background --------------------------------------------------------- */
+
+body {
+    background-color: var(--tblr-gray-400);
+    background-image: radial-gradient(var(--tblr-gray-400) 0.55px, var(--tblr-gray-100) 0.55px);
+    background-size: 11px 11px;
+}
+
+[data-bs-theme=dark] body {
+    background-color: var(--tblr-dark);
+    background-image: radial-gradient(var(--tblr-dark) 0.55px, var(--tblr-black) 0.55px);
+}
+
+/* 2. Accent ------------------------------------------------------------- */
+:root,
+[data-bs-theme=light],
+[data-menu-theme=light] {
+    --tblr-primary: #d97706;
+    --tblr-primary-rgb: 217, 119, 6;
+    --tblr-primary-text-emphasis: #92400e;
+    --tblr-primary-bg-subtle: #fef3c7;
+    --tblr-primary-border-subtle: #fcd34d;
+    --tblr-link-color: #d97706;
+    --tblr-link-color-rgb: 217, 119, 6;
+    --tblr-link-hover-color: #b45309;
+    --tblr-link-hover-color-rgb: 217, 119, 6;
+    --tblr-focus-ring-color: rgba(217, 119, 6, 0.28);
+    --bg-switch-checked-color: #d97706;
+}
+
+[data-bs-theme=dark],
+[data-menu-theme=dark] {
+    --tblr-primary: #fbbf24;
+    --tblr-primary-rgb: 251, 191, 36;
+    --tblr-primary-text-emphasis: #fde68a;
+    --tblr-primary-bg-subtle: rgba(251, 191, 36, 0.16);
+    --tblr-primary-border-subtle: rgba(251, 191, 36, 0.4);
+    --tblr-link-color: #fbbf24;
+    --tblr-link-color-rgb: 251, 191, 36;
+    --tblr-link-hover-color: #fcd34d;
+    --tblr-link-hover-color-rgb: 251, 191, 36;
+    --tblr-focus-ring-color: rgba(251, 191, 36, 0.35);
+    --bg-switch-checked-color: #fbbf24;
+}
+
+/* 3. Flush top bar ------------------------------------------------------ */
+body[bp-layout=horizontal] .single-top-bar,
+body[bp-layout=horizontal] .double-top-bar {
+    padding-left: 0;
+    padding-right: 0;
+}

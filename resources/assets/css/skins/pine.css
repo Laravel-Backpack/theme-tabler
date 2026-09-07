@@ -1,0 +1,62 @@
+/*
+ * Pine skin for the Backpack Tabler theme.
+ *
+ * A deep emerald accent over thin diagonal pinstripes.
+ * Self-contained: the background pattern, the accent colour and a flush top bar,
+ * in one file. Load it after backpack-color-palette.css.
+ *
+ * Sections: 1. background  2. accent (light, then dark)  3. flush top bar
+ */
+
+/* 1. Background --------------------------------------------------------- */
+
+body {
+    background-color: var(--tblr-gray-400);
+    background-size: 20% 20%;
+    background-image: repeating-linear-gradient(to right, var(--tblr-gray-200), var(--tblr-gray-200) 1px, var(--tblr-gray-100) 1px, var(--tblr-gray-100));
+
+}
+
+[data-bs-theme=dark] body {
+    background-color: var(--tblr-dark);
+    background-image: repeating-linear-gradient(to right, var(--tblr-gray-800), var(--tblr-gray-800) 1px, var(--tblr-black) 1px, var(--tblr-black));
+}
+
+/* 2. Accent ------------------------------------------------------------- */
+:root,
+[data-bs-theme=light],
+[data-menu-theme=light] {
+    --tblr-primary: #047857;
+    --tblr-primary-rgb: 4, 120, 87;
+    --tblr-primary-text-emphasis: #064e3b;
+    --tblr-primary-bg-subtle: #d1fae5;
+    --tblr-primary-border-subtle: #6ee7b7;
+    --tblr-link-color: #047857;
+    --tblr-link-color-rgb: 4, 120, 87;
+    --tblr-link-hover-color: #065f46;
+    --tblr-link-hover-color-rgb: 4, 120, 87;
+    --tblr-focus-ring-color: rgba(4, 120, 87, 0.28);
+    --bg-switch-checked-color: #047857;
+}
+
+[data-bs-theme=dark],
+[data-menu-theme=dark] {
+    --tblr-primary: #34d399;
+    --tblr-primary-rgb: 52, 211, 153;
+    --tblr-primary-text-emphasis: #a7f3d0;
+    --tblr-primary-bg-subtle: rgba(52, 211, 153, 0.16);
+    --tblr-primary-border-subtle: rgba(52, 211, 153, 0.4);
+    --tblr-link-color: #34d399;
+    --tblr-link-color-rgb: 52, 211, 153;
+    --tblr-link-hover-color: #6ee7b7;
+    --tblr-link-hover-color-rgb: 52, 211, 153;
+    --tblr-focus-ring-color: rgba(52, 211, 153, 0.35);
+    --bg-switch-checked-color: #34d399;
+}
+
+/* 3. Flush top bar ------------------------------------------------------ */
+body[bp-layout=horizontal] .single-top-bar,
+body[bp-layout=horizontal] .double-top-bar {
+    padding-left: 0;
+    padding-right: 0;
+}

@@ -1,0 +1,232 @@
+/*
+ * Atlas skin for the Backpack Tabler theme.
+ *
+ * Cool greys, hairline borders instead of shadows, dense tables, quiet chrome.
+ * The look of a good fintech dashboard. Loads after backpack-color-palette.css
+ * and only touches Tabler's design tokens plus a handful of components.
+ *
+ * Sections: 1. tokens (light)  2. tokens (dark)  3. components
+ */
+
+/* 1. Tokens: light ------------------------------------------------------ */
+:root,
+[data-bs-theme=light],
+[data-menu-theme=light] {
+    --tblr-body-bg: #f6f8fa;
+    --tblr-body-bg-rgb: 246, 248, 250;
+    --tblr-body-color: #1a1f36;
+    --tblr-body-color-rgb: 26, 31, 54;
+    --tblr-emphasis-color: #0a0d1c;
+    --tblr-emphasis-color-rgb: 10, 13, 28;
+    --tblr-secondary-color: #697386;
+    --tblr-secondary-color-rgb: 105, 115, 134;
+    --tblr-tertiary-color: rgba(26, 31, 54, 0.5);
+    --tblr-tertiary-color-rgb: 26, 31, 54;
+    --tblr-tertiary-bg: #eef1f5;
+    --tblr-tertiary-bg-rgb: 238, 241, 245;
+
+    --tblr-bg-surface: #ffffff;
+    --tblr-bg-surface-primary: #ffffff;
+    --tblr-bg-surface-secondary: #f6f8fa;
+    --tblr-bg-surface-tertiary: #fbfcfd;
+
+    --tblr-border-color: #e3e8ee;
+    --tblr-border-color-translucent: rgba(26, 31, 54, 0.08);
+    --tblr-navbar-border-color: #e3e8ee;
+
+    --tblr-shadow-card: 0 1px 2px rgba(26, 31, 54, 0.04);
+    --tblr-shadow-card-hover: 0 4px 12px rgba(26, 31, 54, 0.08);
+    --tblr-shadow-input: 0 1px 1px rgba(26, 31, 54, 0.04);
+    --tblr-shadow-dropdown: 0 8px 24px rgba(26, 31, 54, 0.12), 0 0 0 1px rgba(26, 31, 54, 0.04);
+    --tblr-box-shadow: 0 1px 2px rgba(26, 31, 54, 0.04);
+    --tblr-box-shadow-inset: none;
+
+    /* Accent: a confident blue instead of Backpack's purple */
+    --tblr-primary: #2563eb;
+    --tblr-primary-rgb: 37, 99, 235;
+    --tblr-primary-text-emphasis: #1e3a8a;
+    --tblr-primary-bg-subtle: #dbeafe;
+    --tblr-primary-border-subtle: #93c5fd;
+    --tblr-link-color: #2563eb;
+    --tblr-link-color-rgb: 37, 99, 235;
+    --tblr-link-hover-color: #1d4ed8;
+    --tblr-link-hover-color-rgb: 29, 78, 216;
+    --tblr-focus-ring-color: rgba(37, 99, 235, 0.28);
+    --bg-switch-checked-color: #2563eb;
+    --atlas-table-head-color: #697386;
+}
+
+/* 2. Tokens: dark ------------------------------------------------------- */
+[data-bs-theme=dark],
+[data-menu-theme=dark] {
+    --tblr-body-bg: #0f1117;
+    --tblr-body-bg-rgb: 15, 17, 23;
+    --tblr-body-color: #e6e8ef;
+    --tblr-body-color-rgb: 230, 232, 239;
+    --tblr-emphasis-color: #ffffff;
+    --tblr-emphasis-color-rgb: 255, 255, 255;
+    --tblr-secondary-color: #9aa3b5;
+    --tblr-secondary-color-rgb: 154, 163, 181;
+    --tblr-tertiary-color: rgba(230, 232, 239, 0.5);
+    --tblr-tertiary-color-rgb: 230, 232, 239;
+    --tblr-tertiary-bg: #1c2030;
+    --tblr-tertiary-bg-rgb: 28, 32, 48;
+
+    --tblr-bg-surface: #171a23;
+    --tblr-bg-surface-primary: #171a23;
+    --tblr-bg-surface-secondary: #1c2030;
+    --tblr-bg-surface-tertiary: #1a1e2a;
+
+    --tblr-border-color: #262b3a;
+    --tblr-border-color-translucent: rgba(255, 255, 255, 0.08);
+    --tblr-navbar-border-color: #262b3a;
+
+    --tblr-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --tblr-shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.5);
+    --tblr-shadow-input: none;
+    --tblr-shadow-dropdown: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
+    --tblr-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+
+    --tblr-primary: #60a5fa;
+    --tblr-primary-rgb: 96, 165, 250;
+    --tblr-primary-text-emphasis: #bfdbfe;
+    --tblr-primary-bg-subtle: rgba(96, 165, 250, 0.16);
+    --tblr-primary-border-subtle: rgba(96, 165, 250, 0.4);
+    --tblr-link-color: #60a5fa;
+    --tblr-link-color-rgb: 96, 165, 250;
+    --tblr-link-hover-color: #93c5fd;
+    --tblr-link-hover-color-rgb: 147, 197, 253;
+    --tblr-focus-ring-color: rgba(96, 165, 250, 0.35);
+    --bg-switch-checked-color: #60a5fa;
+    --atlas-table-head-color: #9aa3b5;
+}
+
+/* 3. Components --------------------------------------------------------- */
+
+/* Type: slightly tighter headings, tabular numbers where numbers matter */
+h1, h2, h3, .h1, .h2, .h3, .page-title {
+    letter-spacing: -0.01em;
+}
+.h1, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-variant-numeric: tabular-nums;
+}
+.page-pretitle {
+    letter-spacing: 0.06em;
+}
+
+/* Cards: hairline border, white header, no heavy shadow */
+.card {
+    --tblr-card-border-color: var(--tblr-border-color);
+    --tblr-card-cap-bg: var(--tblr-bg-surface);
+    --tblr-card-box-shadow: var(--tblr-shadow-card);
+}
+.card .card-header {
+    border-bottom-color: var(--tblr-border-color);
+}
+.card .card-footer {
+    background: var(--tblr-bg-surface-secondary);
+    border-top-color: var(--tblr-border-color);
+}
+
+/* Tables: denser rows, sentence-case headers, quiet borders */
+.table > :not(caption) > * > *,
+table.dataTable > tbody > tr > td,
+table.dataTable > thead > tr > th,
+table.dataTable > tfoot > tr > th {
+    padding: 0.5rem 0.75rem;
+}
+.table th,
+.table thead th,
+.table tfoot th,
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable tfoot th {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--atlas-table-head-color);
+    border-bottom: 1px solid var(--tblr-border-color);
+}
+.table {
+    --tblr-table-border-color: var(--tblr-border-color);
+    --tblr-table-hover-bg: var(--tblr-bg-surface-secondary);
+    --tblr-table-striped-bg: var(--tblr-bg-surface-secondary);
+}
+.table-vcenter td .fw-medium,
+.table-vcenter td strong {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Buttons and inputs: 1px shadow, sharper focus ring */
+.btn {
+    --tblr-btn-box-shadow: var(--tblr-shadow-input);
+}
+.btn-primary {
+    --tblr-btn-box-shadow: 0 1px 2px rgba(var(--tblr-primary-rgb), 0.3);
+}
+.form-control,
+.form-select,
+.form-selectgroup-label,
+.form-imagecheck-figure:before,
+.select2-container--bootstrap-5 .select2-selection {
+    border-color: var(--tblr-border-color);
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--tblr-primary);
+    box-shadow: 0 0 0 3px var(--tblr-focus-ring-color);
+}
+
+/* Chrome: navbar and sidebar sit on a hairline, not a shadow */
+.navbar,
+.navbar-vertical.navbar-expand-lg {
+    --tblr-navbar-bg: var(--tblr-bg-surface);
+    box-shadow: none;
+}
+.navbar-expand-lg.top,
+header.navbar-expand-lg {
+    border-bottom: 1px solid var(--tblr-navbar-border-color);
+}
+.navbar-vertical.navbar-expand-lg {
+    border-right: 1px solid var(--tblr-navbar-border-color);
+}
+[dir="rtl"] .navbar-vertical.navbar-expand-lg {
+    border-right: 0;
+    border-left: 1px solid var(--tblr-navbar-border-color);
+}
+
+/* Small things: badges, dropdowns, breadcrumbs, filters bar */
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+.dropdown-menu {
+    --tblr-dropdown-border-color: var(--tblr-border-color);
+    box-shadow: var(--tblr-shadow-dropdown);
+}
+.breadcrumb {
+    font-size: 0.8125rem;
+}
+.navbar.navbar-filters {
+    --tblr-card-border-color: var(--tblr-border-color);
+    --tblr-card-box-shadow: none;
+}
+.alert {
+    box-shadow: none;
+}
+.offcanvas {
+    border-left: 1px solid var(--tblr-border-color);
+}
+
+/* Horizontal layout: the top bar floats as a card, aligned with the page content */
+body[bp-layout=horizontal] header.navbar-expand-lg.top {
+    border-bottom: 0;
+}
+body[bp-layout=horizontal] .single-top-bar #navbar-menu .navbar {
+    margin-top: 0.75rem;
+    border: 1px solid var(--tblr-border-color);
+    border-radius: var(--tblr-border-radius-lg);
+    box-shadow: var(--tblr-shadow-card);
+    background: var(--tblr-bg-surface);
+}

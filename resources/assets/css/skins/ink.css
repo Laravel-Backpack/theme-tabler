@@ -1,0 +1,237 @@
+/*
+ * Ink skin for the Backpack Tabler theme.
+ *
+ * Dark first: near-black canvas, surfaces a shade lighter, borders made of
+ * low-alpha white, a soft glow on the accent, compact spacing. The look of
+ * a modern engineering tool. Picking this skin switches the panel to dark
+ * mode; the light variant below is there for people who toggle back.
+ *
+ * Sections: 1. tokens (light)  2. tokens (dark)  3. components
+ * The light block must come first: ":root" and "[data-bs-theme=dark]" both
+ * match <html> with equal specificity, so the later block wins.
+ */
+
+/* 1. Tokens: light (for those who toggle) -------------------------------- */
+:root,
+[data-bs-theme=light],
+[data-menu-theme=light] {
+    --tblr-body-bg: #f7f8f8;
+    --tblr-body-bg-rgb: 247, 248, 248;
+    --tblr-body-color: #282a30;
+    --tblr-body-color-rgb: 40, 42, 48;
+    --tblr-secondary-color: #6f7280;
+    --tblr-secondary-color-rgb: 111, 114, 128;
+    --tblr-bg-surface: #ffffff;
+    --tblr-bg-surface-primary: #ffffff;
+    --tblr-bg-surface-secondary: #f7f8f8;
+    --tblr-bg-surface-tertiary: #fbfbfc;
+    --tblr-border-color: #e4e5ea;
+    --tblr-border-color-translucent: rgba(40, 42, 48, 0.08);
+    --tblr-navbar-border-color: #e4e5ea;
+    --tblr-shadow-card: 0 0 0 1px rgba(40, 42, 48, 0.04);
+    --tblr-shadow-input: none;
+    --tblr-box-shadow: none;
+    --tblr-primary: #0284c7;
+    --tblr-primary-rgb: 2, 132, 199;
+    --tblr-primary-text-emphasis: #075985;
+    --tblr-primary-bg-subtle: #e0f2fe;
+    --tblr-primary-border-subtle: #7dd3fc;
+    --tblr-link-color: #0284c7;
+    --tblr-link-color-rgb: 2, 132, 199;
+    --tblr-link-hover-color: #0369a1;
+    --tblr-link-hover-color-rgb: 3, 105, 161;
+    --tblr-focus-ring-color: rgba(2, 132, 199, 0.28);
+    --bg-switch-checked-color: #0284c7;
+    --ink-glow: 0 0 0 1px rgba(2, 132, 199, 0.35), 0 0 16px rgba(2, 132, 199, 0.25);
+}
+
+/* 2. Tokens: dark (the point of this skin) ------------------------------ */
+[data-bs-theme=dark],
+[data-menu-theme=dark] {
+    --tblr-body-bg: #0b0c10;
+    --tblr-body-bg-rgb: 11, 12, 16;
+    --tblr-body-color: #d5d7e0;
+    --tblr-body-color-rgb: 213, 215, 224;
+    --tblr-emphasis-color: #f4f5f9;
+    --tblr-emphasis-color-rgb: 244, 245, 249;
+    --tblr-secondary-color: #8b8fa3;
+    --tblr-secondary-color-rgb: 139, 143, 163;
+    --tblr-tertiary-color: rgba(213, 215, 224, 0.45);
+    --tblr-tertiary-color-rgb: 213, 215, 224;
+    --tblr-tertiary-bg: #16171e;
+    --tblr-tertiary-bg-rgb: 22, 23, 30;
+
+    --tblr-bg-surface: #111218;
+    --tblr-bg-surface-primary: #111218;
+    --tblr-bg-surface-secondary: #16171e;
+    --tblr-bg-surface-tertiary: #14151b;
+
+    --tblr-border-color: rgba(255, 255, 255, 0.09);
+    --tblr-border-color-translucent: rgba(255, 255, 255, 0.07);
+    --tblr-navbar-border-color: rgba(255, 255, 255, 0.09);
+
+    /* Accent: an electric sky blue that glows on the dark canvas */
+    --tblr-primary: #38bdf8;
+    --tblr-primary-rgb: 56, 189, 248;
+    --tblr-primary-fg: #06202e;
+    --tblr-primary-text-emphasis: #bae6fd;
+    --tblr-primary-bg-subtle: rgba(56, 189, 248, 0.14);
+    --tblr-primary-border-subtle: rgba(56, 189, 248, 0.35);
+    --tblr-link-color: #7dd3fc;
+    --tblr-link-color-rgb: 125, 211, 252;
+    --tblr-link-hover-color: #bae6fd;
+    --tblr-link-hover-color-rgb: 186, 230, 253;
+    --tblr-focus-ring-color: rgba(56, 189, 248, 0.35);
+    --bg-switch-checked-color: #38bdf8;
+
+    --tblr-shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.04);
+    --tblr-shadow-card-hover: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 8px 24px rgba(0, 0, 0, 0.5);
+    --tblr-shadow-input: none;
+    --tblr-shadow-dropdown: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    --tblr-box-shadow: none;
+    --tblr-box-shadow-inset: none;
+    --ink-glow: 0 0 0 1px rgba(56, 189, 248, 0.45), 0 0 18px rgba(56, 189, 248, 0.35);
+}
+
+/* 3. Components --------------------------------------------------------- */
+
+/* Compact type: smaller, tighter, headings a touch heavier */
+body {
+    letter-spacing: -0.005em;
+}
+h1, h2, h3, .h1, .h2, .h3, .page-title, .card-title {
+    letter-spacing: -0.02em;
+    font-weight: 600;
+}
+.h1, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-variant-numeric: tabular-nums;
+}
+.page-pretitle {
+    letter-spacing: 0.08em;
+}
+
+/* Cards: flat, ringed by a 1px line, no header tint */
+.card {
+    --tblr-card-border-color: var(--tblr-border-color);
+    --tblr-card-cap-bg: transparent;
+    --tblr-card-box-shadow: none;
+    --tblr-card-spacer-y: 0.875rem;
+    --tblr-card-cap-padding-y: 0.75rem;
+}
+.card .card-header,
+.card .card-footer {
+    border-color: var(--tblr-border-color);
+}
+.card .card-footer {
+    background: var(--tblr-bg-surface-secondary);
+}
+
+/* Tables: compact rows, uppercase micro headers, rows lit on hover */
+.table > :not(caption) > * > *,
+table.dataTable > tbody > tr > td,
+table.dataTable > thead > tr > th,
+table.dataTable > tfoot > tr > th {
+    padding: 0.45rem 0.75rem;
+}
+.table th,
+.table thead th,
+.table tfoot th,
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable tfoot th {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--tblr-secondary-color);
+    border-bottom: 1px solid var(--tblr-border-color);
+}
+.table {
+    --tblr-table-border-color: var(--tblr-border-color);
+    --tblr-table-hover-bg: var(--tblr-bg-surface-secondary);
+    --tblr-table-striped-bg: transparent;
+}
+
+/* Buttons and inputs: flat, focus glows */
+.btn {
+    --tblr-btn-box-shadow: none;
+    --tblr-btn-border-color: var(--tblr-border-color);
+}
+.btn-primary {
+    --tblr-btn-border-color: transparent;
+    box-shadow: 0 0 0 1px rgba(var(--tblr-primary-rgb), 0.5);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    box-shadow: var(--ink-glow);
+}
+.form-control,
+.form-select,
+.form-selectgroup-label,
+.select2-container--bootstrap-5 .select2-selection {
+    background-color: var(--tblr-bg-surface-secondary);
+    border-color: var(--tblr-border-color);
+}
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--tblr-bg-surface-secondary);
+    border-color: var(--tblr-primary);
+    box-shadow: var(--ink-glow);
+}
+
+/* Chrome: bars on a 1px line, current item lit */
+.navbar,
+.navbar-vertical.navbar-expand-lg {
+    --tblr-navbar-bg: var(--tblr-body-bg);
+    box-shadow: none;
+}
+.navbar-expand-lg.top,
+header.navbar-expand-lg {
+    border-bottom: 1px solid var(--tblr-navbar-border-color);
+}
+.navbar-vertical.navbar-expand-lg {
+    border-right: 1px solid var(--tblr-navbar-border-color);
+}
+[dir="rtl"] .navbar-vertical.navbar-expand-lg {
+    border-right: 0;
+    border-left: 1px solid var(--tblr-navbar-border-color);
+}
+.navbar .nav-link.active,
+.navbar .nav-item.active > .nav-link {
+    color: var(--tblr-emphasis-color);
+}
+
+/* Small things */
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border: 1px solid var(--tblr-border-color);
+}
+.dropdown-menu {
+    --tblr-dropdown-border-color: var(--tblr-border-color);
+    --tblr-dropdown-bg: var(--tblr-bg-surface);
+    box-shadow: var(--tblr-shadow-dropdown);
+}
+.offcanvas {
+    border-left: 1px solid var(--tblr-border-color);
+}
+.alert {
+    box-shadow: none;
+    border-color: var(--tblr-border-color);
+}
+.avatar {
+    box-shadow: 0 0 0 1px var(--tblr-border-color);
+}
+.progress {
+    background: var(--tblr-bg-surface-secondary);
+}
+.navbar.navbar-filters {
+    --tblr-card-border-color: var(--tblr-border-color);
+    --tblr-card-box-shadow: none;
+}
+
+body[bp-layout=horizontal] .single-top-bar,
+body[bp-layout=horizontal] .double-top-bar {
+    padding-left: 0;
+    padding-right: 0;
+}
