@@ -1,0 +1,74 @@
+/*
+ * Synth skin for the Backpack Tabler theme.
+ *
+ * A teal accent over faint vertical lines. A little retro, a little future.
+ * Self-contained: the background pattern, the accent colour and a flush top bar,
+ * in one file. Load it after backpack-color-palette.css.
+ *
+ * Sections: 1. background  2. accent (light, then dark)  3. flush top bar
+ */
+
+/* 1. Background --------------------------------------------------------- */
+
+body {
+    width: 100%;
+        height: 100%;
+        background: linear-gradient(var(--tblr-light) 1px, var(--tblr-primary-bg-subtle) 0),
+            linear-gradient(90deg, #fff, #ffff, #fff),
+            linear-gradient(in oklch longer hue -2deg, var(--tblr-danger), var(--tblr-danger));
+        background-size:
+            100% 2px,
+            100% 100%,
+            100% 100%;
+}
+
+[data-bs-theme=dark] body {
+    width: 100%;
+        height: 100%;
+        background: linear-gradient(#000 1px, #0000 0),
+            linear-gradient(90deg, #000, #0000, #000),
+            linear-gradient(in oklch longer hue -2deg, var(--tblr-danger), var(--tblr-danger));
+        background-size:
+            100% 2px,
+            100% 100%,
+            100% 100%;
+}
+
+/* 2. Accent ------------------------------------------------------------- */
+:root,
+[data-bs-theme=light],
+[data-menu-theme=light] {
+    --tblr-primary: #0f766e;
+    --tblr-primary-rgb: 15, 118, 110;
+    --tblr-primary-text-emphasis: #134e4a;
+    --tblr-primary-bg-subtle: #ccfbf1;
+    --tblr-primary-border-subtle: #5eead4;
+    --tblr-link-color: #0f766e;
+    --tblr-link-color-rgb: 15, 118, 110;
+    --tblr-link-hover-color: #115e59;
+    --tblr-link-hover-color-rgb: 15, 118, 110;
+    --tblr-focus-ring-color: rgba(15, 118, 110, 0.28);
+    --bg-switch-checked-color: #0f766e;
+}
+
+[data-bs-theme=dark],
+[data-menu-theme=dark] {
+    --tblr-primary: #2dd4bf;
+    --tblr-primary-rgb: 45, 212, 191;
+    --tblr-primary-text-emphasis: #99f6e4;
+    --tblr-primary-bg-subtle: rgba(45, 212, 191, 0.16);
+    --tblr-primary-border-subtle: rgba(45, 212, 191, 0.4);
+    --tblr-link-color: #2dd4bf;
+    --tblr-link-color-rgb: 45, 212, 191;
+    --tblr-link-hover-color: #5eead4;
+    --tblr-link-hover-color-rgb: 45, 212, 191;
+    --tblr-focus-ring-color: rgba(45, 212, 191, 0.35);
+    --bg-switch-checked-color: #2dd4bf;
+}
+
+/* 3. Flush top bar ------------------------------------------------------ */
+body[bp-layout=horizontal] .single-top-bar,
+body[bp-layout=horizontal] .double-top-bar {
+    padding-left: 0;
+    padding-right: 0;
+}

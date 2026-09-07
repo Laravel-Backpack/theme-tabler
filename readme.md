@@ -63,13 +63,39 @@ Note: Any value set here will override the ones defined in config/backpack/ui.ph
 'auth_layout' => 'default', //Possible values: default, illustration, cover
 ```
 
+**Pick a skin:** A skin is one CSS file that changes the look of the whole admin panel: colours, background, borders, spacing, fonts. Keep `backpack-color-palette.css` (the theme needs it) and load exactly one skin after it. You can try every skin live at [demo.backpackforlaravel.com](https://demo.backpackforlaravel.com/admin?open_drawer=true).
+
+```php
+'styles' => [
+    base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/backpack-color-palette.css'),
+    base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/atlas.css'),
+],
+```
+
+| Skin | Look |
+|---|---|
+| `aurora.css` | Frosted-glass cards over a soft mesh gradient, Backpack purple. The default (new installs get it as `glass.css` + `fuzzy-background.css`). |
+| `atlas.css` | Cool greys, hairline borders, dense tables, a confident blue. |
+| `manuscript.css` | Warm cream, serif headings, a terracotta accent, room to breathe. |
+| `ink.css` | Dark first: near-black canvas, sky-blue accent, compact rows. Pair it with `'defaultColorMode' => 'dark'`. |
+| `mono.css` | Black on white, sharp corners, monospace labels. |
+| `blueprint.css` | A graph-paper grid with a blueprint blue accent. |
+| `honey.css` | A warm amber accent over a faint dot grid. |
+| `pine.css` | A deep emerald accent over thin pinstripes. |
+| `synth.css` | A teal accent over faint vertical lines. |
+
+Manuscript and Mono load their fonts (Source Serif 4, Geist, Geist Mono) from Google Fonts through an `@import` at the top of the file. If you would rather not, copy the file into your project, remove that line, and the skins fall back to system fonts.
+
+The older background-only files (`dotted-background.css`, `vertical-lines-background.css`, `pinstripe-background.css`, `paper-background.css`) still work and can be stacked on the default look, as before.
+
 **Add CSS:** Here you can easily load your own extra CSS styles.
 
 ```php
 'styles' => [
-  base_path('vendor/backpack/theme-tabler/resources/assets/css/color-adjustments.css'),
-  base_path('vendor/backpack/theme-tabler/resources/assets/css/colors.css'),
- // add your css here
+  base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/backpack-color-palette.css'),
+  base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/glass.css'),
+  base_path('vendor/backpack/theme-tabler/resources/assets/css/skins/fuzzy-background.css'),
+  // add your css here
 ],
 ```
 
