@@ -69,6 +69,15 @@ table tbody tr td.dtr-control span {
     margin-left: 3px;
 }
 
+table tbody tr td:has(> div.dtr-control) {
+    vertical-align: middle;
+}
+
+table tbody tr div.dtr-control {
+    display: flex;
+    align-items: center;
+}
+
 .nav-separator {
     margin-left: 10px;
     margin-top: 25px;
@@ -480,10 +489,14 @@ form .select2.select2-container {
     background-color: var(--tblr-bg-surface);
 }
 
-[data-bs-theme=dark] div.dtr-modal div.dtr-modal-display .dtr-modal-close {
+div.dtr-modal div.dtr-modal-display .dtr-modal-close {
     background-color: var(--tblr-danger);
     color: var(--tblr-light-text);
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
 [data-bs-theme=dark] div.dtr-modal div.dtr-modal-display table.table.table-striped tr td {
@@ -491,11 +504,10 @@ form .select2.select2-container {
 }
 
 [data-bs-theme=light] div.dtr-modal div.dtr-modal-background {
-    /* background-color: rgba(var(--tblr-dark-rgb), 0.8) !important; */
+    background-color: rgba(var(--tblr-dark-rgb), 0.8) !important;
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     --tblr-modal-margin: 1.75rem;
-    background: var(--tblr-bg-surface)!important;
 }
 
 div.dtr-modal div.dtr-modal-display {
